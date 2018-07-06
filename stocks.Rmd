@@ -1,0 +1,138 @@
+---
+output: 
+  html_document:
+    code_folding: hide
+params:
+  symbol: TSLA
+  threshold: 10
+  force: True
+---
+  
+# Report for `r params$symbol` on `r Sys.Date()`
+
+## Summary{.tabset}
+
+```{r, echo=TRUE, message=FALSE}
+library(openxlsx)
+library(quantmod)
+library(DT)
+library(highcharter)
+library(blastula)
+library(formattable)
+
+prices <- round(getSymbols(params$symbol, auto.assign = FALSE, src = 'yahoo'), 2)
+close <- Cl(last(prices))
+open <- Op(last(prices))
+
+recent <- last(prices, n=90)
+recent_nv <- recent[,-5]
+
+```
+
+The stock closed `r ifelse(close>open,'up','down')` at `r close` dollars per share yesterday.
+
+
+### Price History
+
+The chart below is made with the `quantmod` and `highcharter` R packages. An API returns all of the price history based on the stock tick symbol provided as a parameter. The candlestick chart is a default function from highcharter, as is the the Economist theme.
+
+
+```{r echo=TRUE, warning=FALSE, message=FALSE}
+
+highchart() %>% 
+   hc_yAxis_multiples(
+    list(title = list(text = NULL), height = "75%", top = "0%"),
+    list(title = list(text = NULL), height = "15%", top = "80.5%", opposite = TRUE)
+  ) %>%
+  hc_add_series_ohlc(prices, yAxis=0, name= params$symbol) %>% 
+  hc_add_series_xts(prices[,paste0(params$symbol,".Volume")], name="Volume", type="column", yAxis=1) %>% 
+  hc_add_theme(hc_theme_economist())
+```
+
+### Raw Data
+
+The table below displays the daily price data for the stock. A concise, interactive table is created with the `DT` package. 
+
+  
+```{r echo=TRUE}
+df <- as.data.frame(recent)
+df[,paste0(params$symbol, ".Volume")] <- df[,paste0(params$symbol, ".Volume")]/1000000 
+datatable(df) %>% 
+  formatCurrency(c(paste0(params$symbol, ".Open"), paste0(params$symbol, ".High"), paste0(params$symbol, ".Low"), paste0(params$symbol,".Close")), digits=2) %>% 
+  formatRound(c(paste0(params$symbol, ".Volume")), digits=0)
+```
+
+## Legacy Information
+
+This report also creates an excel file with the relevant information updated by R. The Excel file supprots a legacy report that is slowly be replaced.
+
+```{r echo=TRUE}
+fname <- sprintf('%s.xlsx', Sys.Date())
+write.xlsx(df, file = fname)
+rmarkdown::output_metadata$set(rsc_output_files = list(fname))
+```
+
+[Link to Excel](`r fname`)
+
+## Email
+
+This report also produces an email that is sent to key stakeholders with summary information if the price change is above `r params$threshold`.
+
+```{r warning = FALSE, message = FALSE, echo = TRUE}
+# Calculate the total change
+close <- Cl(last(prices, n = 2))
+diff <- round(as.numeric(close[2]) - as.numeric(close[1]),2)
+
+# If the change is above a $10 / share, send an email to stake holders
+if (abs(diff) > params$threshold || params$force) {
+  rmarkdown::output_metadata$set(rsc_email_suppress_scheduled = FALSE)
+  # set a dynamic subject line
+  subject <- paste0(params$symbol,
+                    ' is ', 
+                    ifelse(diff > 0, 'up', 'down'), 
+                    ' today by $', 
+                    abs(diff), '!')
+  rmarkdown::output_metadata$set("rsc_email_subject" = subject)
+  
+  # also update the body
+  price_new <- prices[,c(1,4)]
+  colnames(price_new) <- c('open', 'close')
+  price_new$change <- price_new$close - price_new$open
+  tbl <- format_table(
+    x = as.data.frame(head(price_new)),
+    list(
+      change = formatter("span", style = x ~ ifelse(x > 0, style(color = "green"), style(color = "red"))),
+      area(col = c(open, close)) ~ normalize_bar("lightgrey")
+
+    )
+  )
+  
+  msg <- compose_email(
+    body = "
+    Hello Team,
+    
+    Here are the updated stock prices for {params$symbol}.
+    
+
+    <center>{tbl}</center>
+    
+
+    Let me know if you have any questions.
+    
+
+    Best,
+    
+
+    Team Lead"
+  )
+  rmarkdown::output_metadata$set(rsc_email_body_html = blastula::get_html_str(msg))
+  
+  # attach the excel file
+  rmarkdown::output_metadata$set(rsc_email_attachments = list(fname))
+  
+} else {
+  # don't send an email
+  rmarkdown::output_metadata$set(rsc_email_suppress_scheduled = TRUE)
+}
+
+```

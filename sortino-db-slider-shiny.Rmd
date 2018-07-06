@@ -1,0 +1,193 @@
+---
+title: "sortino-db-slider-shiny"
+runtime: shiny
+resource_files:
+- config.yml
+output:
+  flexdashboard::flex_dashboard:
+    source_code: embed
+    orientation: rows
+---
+
+
+
+```{r setup, message = FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+library(config)
+library(dbplyr)
+library(DBI)
+
+dw <- config::get("mssql")
+
+con <- DBI::dbConnect(odbc::odbc(),
+                      Driver = dw$Driver,
+                      Server = dw$Server,
+                      #Host = dw$Host,
+                      UID    = dw$UID,
+                      PWD    = dw$PWD,
+                      Port   = dw$Port,
+                      Database = dw$Database
+                      #Schema = dw$Schema
+                      )
+
+library(flexdashboard)
+library(tidyverse)
+library(dygraphs)
+library(highcharter)
+library(tidyquant)
+library(timetk)
+library(shiny)
+```
+
+Sidebar {.sidebar}
+=====================================
+  
+```{r}
+helpText("Choose the risk level of the portfolio.")
+
+sliderInput("risk_level", "risk level", 1, 10, value = 5, step = 1)
+
+dateInput("date", "Starting Date", "2010-01-01", format = "yyyy-mm-dd")
+
+numericInput("mar", "MAR", .008, min = 0, max = 1, step = .001)
+
+numericInput("window", "Window", 5, min = 3, max = 24, step = 2)
+
+actionButton("go", "Submit")
+
+mar <- eventReactive(input$go, {input$mar})
+
+portfolio_selected <- eventReactive(input$go, {
+  column <- input$risk_level + 1
+    
+  tbl(con, "portfolio_returns_risk_levels") %>%
+    select(date, column) %>% 
+    collect() %>% 
+    `colnames<-`(c("date", "returns")) %>% 
+    filter(date >= input$date)
+})
+
+rolling_sortino <- eventReactive(input$go, {
+  MAR <- mar()
+  window <- input$window
+  
+  rolling_sortino <-
+    portfolio_selected() %>%
+    #filter(date >= input$date) %>% 
+    tk_xts(date_var = date) %>% 
+    rollapply(window, function(x) SortinoRatio(x, MAR = MAR)) %>% 
+    `colnames<-`("24-rolling")
+
+})
+
+sortino_byhand <- eventReactive(input$go, {
+  
+  MAR <- mar()
+  
+  portfolio_selected_tibbe <-
+    portfolio_selected() %>%
+    mutate(ratio = mean(returns - MAR)/sqrt(sum(pmin(returns - MAR, 0)^2)/nrow(.))) %>% 
+    # Add two new columns to help with ggplot.
+    mutate(returns_below_MAR = ifelse(returns < MAR, returns, NA)) %>%
+    mutate(returns_above_MAR = ifelse(returns > MAR, returns, NA))
+
+})
+
+```
+
+Sortino Ratio
+=====================================  
+
+Row {data-height=600}
+-----------------------------------------------------------------------
+
+### Rolling Sortino
+
+```{r}
+renderHighchart({
+  
+  validate(need(input$go != 0, "Please choose the portfolio risk level by adjusting the slider and click submit."))
+  
+  highchart(type = "stock") %>%
+  hc_title(text = "Rolling Sortino") %>%
+  hc_add_series(rolling_sortino(), name = "Sortino", color = "cornflowerblue") %>%
+  hc_navigator(enabled = FALSE) %>% 
+  hc_scrollbar(enabled = FALSE) 
+
+  
+})
+```
+
+Row {.tabset .tabset-fade}
+-------------------------------------
+
+### Scatterplot
+
+```{r, message = FALSE}
+renderPlot({
+  validate(need(input$go != 0, "Please choose the portfolio risk level by adjusting the slider and click submit."))
+  
+  MAR <- mar()
+  sortino_byhand <- sortino_byhand()
+  
+  ggplot(data = sortino_byhand, aes(x = date)) +
+  geom_point(aes(y = returns_below_MAR), colour = "red") +
+  geom_point(aes(y = returns_above_MAR), colour = "green") + 
+  geom_vline(xintercept = as.numeric(as.Date("2016-11-30")), color = "blue") +
+  geom_hline(yintercept = MAR, color = "purple", linetype = "dotted") +
+  annotate(geom="text", x=as.Date("2016-11-30"), 
+           y = -.05, label = "Trump", fontface = "plain", 
+           angle = 90, alpha = .5, vjust =  1.5) +
+  ylab("percent monthly returns")
+})
+```
+
+
+### Histogram
+
+```{r}
+renderPlot({
+  MAR <- mar()
+  sortino_byhand <- sortino_byhand()
+  
+  sortino_byhand %>% 
+    ggplot(aes(x = returns)) +
+    geom_histogram(alpha = 0.25, binwidth = .01, fill = "cornflowerblue") +
+    geom_vline(xintercept = MAR, color = "green") +
+    annotate(geom = "text", x = MAR, 
+             y = 10, label = "MAR", fontface = "plain", 
+             angle = 90, alpha = .5, vjust =  1)
+})
+```
+
+### Density
+
+```{r}
+renderPlot({
+  MAR <- mar()
+  sortino_byhand <- sortino_byhand()
+  
+  sortino_density_plot <- sortino_byhand %>% 
+    ggplot(aes(x = returns)) +
+    stat_density(geom = "line", size = 1, color = "cornflowerblue") 
+  
+  shaded_area_data <- ggplot_build(sortino_density_plot)$data[[1]] %>% 
+    filter(x < MAR)
+
+  sortino_density_plot + 
+  geom_area(data = shaded_area_data, aes(x = x, y = y), fill="pink", alpha = 0.5) +
+  geom_segment(data = shaded_area_data, aes(x = MAR, y = 0, xend = MAR, yend = y), 
+               color = "red", linetype = "dotted") +
+  annotate(geom = "text", x = MAR, y = 5, label = paste("MAR =", MAR, sep = ""), 
+           fontface = "plain", angle = 90, alpha = .8, vjust =  -1) +
+  annotate(geom = "text", x = (MAR - .02), y = .1, label = "Downside", 
+           fontface = "plain", alpha = .8, vjust =  -1)
+           
+})
+
+```
+
+
+
+
+

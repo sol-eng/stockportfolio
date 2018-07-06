@@ -1,0 +1,198 @@
+---
+title: "Portfolios ETL"
+resource_files:
+- config.yml
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(message=FALSE, warning=FALSE)
+
+library(tidyquant)
+library(tidyverse)
+library(timetk)
+```
+
+Import stock data daily prices, convert to monthly returns
+
+```{r}
+# The symbols vector holds our tickers. 
+symbols <- c("SPY","EFA", "IJS", "EEM","AGG")
+
+etf_monthly_returns <- 
+  symbols %>% 
+  tq_get(get = "stock.prices", from = "2003-10-01") %>% 
+  group_by(symbol) %>% 
+  tq_transmute(adjusted, periodReturn, period = "monthly", col_rename = "returns")
+
+mult_monthly_returns_stocks <- tq_repeat_df(etf_monthly_returns, n = 10)
+```
+
+```{r}
+
+weights <-  c(0.15, 0.15, 0.10, 0.10, 0.50,
+              0.15, 0.15, 0.15, 0.10, 0.45,
+              0.15, 0.15, 0.15, 0.15, 0.40,
+              0.20, 0.15, 0.15, 0.15, 0.35,
+              0.20, 0.20, 0.15, 0.15, 0.30,
+              0.20, 0.20, 0.20, 0.15, 0.25,
+              0.20, 0.20, 0.20, 0.20, 0.20,
+              0.25, 0.20, 0.20, 0.20, 0.15,
+              0.25, 0.25, 0.20, 0.20, 0.10,
+              0.25, 0.25, 0.25, 0.20, 0.05)
+
+weights_table <- tibble(symbols) %>%
+    tq_repeat_df(n = 10) %>%
+    bind_cols(tibble(weights))%>%
+    group_by(portfolio)
+
+portfolio_returns_risk_levels <- 
+  mult_monthly_returns_stocks %>%
+  tq_portfolio(assets_col = symbol,
+               returns_col = returns,
+               weights = weights_table,
+               col_rename = NULL,
+               wealth.index = FALSE) %>% 
+  spread(portfolio, portfolio.returns)
+```
+
+Build three portfolios of different risk profiles
+
+Conservative is 45% to AGG
+
+```{r Conservative Portfolio}
+w_cons <- c(0.25, 0.10, 0.10, 0.10, 0.45)
+conservative_portfolio_returns <- 
+  etf_monthly_returns %>% 
+  tq_portfolio(assets_col = symbol, 
+               returns_col = returns, 
+               weights = w_cons,
+               col_rename = "returns")
+```
+
+Balanced is almost equal distribution
+
+```{r Balanced Portfolio}
+w_bal <- c(0.20, 0.20, 0.20, 0.20, 0.20)
+
+balanced_portfolio_returns <- 
+  etf_monthly_returns %>% 
+  tq_portfolio(assets_col = symbol, 
+               returns_col = returns, 
+               weights = w_bal,
+               col_rename = "returns")
+```
+
+Aggressive is 25% SPY, 25% EAF, 25% IJS, 20% EEM, 5% AGG
+
+```{r Aggressive Portfolio}
+w_agg <- c(0.25, 0.25, 0.25, 0.20, 0.05)
+
+aggressive_portfolio_returns <- 
+  etf_monthly_returns %>% 
+  tq_portfolio(assets_col = symbol, 
+               returns_col = returns, 
+               weights = w_agg,
+               col_rename = "returns")
+
+```
+
+```{r}
+portfolio_allocations <- 
+  aggressive_portfolio_returns %>% 
+  mutate(conservative = conservative_portfolio_returns$returns,
+         balanced = balanced_portfolio_returns$returns) %>% 
+  rename(aggressive = returns)
+```
+
+
+Connect to mysql database and save my results for use in in Shiny app etc
+
+```{r}
+library(config)
+library(dbplyr)
+library(DBI)
+
+dw <- config::get("mssql")
+
+con <- DBI::dbConnect(odbc::odbc(),
+                      Driver = dw$Driver,
+                      Server = dw$Server,
+                      #Host = dw$Host,
+                      UID    = dw$UID,
+                      PWD    = dw$PWD,
+                      Port   = dw$Port,
+                      Database = dw$Database
+                      #Schema = dw$Schema
+                      )
+```
+
+```{r}
+
+# DBI::dbRemoveTable(con, "conservative_portfolio_returns")
+# DBI::dbRemoveTable(con, "balanced_portfolio_returns")
+# DBI::dbRemoveTable(con, "aggressive_portfolio_returns")
+# DBI::dbRemoveTable(con, "portfolio_returns_risk_levels")
+# DBI::dbRemoveTable(con, "portfolio_allocations")
+# 
+# DBI::dbWriteTable(con, "conservative_portfolio_returns", conservative_portfolio_returns)
+# DBI::dbWriteTable(con, "balanced_portfolio_returns", balanced_portfolio_returns)
+# DBI::dbWriteTable(con, "aggressive_portfolio_returns", aggressive_portfolio_returns)
+# DBI::dbWriteTable(con, "portfolio_returns_risk_levels", portfolio_returns_risk_levels)
+# DBI::dbWriteTable(con, "portfolio_allocations", portfolio_allocations)
+
+```
+
+Import portfolio returns for balanced, aggressive, conservative
+
+
+```{r}
+# conservative_portfolio_returns <-
+#   tbl(con, "conservative_portfolio_returns") %>%
+#   collect()
+# 
+# balanced_portfolio_returns <-
+#   tbl(con, "balanced_portfolio_returns") %>%
+#   collect()
+# 
+# aggressive_portfolio_returns <-
+#   tbl(con, "aggressive_portfolio_returns") %>%
+#   collect()
+# 
+# portfolio_returns_risk_levels <-
+#   tbl(con, "portfolio_returns_risk_levels") %>%
+#   collect()
+# 
+# portfolio_allocations <- tbl(con, "portfolio_allocations") %>% 
+#   collect()
+```
+
+```{r}
+conservative_portfolio_returns %>%
+  mutate(balanced = balanced_portfolio_returns$returns + 1, 
+         aggressive = aggressive_portfolio_returns$returns + 1,
+         conservative = returns + 1) %>% 
+  select(-date, -returns) %>% 
+  map_dfc(., accumulate,  `*`) %>% 
+  mutate(date = conservative_portfolio_returns$date) %>%  
+  gather(portfolio, return, -date) %>% 
+  group_by(portfolio) %>% 
+  ggplot(aes(x = date, y = return, color = portfolio)) +      
+  geom_line() 
+
+```
+
+
+```{r}
+portfolio_returns_risk_levels %>%
+  gather(risk, return, -date) %>% 
+  ggplot(aes(x = date, y = return, color = risk)) +
+  geom_point() +
+  facet_wrap(~risk, nrow = 3)
+```
+
+
+
+
