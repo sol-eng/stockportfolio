@@ -13,12 +13,13 @@ params:
 ## Summary{.tabset}
 
 ```{r, echo=TRUE, message=FALSE}
-library(openxlsx)
 library(quantmod)
 library(DT)
 library(highcharter)
 library(blastula)
 library(formattable)
+library(ggplot2)
+library(ggthemes)
 
 prices <- round(getSymbols(params$symbol, auto.assign = FALSE, src = 'yahoo'), 2)
 close <- Cl(last(prices))
@@ -68,7 +69,7 @@ This report also creates an excel file with the relevant information updated by 
 
 ```{r echo=TRUE}
 fname <- sprintf('%s.xlsx', Sys.Date())
-write.xlsx(df, file = fname)
+write.csv(df, file = fname)
 rmarkdown::output_metadata$set(rsc_output_files = list(fname))
 ```
 
@@ -107,6 +108,14 @@ if (abs(diff) > params$threshold || params$force) {
     )
   )
   
+  p <- recent[,6] %>% 
+    autoplot() +
+    geom_smooth() +
+    theme_fivethirtyeight() + 
+    labs(
+      title = sprintf("%s Price Adjusted", params$symbol)
+    )
+  
   msg <- compose_email(
     body = "
     Hello Team,
@@ -114,7 +123,10 @@ if (abs(diff) > params$threshold || params$force) {
     Here are the updated stock prices for {params$symbol}.
     
 
-    <center>{tbl}</center>
+    {tbl}
+
+
+    {add_ggplot(p, width = 6, height = 6)}
     
 
     Let me know if you have any questions.
