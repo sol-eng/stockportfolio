@@ -120,10 +120,12 @@ if (abs(diff) > params$threshold || params$force) {
     body = "
     Hello Team,
     
-    Here are the updated stock prices for {params$symbol}.
+    Here are the latest stock prices for {params$symbol}.
     
 
     {tbl}
+
+    The historical trend is shown below: 
 
 
     {add_ggplot(p, width = 6, height = 6)}
@@ -137,7 +139,8 @@ if (abs(diff) > params$threshold || params$force) {
 
     Team Lead"
   )
-  rmarkdown::output_metadata$set(rsc_email_body_html = blastula::get_html_str(msg))
+  rmarkdown::output_metadata$set(rsc_email_body_html = msg$html_str)
+  rmarkdown::output_metadata$set(rsc_email_images = msg$images)
   
   # attach the excel file
   rmarkdown::output_metadata$set(rsc_email_attachments = list(fname))
