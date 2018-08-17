@@ -21,6 +21,10 @@ library(formattable)
 library(ggplot2)
 library(ggthemes)
 
+report_name <- Sys.getenv("RSC_REPORT_NAME")
+report_url <- Sys.getenv("RSC_REPORT_URL")
+subscription_url <- Sys.getenv("RSC_REPORT_SUBSCRIPTION_URL")
+
 prices <- round(getSymbols(params$symbol, auto.assign = FALSE, src = 'yahoo'), 2)
 close <- Cl(last(prices))
 open <- Op(last(prices))
