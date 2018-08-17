@@ -144,7 +144,7 @@ if (abs(diff) > params$threshold || params$force) {
     Team Lead",
     footer = "
     This <strong>{report_name}</strong> document 
-    is available on our connect server <code>[here]({report_url})</code>
+    is available on our RStudio Connect server <code>[here]({report_url})</code>
 
     To stop receiving these emails, <code>[unsubscribe]({subscription_url})</code>
     "
