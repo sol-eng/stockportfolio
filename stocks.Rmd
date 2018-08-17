@@ -143,9 +143,9 @@ if (abs(diff) > params$threshold || params$force) {
 
     Team Lead",
     footer = "
-    This <strong>{report_name}</strong> document is available on our RStudio Connect server <code>[here]({report_url})</code>.
+    This <strong>{report_name}</strong> document is available on our RStudio Connect server [here]({report_url}).
 
-    To stop receiving these emails, <code>[unsubscribe]({subscription_url})</code>.
+    To stop receiving these emails, [unsubscribe]({subscription_url}).
     "
   )
   rmarkdown::output_metadata$set(rsc_email_body_html = msg$html_str)
