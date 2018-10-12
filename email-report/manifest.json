@@ -337,7 +337,7 @@
 		},
 		"assertthat" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -423,7 +423,7 @@
 		},
 		"bindr" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -453,7 +453,7 @@
 		},
 		"bindrcpp" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -527,7 +527,7 @@
 		},
 		"broom" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -626,7 +626,7 @@
 		},
 		"commonmark" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -839,7 +839,7 @@
 		},
 		"downloader" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -869,7 +869,7 @@
 		},
 		"dplyr" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -938,7 +938,7 @@
 		},
 		"foreign" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -969,7 +969,7 @@
 		},
 		"formattable" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -1002,7 +1002,7 @@
 		},
 		"ggplot2" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -1040,7 +1040,7 @@
 		},
 		"ggthemes" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -1425,7 +1425,7 @@
 		},
 		"jsonlite" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -1457,7 +1457,7 @@
 		},
 		"knitr" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -1732,7 +1732,7 @@
 		},
 		"mnormt" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -1783,7 +1783,7 @@
 		},
 		"nlme" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -1845,7 +1845,7 @@
 		},
 		"packrat" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -1910,7 +1910,7 @@
 		},
 		"pkgconfig" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -2065,7 +2065,7 @@
 		},
 		"psych" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -2095,7 +2095,7 @@
 		},
 		"purrr" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -2131,7 +2131,7 @@
 		},
 		"quantmod" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -2259,7 +2259,7 @@
 		},
 		"rmarkdown" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -2327,7 +2327,7 @@
 		},
 		"scales" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -2392,7 +2392,7 @@
 		},
 		"shiny" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -2556,7 +2556,7 @@
 		},
 		"tidyr" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
@@ -2657,7 +2657,7 @@
 		},
 		"viridisLite" : {
 			"Source" : "RSPM",
-			"Repository" : null,
+			"Repository" : "https://demo.rstudiopm.com/cran/latest/",
 			"GithubRepo" : null,
 			"GithubUsername" : null,
 			"GithubRef" : null,
