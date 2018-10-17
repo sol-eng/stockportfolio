@@ -35,7 +35,7 @@ The stock closed `r ifelse(close>open,'up','down')` at `r close` dollars per sha
 
 ### Price History
 
-The chart below is made with the `quantmod` and `highcharter` R packages. An API returns all of the price history based on the stock tick symbol provided as a parameter. The candlestick chart is a default function from highcharter, as is the the Economist theme.
+The chart below is made with the `quantmod` and `highcharter` R packages. An API returns all of the price history based on the stock tick symbol provided as a parameter. The candlestick chart is a default function from highcharter, as is the Economist theme.
 
 
 ```{r echo=TRUE, warning=FALSE, message=FALSE}
@@ -65,7 +65,7 @@ datatable(df) %>%
 
 ## Legacy Information
 
-This report also creates an excel file with the relevant information updated by R. The Excel file supprots a legacy report that is slowly be replaced.
+This report also creates an excel file with the relevant information updated by R. The Excel file contains a legacy report that will slowly be replaced.
 
 ```{r echo=TRUE}
 fname <- sprintf('%s.xlsx', Sys.Date())
