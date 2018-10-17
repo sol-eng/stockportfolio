@@ -17,20 +17,13 @@ library(config)
 library(dbplyr)
 library(DBI)
 
-#dw <- config::get("mssql")
+# dependencies from the config file
+library(odbc)
+library(RSQLite)
 
-con <- DBI::dbConnect(drv = RSQLite::SQLite(),
-                      dbname = "app.db"
-                     # odbc::odbc(),
-                     # Driver = dw$Driver,
-                     # Server = dw$Server,
-                     # #Host = dw$Host,
-                     # UID    = dw$UID,
-                     # PWD    = dw$PWD,
-                     # Port   = dw$Port,
-                     # Database = dw$Database
-                     # #Schema = dw$Schema
-                      )
+db <- config::get("db")
+
+con <- do.call(DBI::dbConnect, args = db)
 
 library(flexdashboard)
 library(tidyverse)
