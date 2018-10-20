@@ -67,7 +67,7 @@
     },
     "MASS": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -136,7 +136,7 @@
     },
     "R6": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -165,7 +165,7 @@
     },
     "RColorBrewer": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -252,7 +252,7 @@
     },
     "XML": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -286,7 +286,7 @@
     },
     "assertthat": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -313,7 +313,7 @@
     },
     "backports": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -347,7 +347,7 @@
     },
     "base64enc": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -438,41 +438,41 @@
       "GithubRepo": "blastula",
       "GithubUsername": "rich-iannone",
       "GithubRef": "master",
-      "GithubSha1": "56f10c284372a84615a51b84e98fef82a50512ee",
+      "GithubSha1": "3b69cbcf340be2bba4a9f1d29f6557747668aebf",
       "description": {
         "Type": "Package",
         "Package": "blastula",
         "Title": "Easily Send HTML Email Messages",
-        "Version": "0.2.0",
+        "Version": "0.2.2",
         "Authors@R": "\n    person(\"Richard\", \"Iannone\", , \"riannone@me.com\", c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0003-3925-190X\"))",
         "Description": "Compose and send out responsive HTML email messages that render\n    perfectly across a range of email clients and device sizes. Messages are\n    composed using 'Markdown' and a text interpolation system that allows for\n    the injection of evaluated R code within the message body, footer, and\n    subject line. Helper functions let the user insert embedded images, web\n    link buttons, and 'ggplot2' plot objects into the message body. Messages\n    can be sent through an 'SMTP' server or through the 'Mailgun' API service\n    <http://mailgun.com/>.",
         "License": "MIT + file LICENSE",
         "URL": "https://github.com/rich-iannone/blastula",
         "BugReports": "https://github.com/rich-iannone/blastula/issues",
         "Depends": "R (>= 3.2.1)",
-        "Imports": "commonmark (>= 1.5),\ndownloader (>= 0.4),\ndplyr (>= 0.7.5),\nggplot2 (>= 2.2.1),\nglue (>= 1.2.0),\nhtmltools (>= 0.3.6),\nhttr (>= 1.3.1),\nknitr (>= 1.20),\nmagrittr (>= 1.5),\npurrr (>= 0.2.4),\nrlang (>= 0.2.1),\nstringr (>= 1.3.1),\ntidyr (>= 0.8.0)",
-        "Suggests": "covr,\ntestthat",
+        "Imports": "commonmark (>= 1.5),\ndownloader (>= 0.4),\ndplyr (>= 0.7.5),\nglue (>= 1.2.0),\nhtmltools (>= 0.3.6),\nmagrittr (>= 1.5),\nstringr (>= 1.3.1),\ntidyr (>= 0.8.0)",
+        "Suggests": "covr,\nggplot2,\nhttr,\ntestthat",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "6.0.1",
+        "RoxygenNote": "6.1.0",
         "Author": "Richard Iannone [aut, cre] (0000-0003-3925-190X)",
         "Maintainer": "Richard Iannone <riannone@me.com>",
-        "Built": "R 3.4.3; ; 2018-07-05 16:36:24 UTC; unix",
+        "Built": "R 3.4.3; ; 2018-10-20 17:51:12 UTC; unix",
         "RemoteType": "github",
         "RemoteHost": "https://api.github.com",
         "RemoteRepo": "blastula",
         "RemoteUsername": "rich-iannone",
         "RemoteRef": "master",
-        "RemoteSha": "56f10c284372a84615a51b84e98fef82a50512ee",
+        "RemoteSha": "3b69cbcf340be2bba4a9f1d29f6557747668aebf",
         "GithubRepo": "blastula",
         "GithubUsername": "rich-iannone",
         "GithubRef": "master",
-        "GithubSHA1": "56f10c284372a84615a51b84e98fef82a50512ee"
+        "GithubSHA1": "3b69cbcf340be2bba4a9f1d29f6557747668aebf"
       }
     },
     "broom": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -503,7 +503,7 @@
     },
     "cli": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -534,7 +534,7 @@
     },
     "colorspace": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -591,7 +591,7 @@
     },
     "crayon": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -622,7 +622,7 @@
     },
     "crosstalk": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -684,7 +684,7 @@
     },
     "data.table": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -713,34 +713,9 @@
         "Built": "R 3.4.2; x86_64-apple-darwin15.6.0; 2017-10-28 04:25:16 UTC; unix"
       }
     },
-    "dichromat": {
-      "Source": "CRAN",
-      "Repository": null,
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "dichromat",
-        "Version": "2.0-0",
-        "Date": "2013-01-23",
-        "Title": "Color Schemes for Dichromats",
-        "Authors@R": "c(person(given = \"Thomas\", family = \"Lumley\", role =\n        c(\"aut\", \"cre\"), email = \"tlumley@u.washington.edu\"),\n        person(given = \"Ken\", family = \"Knoblauch\", role = \"ctb\", email\n        = \"ken.knoblauch@inserm.fr\"), person(given = \"Scott\", family =\n        \"Waichler\", role = \"ctb\", email = \"scott.waichler@pnl.gov\"),\n        person(given = \"Achim\", family = \"Zeileis\", role = \"ctb\", email\n        = \"Achim.Zeileis@R-project.org\"))",
-        "Description": "Collapse red-green or green-blue distinctions to simulate\n        the effects of different types of color-blindness.",
-        "Depends": "R (>= 2.10), stats",
-        "License": "GPL-2",
-        "LazyLoad": "Yes",
-        "Packaged": "2013-01-23 06:25:04 UTC; zeileis",
-        "Author": "Thomas Lumley [aut, cre], Ken Knoblauch [ctb], Scott Waichler\n        [ctb], Achim Zeileis [ctb]",
-        "Maintainer": "Thomas Lumley <tlumley@u.washington.edu>",
-        "Repository": "CRAN",
-        "Date/Publication": "2013-01-24 08:18:09",
-        "Built": "R 3.4.0; ; 2017-04-21 21:23:41 UTC; unix"
-      }
-    },
     "digest": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -832,7 +807,7 @@
     },
     "evaluate": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -893,7 +868,7 @@
     },
     "foreign": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1023,7 +998,7 @@
     },
     "glue": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1056,7 +1031,7 @@
     },
     "gtable": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1117,7 +1092,7 @@
     },
     "highr": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1148,7 +1123,7 @@
     },
     "htmltools": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1240,39 +1215,9 @@
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-08-04 19:23:29 UTC; unix"
       }
     },
-    "httr": {
-      "Source": "RSPM",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "httr",
-        "Version": "1.3.1",
-        "Title": "Tools for Working with URLs and HTTP",
-        "Description": "Useful tools for working with HTTP organised by HTTP verbs\n    (GET(), POST(), etc). Configuration functions make it easy to control\n    additional request components (authenticate(), add_headers() and so on).",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = \"cph\")\n    )",
-        "Depends": "R (>= 3.0.0)",
-        "Imports": "jsonlite, mime, curl (>= 0.9.1), openssl (>= 0.8), R6",
-        "Suggests": "httpuv, jpeg, knitr, png, testthat (>= 0.8.0), readr, xml2,\nrmarkdown, covr",
-        "VignetteBuilder": "knitr",
-        "License": "MIT + file LICENSE",
-        "RoxygenNote": "6.0.1",
-        "URL": "https://github.com/r-lib/httr",
-        "BugReports": "https://github.com/r-lib/httr/issues",
-        "NeedsCompilation": "no",
-        "Packaged": "2017-08-18 17:47:58 UTC; hadley",
-        "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "RSPM",
-        "Date/Publication": "2017-08-20 14:44:14 UTC",
-        "Built": "R 3.4.3; ; 2018-08-04 20:57:46 UTC; unix"
-      }
-    },
     "igraph": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1302,7 +1247,7 @@
     },
     "irlba": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1333,7 +1278,7 @@
     },
     "jsonlite": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1395,7 +1340,7 @@
     },
     "labeling": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1455,7 +1400,7 @@
     },
     "lattice": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1487,7 +1432,7 @@
     },
     "lazyeval": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1515,7 +1460,7 @@
     },
     "lubridate": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1551,7 +1496,7 @@
     },
     "magrittr": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1577,7 +1522,7 @@
     },
     "markdown": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1609,7 +1554,7 @@
     },
     "mgcv": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1637,7 +1582,7 @@
     },
     "mime": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1667,7 +1612,7 @@
     },
     "mnormt": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1691,8 +1636,8 @@
       }
     },
     "munsell": {
-      "Source": "CRAN",
-      "Repository": null,
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1701,24 +1646,25 @@
         "Package": "munsell",
         "Type": "Package",
         "Title": "Utilities for Using Munsell Colours",
-        "Version": "0.4.3",
+        "Version": "0.5.0",
         "Author": "Charlotte Wickham <cwickham@gmail.com>",
         "Maintainer": "Charlotte Wickham <cwickham@gmail.com>",
         "Description": "Provides easy access to, and manipulation of, the Munsell \n    colours. Provides a mapping between Munsell's \n    original notation (e.g. \"5R 5/10\") and hexadecimal strings suitable \n    for use directly in R graphics. Also provides utilities \n    to explore slices through the Munsell colour tree, to transform \n    Munsell colours and display colour palettes.",
         "Suggests": "ggplot2, testthat",
         "Imports": "colorspace, methods",
         "License": "MIT + file LICENSE",
-        "RoxygenNote": "5.0.1",
+        "URL": "https://cran.r-project.org/package=munsell,\nhttps://github.com/cwickham/munsell/",
+        "RoxygenNote": "6.0.1",
         "NeedsCompilation": "no",
-        "Packaged": "2016-02-12 19:58:18 UTC; wickhamc",
-        "Repository": "CRAN",
-        "Date/Publication": "2016-02-13 00:46:00",
-        "Built": "R 3.4.0; ; 2017-04-20 17:42:21 UTC; unix"
+        "Packaged": "2018-06-11 23:15:15 UTC; wickhamc",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-06-12 04:29:06 UTC",
+        "Built": "R 3.4.3; ; 2018-10-18 01:13:59 UTC; unix"
       }
     },
     "nlme": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1746,36 +1692,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2017-02-06 21:34:58",
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2017-12-07 02:10:57 UTC; unix"
-      }
-    },
-    "openssl": {
-      "Source": "CRAN",
-      "Repository": null,
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "openssl",
-        "Type": "Package",
-        "Title": "Toolkit for Encryption, Signatures and Certificates Based on\nOpenSSL",
-        "Version": "0.9.9",
-        "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", , \"jeroen@berkeley.edu\", role = c(\"cre\", \"aut\")),\n    person(\"Oliver\", \"Keyes\", role = \"ctb\"))",
-        "Description": "Bindings to OpenSSL libssl and libcrypto, plus custom SSH pubkey parsers.\n    Supports RSA, DSA and EC curves P-256, P-384 and P-521. Cryptographic signatures\n    can either be created and verified manually or via x509 certificates. AES can be\n    used in cbc, ctr or gcm mode for symmetric encryption; RSA for asymmetric (public\n    key) encryption or EC for Diffie Hellman. High-level envelope functions combine\n    RSA and AES for encrypting arbitrary sized data. Other utilities include key\n    generators, hash functions (md5, sha1, sha256, etc), base64 encoder, a secure\n    random number generator, and 'bignum' math methods for manually performing\n    crypto calculations on large multibyte integers.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://github.com/jeroen/openssl#readme",
-        "BugReports": "https://github.com/jeroen/openssl/issues",
-        "SystemRequirements": "OpenSSL >= 1.0.1",
-        "VignetteBuilder": "knitr",
-        "Suggests": "testthat, digest, knitr, rmarkdown, jsonlite, jose",
-        "RoxygenNote": "6.0.1.9000",
-        "NeedsCompilation": "yes",
-        "Packaged": "2017-11-10 16:52:56 UTC; jeroen",
-        "Author": "Jeroen Ooms [cre, aut],\n  Oliver Keyes [ctb]",
-        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
-        "Repository": "CRAN",
-        "Date/Publication": "2017-11-10 18:33:32 UTC",
-        "Built": "R 3.4.2; x86_64-apple-darwin15.6.0; 2017-11-12 08:53:38 UTC; unix"
       }
     },
     "pillar": {
@@ -1811,7 +1727,7 @@
     },
     "pkgconfig": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1869,7 +1785,7 @@
     },
     "plyr": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1933,7 +1849,7 @@
     },
     "psych": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -1962,7 +1878,7 @@
     },
     "purrr": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -2117,7 +2033,7 @@
     },
     "rmarkdown": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -2180,34 +2096,35 @@
       }
     },
     "scales": {
-      "Source": "CRAN",
-      "Repository": null,
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
       "GithubSha1": null,
       "description": {
         "Package": "scales",
-        "Version": "0.5.0",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = \"cph\")\n    )",
         "Title": "Scale Functions for Visualization",
+        "Version": "1.0.0",
+        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = \"cph\")\n    )",
         "Description": "Graphical scales map data to aesthetics, and provide\n    methods for automatically determining breaks and labels\n    for axes and legends.",
-        "URL": "https://github.com/hadley/scales",
-        "BugReports": "https://github.com/hadley/scales/issues",
-        "Depends": "R (>= 2.13)",
-        "Imports": "RColorBrewer, dichromat, plyr, munsell (>= 0.2), labeling,\nRcpp, R6, viridisLite",
-        "LinkingTo": "Rcpp",
-        "Suggests": "testthat (>= 0.8), bit64, covr, hms",
         "License": "MIT + file LICENSE",
+        "URL": "https://scales.r-lib.org, https://github.com/r-lib/scales",
+        "BugReports": "https://github.com/r-lib/scales/issues",
+        "Depends": "R (>= 3.1)",
+        "Imports": "labeling, munsell (>= 0.5), R6, RColorBrewer, Rcpp,\nviridisLite",
+        "Suggests": "dichromat, bit64, covr, hms, testthat (>= 2.0)",
+        "LinkingTo": "Rcpp",
         "LazyLoad": "yes",
-        "RoxygenNote": "6.0.1",
+        "RoxygenNote": "6.0.1.9000",
+        "Encoding": "UTF-8",
         "NeedsCompilation": "yes",
-        "Packaged": "2017-08-23 21:21:31 UTC; Kara",
+        "Packaged": "2018-08-07 18:17:33 UTC; hadley",
         "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph]",
         "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2017-08-24 14:35:38 UTC",
-        "Built": "R 3.4.1; x86_64-apple-darwin15.6.0; 2017-08-25 04:21:02 UTC; unix"
+        "Repository": "RSPM",
+        "Date/Publication": "2018-08-09 10:10:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-10-18 01:15:02 UTC; unix"
       }
     },
     "shiny": {
@@ -2243,7 +2160,7 @@
     },
     "sourcetools": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -2400,7 +2317,7 @@
     },
     "tidyselect": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -2460,8 +2377,8 @@
       }
     },
     "viridisLite": {
-      "Source": "CRAN",
-      "Repository": null,
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -2470,10 +2387,10 @@
         "Package": "viridisLite",
         "Type": "Package",
         "Title": "Default Color Maps from 'matplotlib' (Lite Version)",
-        "Version": "0.2.0",
-        "Authors@R": "c(\n      person(\"Simon\", \"Garnier\", email = \"garnier@njit.edu\", role = c(\"aut\", \"cre\")),\n      person(\"Noam\", \"Ross\", email = \"noam.ross@gmail.com\", role = c(\"ctb\", \"cph\")),\n      person(\"Bob\", \"Rudis\", email = \"bob@rud.is\", role = c(\"ctb\", \"cph\"))\n  )",
+        "Version": "0.3.0",
+        "Authors@R": "c(\n      person(\"Simon\", \"Garnier\", email = \"garnier@njit.edu\", role = c(\"aut\", \"cre\")),\n      person(\"Noam\", \"Ross\", email = \"noam.ross@gmail.com\", role = c(\"ctb\", \"cph\")),\n      person(\"Bob\", \"Rudis\", email = \"bob@rud.is\", role = c(\"ctb\", \"cph\")),\n      person(\"Marco\", \"Sciaini\", email = \"sciaini.marco@gmail.com\", role = c(\"ctb\", \"cph\")),\n      person(\"Cédric\", \"Scherer\", email = \"scherer@izw-berlin.de\", role = c(\"ctb\", \"cph\"))\n  )",
         "Maintainer": "Simon Garnier <garnier@njit.edu>",
-        "Description": "Port of the new 'matplotlib' color maps ('viridis' - the default\n    -, 'magma', 'plasma' and 'inferno') to 'R'. 'matplotlib' <http://matplotlib.org/\n    > is a popular plotting library for 'python'. These color maps are designed\n    in such a way that they will analytically be perfectly perceptually-uniform,\n    both in regular form and also when converted to black-and-white. They are\n    also designed to be perceived by readers with the most common form of color\n    blindness. This is the 'lite' version of the more complete 'viridis' package\n    that can be found at <https://cran.r-project.org/package=viridis>.",
+        "Description": "Implementation of the 'viridis' - the default -, 'magma', 'plasma', \n    'inferno', and 'cividis' color maps for 'R'. 'viridis', 'magma', 'plasma', \n    and 'inferno' are ported from 'matplotlib' <http://matplotlib.org/>, a \n    popular plotting library for 'python'. 'cividis', was developed by Jamie R. \n    Nuñez and Sean M. Colby. These color maps are designed in such a way that \n    they will analytically be perfectly perceptually-uniform, both in regular \n    form and also when converted to black-and-white. They are also designed to \n    be perceived by readers with the most common form of color blindness (all \n    color maps in this package) and color vision deficiency ('cividis' only). \n    This is the 'lite' version of the more complete 'viridis' package that can \n    be found at <https://cran.r-project.org/package=viridis>.",
         "License": "MIT + file LICENSE",
         "LazyData": "TRUE",
         "Encoding": "UTF-8",
@@ -2483,11 +2400,11 @@
         "BugReports": "https://github.com/sjmgarnier/viridisLite/issues",
         "RoxygenNote": "6.0.1",
         "NeedsCompilation": "no",
-        "Packaged": "2017-03-23 21:36:52 UTC; simon",
-        "Author": "Simon Garnier [aut, cre],\n  Noam Ross [ctb, cph],\n  Bob Rudis [ctb, cph]",
-        "Repository": "CRAN",
-        "Date/Publication": "2017-03-24 05:37:14 UTC",
-        "Built": "R 3.4.0; ; 2017-04-21 21:26:37 UTC; unix"
+        "Packaged": "2018-02-01 17:33:56 UTC; simon",
+        "Author": "Simon Garnier [aut, cre],\n  Noam Ross [ctb, cph],\n  Bob Rudis [ctb, cph],\n  Marco Sciaini [ctb, cph],\n  Cédric Scherer [ctb, cph]",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-02-01 22:45:56 UTC",
+        "Built": "R 3.4.3; ; 2018-10-18 01:13:59 UTC; unix"
       }
     },
     "withr": {
@@ -2525,7 +2442,7 @@
     },
     "xtable": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -2612,7 +2529,7 @@
     },
     "zoo": {
       "Source": "CRAN",
-      "Repository": null,
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
@@ -2640,6 +2557,12 @@
     }
   },
   "files": {
+    "bundle.tar.gz": {
+      "checksum": "1784345946524a0e0511f6669657639b"
+    },
+    "manifest.json": {
+      "checksum": "7bc4dfbcfc2d4227a035bc169ef1271a"
+    },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
     },
@@ -2659,7 +2582,7 @@
       "checksum": "00cb34c5785c005bc21c1b45bd352806"
     },
     "packrat/desc/blastula": {
-      "checksum": "0ae647347d0f971141802500fc41fccf"
+      "checksum": "c4cc12c5fdedb37401dac858b86d5bc6"
     },
     "packrat/desc/broom": {
       "checksum": "290185ec97f18eb66941a6705ad41ff3"
@@ -2684,9 +2607,6 @@
     },
     "packrat/desc/data.table": {
       "checksum": "fba4470cfd72f403990018a88268c508"
-    },
-    "packrat/desc/dichromat": {
-      "checksum": "3cdfeb9ab6a4156b031bd3a0cdaaeca4"
     },
     "packrat/desc/digest": {
       "checksum": "c21ea20a99462501a9cbf08f6309f58e"
@@ -2739,9 +2659,6 @@
     "packrat/desc/httpuv": {
       "checksum": "37752b3ac0a5a1926563d96bb72452a2"
     },
-    "packrat/desc/httr": {
-      "checksum": "cba5f484844498ccf21470b8fcf2d530"
-    },
     "packrat/desc/igraph": {
       "checksum": "766e69281a35681d64befe2e663b9f3d"
     },
@@ -2791,13 +2708,10 @@
       "checksum": "93309fe0f9c8e886db85b85ee66ff39d"
     },
     "packrat/desc/munsell": {
-      "checksum": "3dfeee266fff04dc3f6c2cc19b6fc474"
+      "checksum": "8641f7a570811c7139cb8b0bc84f5601"
     },
     "packrat/desc/nlme": {
       "checksum": "209c6229dc0321b878587fa507f470fa"
-    },
-    "packrat/desc/openssl": {
-      "checksum": "718e6ed4fcf20063cc290406c4bb5342"
     },
     "packrat/desc/pillar": {
       "checksum": "6f09922f8b4d16462a325f5b6ed0b8c4"
@@ -2848,7 +2762,7 @@
       "checksum": "c97ce6417dca249a3bc45b8ae74c96f7"
     },
     "packrat/desc/scales": {
-      "checksum": "d9f0f7faeb46440b7799622285470637"
+      "checksum": "e67fe6d49034b1102b96c47e92beb0b3"
     },
     "packrat/desc/shiny": {
       "checksum": "d59b2684eb42a82e2305c7ea4ca91564"
@@ -2878,7 +2792,7 @@
       "checksum": "4483f2b0c4e6c2b7246b64b60e408962"
     },
     "packrat/desc/viridisLite": {
-      "checksum": "44096216857354bc4410c50442599272"
+      "checksum": "b473394aff8e1c96043167c46255fd3e"
     },
     "packrat/desc/withr": {
       "checksum": "009aaa6ea0f018b7bd7b58b418576a4c"
@@ -2899,7 +2813,7 @@
       "checksum": "46d1f807fc03a50cf1818ea3560d850f"
     },
     "packrat/packrat.lock": {
-      "checksum": "f4a6abee01addabc4617a8f9f9fc341d"
+      "checksum": "2d54d773e55defb1cb456177f5101ba0"
     },
     "stocks.Rmd": {
       "checksum": "750b456c1eb56b47ac07576e1045dcec"
