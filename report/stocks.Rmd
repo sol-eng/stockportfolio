@@ -107,7 +107,7 @@ if (abs(diff) > params$threshold || params$force) {
   colnames(price_new) <- c('open', 'close')
   price_new$change <- price_new$close - price_new$open
   tbl <- format_table(
-    x = as.data.frame(head(price_new)),
+    x = as.data.frame(tail(price_new)),
     list(
       change = formatter("span", style = x ~ ifelse(x > 0, style(color = "green"), style(color = "red"))),
       area(col = c(open, close)) ~ normalize_bar("lightgrey")
