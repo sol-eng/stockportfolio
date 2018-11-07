@@ -40,13 +40,30 @@ Sidebar {.sidebar}
 ```{r}
 helpText("Choose the risk level of the portfolio.")
 
-sliderInput("risk_level", "risk level", 1, 10, value = 5, step = 1)
 
-dateInput("date", "Starting Date", "2010-01-01", format = "yyyy-mm-dd")
+portfolio_choices <- c(
+  "Conservative" = "conservative_portfolio_returns", 
+  "Balanced" = "balanced_portfolio_returns", 
+  "Aggressive" = "aggressive_portfolio_returns" 
+  )
+
+selectInput(
+  "portfolio",
+  "Choose a portfolio",
+  choices = portfolio_choices,
+  selected = "balanced_portfolio_returns"
+  )
+
+dateInput(
+  inputId = "date", 
+  label = "Starting Date",
+  value = "2010-01-01", 
+  format = "yyyy-mm-dd"
+  )
 
 numericInput("mar", "MAR", .008, min = 0, max = 1, step = .001)
 
-numericInput("window", "Window", 5, min = 3, max = 24, step = 2)
+numericInput("window", "Window", 24, min = 6, max = 36, step = 2)
 
 actionButton("go", "Submit")
 
@@ -55,11 +72,9 @@ mar <- eventReactive(input$go, {input$mar})
 portfolio_selected <- eventReactive(input$go, {
   column <- input$risk_level + 1
     
-  tbl(con, "portfolio_returns_risk_levels") %>%
-    select(date, column) %>% 
+  tbl(con, input$portfolio) %>%
     collect() %>% 
-    mutate(date = as.Date(date)) %>%
-    `colnames<-`(c("date", "returns")) %>% 
+    mutate(date = lubridate::as_date(date)) %>%
     filter(date >= input$date)
 })
 
@@ -69,7 +84,6 @@ rolling_sortino <- eventReactive(input$go, {
   
   rolling_sortino <-
     portfolio_selected() %>%
-    #filter(date >= input$date) %>% 
     tk_xts(date_var = date) %>% 
     rollapply(window, function(x) SortinoRatio(x, MAR = MAR)) %>% 
     `colnames<-`("24-rolling")
@@ -108,7 +122,8 @@ renderHighchart({
   hc_title(text = "Rolling Sortino") %>%
   hc_add_series(rolling_sortino(), name = "Sortino", color = "cornflowerblue") %>%
   hc_navigator(enabled = FALSE) %>% 
-  hc_scrollbar(enabled = FALSE) 
+  hc_scrollbar(enabled = FALSE) %>%
+  hc_exporting(enabled = TRUE)
 
   
 })
@@ -129,9 +144,9 @@ renderPlot({
   ggplot(data = sortino_byhand, aes(x = date)) +
   geom_point(aes(y = returns_below_MAR), colour = "red") +
   geom_point(aes(y = returns_above_MAR), colour = "green") + 
-  geom_vline(xintercept = as.numeric(as.Date("2016-11-30")), color = "blue") +
+  geom_vline(xintercept = as.numeric(lubridate::as_date("2016-11-30")), color = "blue") +
   geom_hline(yintercept = MAR, color = "purple", linetype = "dotted") +
-  annotate(geom="text", x=as.Date("2016-11-30"), 
+  annotate(geom="text", x=lubridate::as_date("2016-11-30"), 
            y = -.05, label = "Trump", fontface = "plain", 
            angle = 90, alpha = .5, vjust =  1.5) +
   ylab("percent monthly returns")
