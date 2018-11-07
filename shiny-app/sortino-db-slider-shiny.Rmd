@@ -61,24 +61,27 @@ dateInput(
   format = "yyyy-mm-dd"
   )
 
+
+rate_limit_sec <- 2
+
 numericInput("mar", "MAR", .008, min = 0, max = 1, step = .001)
 
 numericInput("window", "Window", 24, min = 6, max = 36, step = 2)
 
-actionButton("go", "Submit")
+mar <- reactive({input$mar}) 
 
-mar <- eventReactive(input$go, {input$mar})
-
-portfolio_selected <- eventReactive(input$go, {
-  column <- input$risk_level + 1
-    
+portfolio_selected <- throttle(reactive({
+  req(input$portfolio, input$date)
   tbl(con, input$portfolio) %>%
-    collect() %>% 
-    mutate(date = lubridate::as_date(date)) %>%
-    filter(date >= input$date)
-})
+  collect() %>% 
+  mutate(date = lubridate::as_date(date)) %>%
+  filter(date >= input$date)
+}), rate_limit_sec*1000)
 
-rolling_sortino <- eventReactive(input$go, {
+rolling_sortino <- reactive({
+  req(input$mar)
+  req(input$window)
+  
   MAR <- mar()
   window <- input$window
   
@@ -90,7 +93,7 @@ rolling_sortino <- eventReactive(input$go, {
 
 })
 
-sortino_byhand <- eventReactive(input$go, {
+sortino_byhand <- reactive({
   
   MAR <- mar()
   
@@ -116,7 +119,6 @@ Row {data-height=600}
 ```{r}
 renderHighchart({
   
-  validate(need(input$go != 0, "Please choose the portfolio risk level by adjusting the slider and click submit."))
   
   highchart(type = "stock") %>%
   hc_title(text = "Rolling Sortino") %>%
@@ -136,7 +138,6 @@ Row {.tabset .tabset-fade}
 
 ```{r, message = FALSE}
 renderPlot({
-  validate(need(input$go != 0, "Please choose the portfolio risk level by adjusting the slider and click submit."))
   
   MAR <- mar()
   sortino_byhand <- sortino_byhand()
