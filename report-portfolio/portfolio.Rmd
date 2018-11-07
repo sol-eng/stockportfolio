@@ -1,0 +1,230 @@
+---
+title: "Portolio Report"
+params:
+  date:
+    input: date
+    label: Start Date
+    value: '2010-01-01'
+  mar:
+    input: slider
+    label: Min Acceptable Rate
+    max: 0.5
+    min: 0
+    step: 0.001
+    value: 0.008
+  portfolio:
+    choices:
+    - balanced_portfolio_returns
+    - aggressive_portfolio_returns
+    - conservative_portfolio_returns
+    input: select
+    label: portfolio
+    value: balanced_portfolio_returns
+  portfolioName:
+    input: text
+    label: title
+    value: Balanced
+  window:
+    input: numeric
+    label: Rolling Window
+    max: 36
+    min: 6
+    value: 12
+resource_files:
+- config.yml
+output:
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+library(config)
+library(dbplyr)
+library(openxlsx)
+library(tidyverse)
+library(tidyquant)
+library(highcharter)
+library(timetk)
+library(blastula)
+library(formattable)
+
+```
+
+```{r}
+balanced_portfolio_returns <- readr::read_csv("balanced.csv")
+conservative_portfolio_returns <- readr::read_csv("conservative.csv")
+aggressive_portfolio_returns <- readr::read_csv("aggressive.csv")
+```
+
+```{r}
+MAR <- params$mar
+# run our calcs
+portfolio_selected <- 
+    eval(as.name(params$portfolio)) %>%
+    select(date, returns) %>% 
+    collect() %>% 
+    mutate(date = ymd(date)) %>% 
+    filter(date >= params$date) 
+
+  
+rolling_sortino <-
+    portfolio_selected %>% 
+    tk_xts(date_var = date) %>% 
+    rollapply(params$window, function(x) SortinoRatio(x, MAR = MAR)) %>% 
+    `colnames<-`("24-rolling")
+
+
+sortino_byhand <- 
+    portfolio_selected %>% 
+    mutate(ratio = mean(returns - MAR)/sqrt(sum(pmin(returns - MAR, 0)^2)/nrow(.))) %>% 
+    # Add two new columns to help with ggplot.
+    mutate(returns_below_MAR = ifelse(returns < MAR, returns, NA)) %>%
+    mutate(returns_above_MAR = ifelse(returns > MAR, returns, NA))
+
+
+```
+
+
+Sortino Ratio Report for `r params$portfolioName` Portfolio
+=================================
+
+Row 
+-----------------------------------------------------------------------
+
+### Rolling Sortino
+
+```{r}
+highchart(type = "stock") %>%
+  hc_add_series(rolling_sortino, name = "Sortino", color = "cornflowerblue") %>%
+  hc_title(text = "Rolling Sortino") %>%
+  hc_navigator(enabled = FALSE) %>% 
+  hc_scrollbar(enabled = FALSE) %>% 
+  hc_exporting(enabled = TRUE)
+```
+
+
+Row
+-------------------------------------
+
+### Scatterplot
+
+```{r}
+
+ portfolio_scatter <-  ggplot(data = sortino_byhand, aes(x = date)) +
+  geom_point(aes(y = returns_below_MAR), colour = "red") +
+  geom_point(aes(y = returns_above_MAR), colour = "green") + 
+  geom_vline(xintercept = as.numeric(as.Date("2016-11-30")), color = "blue") +
+  geom_hline(yintercept = MAR, color = "purple", linetype = "dotted") +
+  annotate(geom="text", x=as.Date("2016-11-30"), 
+           y = -.05, label = "Trump", fontface = "plain", 
+           angle = 90, alpha = .5, vjust =  1.5) +
+  ylab("percent monthly returns")
+
+portfolio_scatter
+
+```
+
+
+### Histogram
+
+```{r}
+
+  sortino_byhand %>% 
+    ggplot(aes(x = returns)) +
+    geom_histogram(alpha = 0.25, binwidth = .01, fill = "cornflowerblue") +
+    geom_vline(xintercept = MAR, color = "green") +
+    annotate(geom = "text", x = MAR, 
+             y = 10, label = "MAR", fontface = "plain", 
+             angle = 90, alpha = .5, vjust =  1)
+
+
+```
+
+### Density
+
+```{r}
+  
+  sortino_density_plot <- sortino_byhand %>% 
+    ggplot(aes(x = returns)) +
+    stat_density(geom = "line", size = 1, color = "cornflowerblue") 
+  
+  shaded_area_data <- ggplot_build(sortino_density_plot)$data[[1]] %>% 
+    filter(x < MAR)
+
+  sortino_density_plot <- 
+    sortino_density_plot + 
+  geom_area(data = shaded_area_data, aes(x = x, y = y), fill="pink", alpha = 0.5) +
+  geom_segment(data = shaded_area_data, aes(x = MAR, y = 0, xend = MAR, yend = y), 
+               color = "red", linetype = "dotted") +
+  annotate(geom = "text", x = MAR, y = 5, label = paste("MAR =", MAR, sep = ""), 
+           fontface = "plain", angle = 90, alpha = .8, vjust =  -1) +
+  annotate(geom = "text", x = (MAR - .02), y = .1, label = "Downside", 
+           fontface = "plain", alpha = .8, vjust =  -1)
+           
+sortino_density_plot
+```
+
+```{r, echo = FALSE}
+portfolio_file <- 
+  paste(params$portfolio, Sys.Date(), ".xlsx", sep = "")
+
+write.xlsx(portfolio_selected, file = portfolio_file)
+
+rmarkdown::output_metadata$set(rsc_output_files = list(portfolio_file))
+```
+
+```{r, echo = FALSE}
+subject <- paste0(params$portfolioName, " portfolio Sortino report", sep = " ")
+
+rmarkdown::output_metadata$set("rsc_email_subject" = subject)
+  
+  # embed charts and data table
+  
+sign_formatter <- formatter("span", 
+  style = x ~ style(color = ifelse(x > 0, "green", 
+    ifelse(x < 0, "red", "black"))))
+
+
+tbl <- 
+  portfolio_selected %>%
+  arrange(desc(date)) %>% 
+  head() %>% 
+  format_table(x = .,
+               list(returns = sign_formatter))
+  
+  
+  msg <- compose_email(
+    body = "
+    Hello Team,
+    
+    Here are some charts.
+  
+    Here is a scatter plot as of {Sys.Date()}: 
+
+    {add_ggplot(portfolio_scatter, width = 6, height = 6)}
+
+
+    Here is the density of returns as of {Sys.Date()}: 
+
+    {add_ggplot(sortino_density_plot, width = 6, height = 6)}
+
+    Here are the raw numbers and a spreadsheet is attached:
+
+    {tbl}
+    
+
+    Let me know if you have any questions.
+    
+
+    Thanks,
+    JKR"
+  )
+
+  rmarkdown::output_metadata$set(rsc_email_body_html = msg$html_str)
+  rmarkdown::output_metadata$set(rsc_email_images = msg$images)
+  # attach the excel file
+  rmarkdown::output_metadata$set(rsc_email_attachments = list(portfolio_file ))
+```
