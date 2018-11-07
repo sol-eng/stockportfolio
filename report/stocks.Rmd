@@ -1,4 +1,5 @@
 ---
+title: Email Report
 output: 
   html_document:
     code_folding: hide
@@ -35,18 +36,18 @@ The stock closed `r ifelse(close>open,'up','down')` at `r close` dollars per sha
 
 ### Price History
 
-The chart below is made with the `quantmod` and `highcharter` R packages. An API returns all of the price history based on the stock tick symbol provided as a parameter. The candlestick chart is a default function from highcharter, as is the the Economist theme.
+The chart below is made with the `quantmod` and `highcharter` R packages. An API returns all of the price history based on the stock tick symbol provided as a parameter. The candlestick chart is a default function from highcharter, as is the Economist theme.
 
 
 ```{r echo=TRUE, warning=FALSE, message=FALSE}
 
-highchart() %>% 
+highchart(type = "stock") %>% 
    hc_yAxis_multiples(
     list(title = list(text = NULL), height = "75%", top = "0%"),
     list(title = list(text = NULL), height = "15%", top = "80.5%", opposite = TRUE)
   ) %>%
-  hc_add_series_ohlc(prices, yAxis=0, name= params$symbol) %>% 
-  hc_add_series_xts(prices[,paste0(params$symbol,".Volume")], name="Volume", type="column", yAxis=1) %>% 
+  hc_add_series(prices, type = "candlestick", yAxis=0, name= params$symbol) %>% 
+  hc_add_series(prices[,paste0(params$symbol,".Volume")], name="Volume", type="column", yAxis=1) %>% 
   hc_add_theme(hc_theme_economist())
 ```
 
@@ -65,7 +66,7 @@ datatable(df) %>%
 
 ## Legacy Information
 
-This report also creates an excel file with the relevant information updated by R. The Excel file supprots a legacy report that is slowly be replaced.
+This report also creates an excel file with the relevant information updated by R. The Excel file contains a legacy report that will slowly be replaced.
 
 ```{r echo=TRUE}
 fname <- sprintf('%s.xlsx', Sys.Date())
@@ -106,7 +107,7 @@ if (abs(diff) > params$threshold || params$force) {
   colnames(price_new) <- c('open', 'close')
   price_new$change <- price_new$close - price_new$open
   tbl <- format_table(
-    x = as.data.frame(head(price_new)),
+    x = as.data.frame(tail(price_new)),
     list(
       change = formatter("span", style = x ~ ifelse(x > 0, style(color = "green"), style(color = "red"))),
       area(col = c(open, close)) ~ normalize_bar("lightgrey")

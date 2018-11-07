@@ -1,0 +1,14 @@
+default:
+  db:
+    drv: !expr RSQLite::SQLite()
+    dbname: app.db
+
+colorado:
+  db:
+    drv: !expr odbc::odbc()
+    Driver: "SQLServer"
+    Server: "some-host-name.com"
+    Database: "my-database"
+    UID: "my-user-id"
+    PWD: "my-password"
+    Port: 1433
