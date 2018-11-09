@@ -1,8 +1,11 @@
 default:
   db:
     drv: !expr RSQLite::SQLite()
-    dbname: app.db
-
+    dbname: "../portfolio.db"
+quickstart:
+  db:
+    drv: !expr RSQLite::SQLite()
+    dbname: "/data/portfolio.db"
 colorado:
   db:
     drv: !expr odbc::odbc()
