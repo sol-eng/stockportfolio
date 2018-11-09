@@ -50,13 +50,17 @@ library(highcharter)
 library(timetk)
 library(blastula)
 library(formattable)
+library(DBI)
+library(RSQLite)
 
+db_path <- config::get("db", file = "config.yml")
+con <- DBI::dbConnect(RSQLite::SQLite(), db = db_path)
 ```
 
 ```{r}
-balanced_portfolio_returns <- readr::read_csv("balanced.csv")
-conservative_portfolio_returns <- readr::read_csv("conservative.csv")
-aggressive_portfolio_returns <- readr::read_csv("aggressive.csv")
+balanced_portfolio_returns <- tbl(con, "balanced_portfolio_returns")
+conservative_portfolio_returns <- tbl(con, "conservative_portfolio_returns")
+aggressive_portfolio_returns <- tbl(con, "aggressive_portfolio_returns")
 ```
 
 ```{r}
@@ -66,7 +70,7 @@ portfolio_selected <-
     eval(as.name(params$portfolio)) %>%
     select(date, returns) %>% 
     collect() %>% 
-    mutate(date = ymd(date)) %>% 
+    mutate(date = as.Date(date)) %>% 
     filter(date >= params$date) 
 
   
