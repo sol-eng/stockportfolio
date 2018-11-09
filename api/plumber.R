@@ -1,5 +1,7 @@
-library(tidyquant)
-library(tidyverse)
+#library(tidyquant)
+#library(tidyverse)
+library(glue)
+library(dplyr)
 library(pool)
 
 valid_tickers <- c(
@@ -11,7 +13,8 @@ valid_tickers <- c(
   Microsoft = "MSFT"
 )
 
-con <- pool::dbPool(drv = RSQLite::SQLite(), db = "stock.db")
+db_path <- config::get("db", file = "config.yml")
+con <- pool::dbPool(drv = RSQLite::SQLite(), db = db_path)
 
 # in an online environment,
 # replace with 
