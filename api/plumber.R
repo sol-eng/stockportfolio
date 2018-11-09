@@ -19,7 +19,7 @@ con <- pool::dbPool(drv = RSQLite::SQLite(), db = db_path)
 # in an online environment,
 # replace with 
 # tidyquant::tq_get(ticker, from = "2010-01-01")
-# to pull data from Yahoo
+# to pull data directly from Yahoo
 # (note to remove the valid_tickers checks)
 get_price_data <- function(ticker, from = "2010-01-01", con) {
   ticker <- glue::single_quote(ticker)
