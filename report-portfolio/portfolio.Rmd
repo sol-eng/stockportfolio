@@ -58,16 +58,9 @@ con <- DBI::dbConnect(RSQLite::SQLite(), db = db_path)
 ```
 
 ```{r}
-balanced_portfolio_returns <- tbl(con, "balanced_portfolio_returns")
-conservative_portfolio_returns <- tbl(con, "conservative_portfolio_returns")
-aggressive_portfolio_returns <- tbl(con, "aggressive_portfolio_returns")
-```
-
-```{r}
 MAR <- params$mar
 # run our calcs
-portfolio_selected <- 
-    eval(as.name(params$portfolio)) %>%
+portfolio_selected <- tbl(con, params$portfolio)
     select(date, returns) %>% 
     collect() %>% 
     mutate(date = as.Date(date)) %>% 
