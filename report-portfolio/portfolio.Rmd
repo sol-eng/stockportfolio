@@ -174,10 +174,12 @@ rmarkdown::output_metadata$set(rsc_output_files = list(portfolio_file))
 ```
 
 ```{r, echo = FALSE}
-subject <- paste0(params$portfolioName, " portfolio Sortino report", sep = " ")
+  subject <- paste0(
+    params$portfolioName,
+    " portfolio Sortino report",
+    sep = " "
+    )
 
-rmarkdown::output_metadata$set("rsc_email_subject" = subject)
-  
   # embed charts and data table
   
   sign_formatter <- formatter("span", 
@@ -191,7 +193,6 @@ rmarkdown::output_metadata$set("rsc_email_subject" = subject)
   head() %>% 
   format_table(x = .,
                list(returns = sign_formatter))
-  
   
   msg <- compose_email(
     body = "
@@ -220,6 +221,7 @@ rmarkdown::output_metadata$set("rsc_email_subject" = subject)
   )
 
   rmarkdown::output_metadata$set(
+    rsc_email_subject = subject,
     rsc_email_body_html = msg$html_str,
     rsc_email_images = msg$images,
     # attach the excel file
