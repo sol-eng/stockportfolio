@@ -71,9 +71,6 @@ price <- function(ticker) {
 #* @response 500 Bad ticker
 #* @response default Returns volatility for ticker
 volatility <- function(ticker){
-  if (!ticker %in% valid_tickers) {
-    
-  }
   price <- get_price_data(ticker, from = "2010-01-01", con = con) %>% 
     select(date, adjusted) %>% 
     mutate(returns = (log(adjusted) - log(lag(adjusted)))) %>%
