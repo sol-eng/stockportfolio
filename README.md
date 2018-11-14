@@ -7,7 +7,7 @@ results, visit: http://colorado.rstudio.com/rsc
 and filter by the tags: Finance > Stocks > Portfolio.
 
 Each folder contains a piece of R content. More details on each are below. There are
-also two SQLite databases with sample data (`./stock.db` and `./portfolio.db`) to make the repository and resources somewhat encapsulated from external dependencies. Finally, there is a [`deploy.yml`](./deploy.yml) file which is used for programmatic deployment to RStudio Connect. 
+also two SQLite databases with sample data (`./stock.db` and `./portfolio.db`) to make the repository and resources somewhat encapsulated from external dependencies.
 
 - The [`shiny-app`](./shiny-app) folder has a R Markdown flexdashboard that uses
 shiny to allow users to explore portfolio returns based on different tolerances
