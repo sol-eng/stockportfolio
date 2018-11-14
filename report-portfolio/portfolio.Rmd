@@ -216,12 +216,13 @@ rmarkdown::output_metadata$set("rsc_email_subject" = subject)
     Let me know if you have any questions.
     
 
-    Thanks,
-    JKR"
+    Thanks"
   )
 
-  rmarkdown::output_metadata$set(rsc_email_body_html = msg$html_str)
-  rmarkdown::output_metadata$set(rsc_email_images = msg$images)
-  # attach the excel file
-  rmarkdown::output_metadata$set(rsc_email_attachments = list(portfolio_file ))
+  rmarkdown::output_metadata$set(
+    rsc_email_body_html = msg$html_str,
+    rsc_email_images = msg$images,
+    # attach the excel file
+    rsc_email_attachments = list(portfolio_file)
+    )
 ```
