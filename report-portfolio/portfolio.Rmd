@@ -180,12 +180,12 @@ rmarkdown::output_metadata$set("rsc_email_subject" = subject)
   
   # embed charts and data table
   
-sign_formatter <- formatter("span", 
+  sign_formatter <- formatter("span", 
   style = x ~ style(color = ifelse(x > 0, "green", 
     ifelse(x < 0, "red", "black"))))
 
 
-tbl <- 
+  tbl <- 
   portfolio_selected %>%
   arrange(desc(date)) %>% 
   head() %>% 
