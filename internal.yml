@@ -1,0 +1,14 @@
+default:
+  resource:
+    - from_path: "./stock.db"
+      to_path: "/data/stock.db"
+  content:
+    - name: "Stock Portfolio Report"
+      path: "./report-portfolio"
+      description: "This parameterized rmarkdown report illustrates scheduled, customized emails and user-editable parameterization of reporting"
+    - name: "Stock Portfolio Shiny Application"
+      path: "./shiny-app"
+      description: "This Shiny application allows interactive exploration of portfolio returns along with tuning of model parameters"
+    - name: "Stock Information Plumber API"
+      path: "./api"
+      description: "This Plumber API surfaces the ability to programmatically request price history or a number representing the relative volatility of a stock ticker"

@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+*.tar.gz
+*.xlsx
+*.zip
+*.log
