@@ -1,0 +1,4 @@
+default:
+  db: "../stock.db"
+quickstart:
+  db: "/data/stock.db"
