@@ -1181,7 +1181,7 @@
       "checksum": "b94cda94efb55fb9cca0170c0e7854b6"
     },
     "manifest.json": {
-      "checksum": "a089dbe1f8f21f057093b5c5bbe85695"
+      "checksum": "7b629619d8f9d442d3bde1a73716a93b"
     },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
@@ -1301,7 +1301,7 @@
       "checksum": "55a3eaa030b97a46e4ff35c603fd7a3f"
     },
     "plumber.R": {
-      "checksum": "2f5d4d0164ceaa9fc5233a4b206b6713"
+      "checksum": "116337bf0ccd4562fbfe79e3d425b335"
     }
   },
   "users": null
