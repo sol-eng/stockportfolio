@@ -26,12 +26,16 @@ db <- config::get("db")
 con <- do.call(DBI::dbConnect, args = db)
 
 library(flexdashboard)
-library(tidyverse)
+library(dplyr)
+library(dbplyr)
+library(lubridate)
+library(ggplot2)
 library(dygraphs)
 library(highcharter)
-library(tidyquant)
 library(timetk)
 library(shiny)
+library(zoo)
+library(PerformanceAnalytics)
 ```
 
 Sidebar {.sidebar}
