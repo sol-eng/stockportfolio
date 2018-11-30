@@ -57,17 +57,17 @@ library(RSQLite)
 library(zoo)
 library(PerformanceAnalytics)
 
-db_path <- config::get("db", file = "config.yml")
-con <- DBI::dbConnect(RSQLite::SQLite(), db = db_path)
+db_params <- config::get("db", file = "config.yml")
+con <- do.call(DBI::dbConnect, args = db_params)
 ```
 
 ```{r}
 MAR <- params$mar
 # run our calcs
-portfolio_selected <- tbl(con, params$portfolio)
+portfolio_selected <- tbl(con, params$portfolio) %>%
     select(date, returns) %>% 
     collect() %>% 
-    mutate(date = as.Date(date)) %>% 
+    mutate(date = lubridate::as_date(date)) %>% 
     filter(date >= params$date) 
 
   
