@@ -168,36 +168,6 @@
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-10-12 05:42:59 UTC; unix"
       }
     },
-    "Quandl": {
-      "Source": "RSPM",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "Quandl",
-        "Title": "API Wrapper for Quandl.com",
-        "Version": "2.9.1",
-        "Date": "2018-08-14",
-        "Authors@R": "c(person(\n    \"Raymond McTaggart\", role=c(\"aut\", \"cre\"), email=\"ray@quandl.com\"),\n    person(\"Gergely Daroczi\", role=\"aut\"),\n    person(\"Clement Leung\", role=\"aut\", email=\"clement@quandl.com\"),\n    person(\"Quandl Inc.\", role=\"cph\"))",
-        "Maintainer": "Raymond McTaggart <ray@quandl.com>",
-        "Description": "Functions for interacting directly with the Quandl API to offer data in a number of formats usable in R, downloading a zip with all data from a Quandl database, and the ability to search. This R package uses the Quandl API. For more information go to <https://www.quandl.com/docs/api>. For more help on the package itself go to <https://www.quandl.com/help/r>.",
-        "Imports": "httr (>= 0.6.1), zoo, jsonlite (>= 0.9.14)",
-        "Suggests": "testthat (>= 0.10.0), roxygen2, timeSeries",
-        "Depends": "R (>= 2.15.0), xts",
-        "License": "MIT + file LICENSE",
-        "URL": "https://github.com/quandl/quandl-r",
-        "BugReports": "https://github.com/quandl/quandl-r/issues",
-        "RoxygenNote": "6.1.0",
-        "NeedsCompilation": "no",
-        "Packaged": "2018-08-14 19:16:12 UTC; Rayy",
-        "Author": "Raymond McTaggart [aut, cre],\n  Gergely Daroczi [aut],\n  Clement Leung [aut],\n  Quandl Inc. [cph]",
-        "Repository": "RSPM",
-        "Date/Publication": "2018-08-14 19:50:03 UTC",
-        "Built": "R 3.4.3; ; 2018-10-12 05:43:07 UTC; unix"
-      }
-    },
     "R6": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -748,37 +718,6 @@
         "Built": "R 3.4.3; ; 2018-10-10 02:16:50 UTC; unix"
       }
     },
-    "cellranger": {
-      "Source": "CRAN",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "cellranger",
-        "Title": "Translate Spreadsheet Cell Ranges to Rows and Columns",
-        "Version": "1.1.0",
-        "Authors@R": "c(\n    person(\"Jennifer\", \"Bryan\", , \"jenny@stat.ubc.ca\", c(\"cre\", \"aut\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", \"ctb\")\n  )",
-        "Description": "Helper functions to work with spreadsheets and the \"A1:D10\" style\n    of cell range specification.",
-        "Depends": "R (>= 3.0.0)",
-        "License": "MIT + file LICENSE",
-        "LazyData": "true",
-        "URL": "https://github.com/rsheets/cellranger",
-        "BugReports": "https://github.com/rsheets/cellranger/issues",
-        "Suggests": "covr, testthat (>= 1.0.0), knitr, rmarkdown",
-        "RoxygenNote": "5.0.1.9000",
-        "VignetteBuilder": "knitr",
-        "Imports": "rematch, tibble",
-        "NeedsCompilation": "no",
-        "Packaged": "2016-07-26 06:50:00 UTC; jenny",
-        "Author": "Jennifer Bryan [cre, aut],\n  Hadley Wickham [ctb]",
-        "Maintainer": "Jennifer Bryan <jenny@stat.ubc.ca>",
-        "Repository": "CRAN",
-        "Date/Publication": "2016-07-27 03:17:48",
-        "Built": "R 3.4.0; ; 2017-04-20 17:45:08 UTC; unix"
-      }
-    },
     "cli": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -839,6 +778,33 @@
         "Repository": "CRAN",
         "Date/Publication": "2017-11-03 12:20:02 UTC",
         "Built": "R 3.4.2; ; 2017-11-04 08:17:40 UTC; unix"
+      }
+    },
+    "clisymbols": {
+      "Source": "CRAN",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "clisymbols",
+        "Title": "Unicode Symbols at the R Prompt",
+        "Version": "1.2.0",
+        "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Sindre\", \"Sorhus\", role = \"aut\")\n    )",
+        "Description": "A small subset of Unicode symbols, that are useful\n    when building command line applications. They fall back to\n    alternatives on terminals that do not support Unicode.\n    Many symbols were taken from the 'figures' 'npm' package\n    (see <https://github.com/sindresorhus/figures>).",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/gaborcsardi/clisymbols",
+        "BugReports": "https://github.com/gaborcsardi/clisymbols/issues",
+        "Suggests": "testthat",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2017-05-21 10:41:16 UTC; gaborcsardi",
+        "Author": "Gábor Csárdi [aut, cre],\n  Sindre Sorhus [aut]",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2017-05-21 17:19:19 UTC",
+        "Built": "R 3.4.0; ; 2017-05-22 05:32:03 UTC; unix"
       }
     },
     "colorspace": {
@@ -1057,8 +1023,40 @@
         "Built": "R 3.4.3; ; 2018-11-07 15:26:24 UTC; unix"
       }
     },
+    "desc": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "desc",
+        "Title": "Manipulate DESCRIPTION Files",
+        "Version": "1.2.0",
+        "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\",, \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Kirill\", \"Müller\", role = c(\"aut\")),\n    person(\"Jim\", \"Hester\", email = \"james.f.hester@gmail.com\", role = c(\"aut\")))",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+        "Description": "Tools to read, write, create, and manipulate DESCRIPTION files.\n    It is intended for packages that create or manipulate other packages.",
+        "License": "MIT + file LICENSE",
+        "LazyData": "true",
+        "URL": "https://github.com/r-lib/desc#readme",
+        "BugReports": "https://github.com/r-lib/desc/issues",
+        "Depends": "R (>= 3.1.0)",
+        "Suggests": "covr, testthat, whoami, withr",
+        "Imports": "assertthat, utils, R6, crayon, rprojroot",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "6.0.1.9000",
+        "Collate": "'assertions.R' 'authors-at-r.R' 'built.R' 'classes.R'\n'collate.R' 'constants.R' 'deps.R' 'description.R' 'encoding.R'\n'latex.R' 'non-oo-api.R' 'package-archives.R' 'read.R'\n'remotes.R' 'str.R' 'syntax_checks.R' 'urls.R' 'utils.R'\n'validate.R' 'version.R'",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-05-01 20:22:08 UTC; gaborcsardi",
+        "Author": "Gábor Csárdi [aut, cre],\n  Kirill Müller [aut],\n  Jim Hester [aut]",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-05-01 20:48:05 UTC",
+        "Built": "R 3.4.3; ; 2018-11-29 21:32:51 UTC; unix"
+      }
+    },
     "devtools": {
-      "Source": "CRAN",
+      "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
@@ -1067,25 +1065,25 @@
       "description": {
         "Package": "devtools",
         "Title": "Tools to Make Developing R Packages Easier",
-        "Version": "1.13.4",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"Winston\", \"Chang\", role = \"aut\"),\n    person(\"RStudio\", role = \"cph\"),\n    person(\"R Core team\", role = \"ctb\",\n      comment = \"Some namespace and vignette code extracted from base R\")\n    )",
-        "Encoding": "UTF-8",
+        "Version": "2.0.1",
+        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", role = \"aut\"),\n    person(\"Jim\", \"Hester\", , \"james.hester@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"Winston\", \"Chang\", role = \"aut\"),\n    person(\"RStudio\", role = \"cph\"),\n    person(\"R Core team\", role = \"ctb\",\n      comment = \"Some namespace and vignette code extracted from base R\")\n    )",
         "Description": "Collection of package development tools.",
-        "URL": "https://github.com/hadley/devtools",
-        "BugReports": "https://github.com/hadley/devtools/issues",
-        "Depends": "R (>= 3.0.2)",
-        "Imports": "httr (>= 0.4), utils, tools, methods, memoise (>= 1.0.0),\nwhisker, digest, rstudioapi (>= 0.2.0), jsonlite, stats, git2r\n(>= 0.11.0), withr",
-        "Suggests": "curl (>= 0.9), crayon, testthat (>= 1.0.2), BiocInstaller,\nRcpp (>= 0.10.0), MASS, rmarkdown, knitr, hunspell (>= 2.0),\nlintr (>= 0.2.1), bitops, roxygen2 (>= 5.0.0), evaluate,\nrversions, covr, gmailr (> 0.7.0)",
         "License": "GPL (>= 2)",
+        "URL": "https://github.com/r-lib/devtools",
+        "BugReports": "https://github.com/r-lib/devtools/issues",
+        "Depends": "R (>= 3.0.2)",
+        "Imports": "callr, cli, digest, git2r (>= 0.23.0), httr (>= 0.4),\njsonlite, memoise (>= 1.0.0), pkgbuild (>= 1.0.2), pkgload (>=\n1.0.1), rcmdcheck (>= 1.3.0), remotes (>= 2.0.0), rstudioapi\n(>= 0.6.0.9000), sessioninfo, stats, tools, usethis (>= 1.4.0),\nutils, withr",
+        "Suggests": "BiocInstaller, BiocManager, bitops, covr (>= 3.2.0), crayon,\ncurl (>= 0.9), evaluate, foghorn (>= 1.0.1), gmailr (> 0.7.0),\nknitr, lintr (>= 0.2.1), mockery, pingr, MASS, pkgdown, Rcpp\n(>= 0.10.0), rhub, rmarkdown, roxygen2 (>= 6.1.0), rversions,\nspelling (>= 1.1), testthat (>= 1.0.2), whisker",
         "VignetteBuilder": "knitr",
-        "RoxygenNote": "6.0.1",
-        "NeedsCompilation": "yes",
-        "Packaged": "2017-11-08 19:37:59 UTC; jhester",
-        "Author": "Hadley Wickham [aut, cre],\n  Winston Chang [aut],\n  RStudio [cph],\n  R Core team [ctb] (Some namespace and vignette code extracted from base\n    R)",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2017-11-09 10:44:37 UTC",
-        "Built": "R 3.4.2; ; 2017-11-10 05:47:14 UTC; unix"
+        "Encoding": "UTF-8",
+        "RoxygenNote": "6.1.0",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-10-26 20:28:58 UTC; jhester",
+        "Author": "Hadley Wickham [aut],\n  Jim Hester [aut, cre],\n  Winston Chang [aut],\n  RStudio [cph],\n  R Core team [ctb] (Some namespace and vignette code extracted from base\n    R)",
+        "Maintainer": "Jim Hester <james.hester@rstudio.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-10-26 21:10:41 UTC",
+        "Built": "R 3.4.3; ; 2018-11-29 21:32:59 UTC; unix"
       }
     },
     "digest": {
@@ -1270,37 +1268,6 @@
         "Built": "R 3.4.3; ; 2018-11-06 19:30:35 UTC; unix"
       }
     },
-    "forcats": {
-      "Source": "CRAN",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "forcats",
-        "Title": "Tools for Working with Categorical Variables (Factors)",
-        "Version": "0.2.0",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
-        "Description": "Helpers for reordering factor levels (including moving\n    specified levels to front, ordering by first appearance, reversing, and\n    randomly shuffling), and tools for modifying factor levels (including\n    collapsing rare levels into other, 'anonymising', and manually 'recoding').",
-        "License": "GPL-3",
-        "Encoding": "UTF-8",
-        "LazyData": "true",
-        "URL": "http://forcats.tidyverse.org, https://github.com/tidyverse/forcats",
-        "BugReports": "https://github.com/tidyverse/forcats/issues",
-        "Depends": "R (>= 2.10)",
-        "Imports": "tibble, magrittr",
-        "RoxygenNote": "5.0.1.9000",
-        "Suggests": "ggplot2, testthat, covr",
-        "NeedsCompilation": "no",
-        "Packaged": "2017-01-22 19:24:31 UTC; hornik",
-        "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph, fnd]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2017-01-23 16:39:48",
-        "Built": "R 3.4.0; ; 2017-04-20 17:45:05 UTC; unix"
-      }
-    },
     "forecast": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -1421,6 +1388,41 @@
         "Built": "R 3.4.2; x86_64-apple-darwin15.6.0; 2018-04-22 08:14:13 UTC; unix"
       }
     },
+    "fs": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "fs",
+        "Title": "Cross-Platform File System Operations Based on 'libuv'",
+        "Version": "1.2.6",
+        "Authors@R": "c(\n    person(\"Jim\", \"Hester\", email = \"james.f.hester@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", \"aut\"),\n    person(\"libuv project contributors\", role = \"cph\", comment = \"libuv library\"),\n    person(\"Joyent, Inc. and other Node contributors\", role = \"cph\", comment = \"libuv library\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n    )",
+        "Description": "A cross-platform interface to file system operations, built on\n  top of the 'libuv' C library.",
+        "Depends": "R (>= 3.1)",
+        "License": "GPL-3",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "ByteCompile": "true",
+        "LinkingTo": "Rcpp",
+        "Imports": "methods, Rcpp",
+        "SystemRequirements": "GNU make",
+        "RoxygenNote": "6.1.0",
+        "URL": "http://fs.r-lib.org, https://github.com/r-lib/fs",
+        "BugReports": "https://github.com/r-lib/fs/issues",
+        "Copyright": "file COPYRIGHTS",
+        "Suggests": "testthat, covr, pillar (>= 1.0.0), crayon, withr",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-08-23 19:04:30 UTC; jhester",
+        "Author": "Jim Hester [aut, cre],\n  Hadley Wickham [aut],\n  libuv project contributors [cph] (libuv library),\n  Joyent, Inc. and other Node contributors [cph] (libuv library),\n  RStudio [cph, fnd]",
+        "Maintainer": "Jim Hester <james.f.hester@gmail.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-08-23 19:34:26 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-10-17 18:47:24 UTC; unix"
+      }
+    },
     "ggplot2": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -1455,6 +1457,36 @@
         "Built": "R 3.4.3; ; 2018-11-06 19:26:59 UTC; unix"
       }
     },
+    "gh": {
+      "Source": "CRAN",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "gh",
+        "Title": "'GitHub' 'API'",
+        "Version": "1.0.1",
+        "Authors@R": "\n    c(person(\"Gábor\", \"Csárdi\",, \"csardi.gabor@gmail.com\", c(\"cre\", \"ctb\")),\n      person(\"Jennifer\", \"Bryan\", role = \"aut\"),\n      person(\"Hadley\", \"Wickham\", role = \"aut\"))",
+        "Description": "Minimal client to access the 'GitHub' 'API'.",
+        "License": "MIT + file LICENSE",
+        "LazyData": "true",
+        "URL": "https://github.com/r-lib/gh#readme",
+        "BugReports": "https://github.com/r-lib/gh/issues",
+        "Suggests": "covr, pingr, testthat",
+        "Imports": "ini, jsonlite, httr",
+        "RoxygenNote": "6.0.1.9000",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2017-07-16 16:36:29 UTC; gaborcsardi",
+        "Author": "Gábor Csárdi [cre, ctb],\n  Jennifer Bryan [aut],\n  Hadley Wickham [aut]",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2017-07-16 20:28:25 UTC",
+        "Built": "R 3.4.1; ; 2017-07-20 01:59:52 UTC; unix"
+      }
+    },
     "git2r": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -1465,8 +1497,8 @@
       "description": {
         "Package": "git2r",
         "Title": "Provides Access to Git Repositories",
-        "Description": "Interface to the 'libgit2' library, which is a pure C\n        implementation of the 'Git' core methods. Provides access to\n        'Git' repositories to extract data and running some basic 'Git'\n        commands.",
-        "Version": "0.21.0",
+        "Description": "Interface to the 'libgit2' library, which is a pure C\n    implementation of the 'Git' core methods. Provides access to 'Git'\n    repositories to extract data and running some basic 'Git'\n    commands.",
+        "Version": "0.23.0",
         "License": "GPL-2",
         "Copyright": "See COPYRIGHTS file.",
         "URL": "https://github.com/ropensci/git2r",
@@ -1474,19 +1506,19 @@
         "Maintainer": "Stefan Widgren <stefan.widgren@gmail.com>",
         "Author": "See AUTHORS file.",
         "Imports": "graphics, utils",
-        "Depends": "R (>= 3.1), methods",
+        "Depends": "R (>= 3.1)",
         "Suggests": "getPass",
         "Type": "Package",
         "LazyData": "true",
         "Biarch": "true",
         "NeedsCompilation": "yes",
-        "SystemRequirements": "zlib headers and library. OpenSSL headers and\nlibrary. LibSSH2 (optional on non-Windows) to enable the SSH\ntransport.",
-        "Collate": "'S4_classes.r' 'blame.r' 'blob.r' 'branch.r'\n'bundle_r_package.r' 'checkout.r' 'commit.r' 'config.r'\n'contributions.r' 'credential.r' 'diff.r' 'fetch.r' 'git2r.r'\n'index.r' 'libgit2.r' 'merge.r' 'note.r' 'odb.r' 'plot.r'\n'pull.r' 'punch_card.r' 'refspec.r' 'push.r' 'reference.r'\n'reflog.r' 'remote.r' 'repository.r' 'reset.r' 'revparse.r'\n'signature.r' 'stash.r' 'status.r' 'tag.r' 'time.r' 'tree.r'\n'when.r'",
+        "SystemRequirements": "By default, git2r uses a system installation of the\nlibgit2 headers and library. However, if a system installation\nis not available, builds and uses a bundled version of the\nlibgit2 source. zlib headers and library. OpenSSL headers and\nlibrary (non-macOS). LibSSH2 (optional on non-Windows) to\nenable the SSH transport.",
+        "Collate": "'blame.R' 'blob.R' 'branch.R' 'bundle_r_package.R'\n'checkout.R' 'commit.R' 'config.R' 'contributions.R'\n'credential.R' 'diff.R' 'fetch.R' 'git2r.R' 'index.R'\n'libgit2.R' 'merge.R' 'note.R' 'odb.R' 'plot.R' 'pull.R'\n'punch_card.R' 'push.R' 'reference.R' 'reflog.R' 'refspec.R'\n'remote.R' 'repository.R' 'reset.R' 'revparse.R' 'sha.R'\n'signature.R' 'stash.R' 'status.R' 'tag.R' 'time.R' 'tree.R'\n'when.R'",
         "RoxygenNote": "6.0.1",
-        "Packaged": "2018-01-03 21:29:02 UTC; stefan",
+        "Packaged": "2018-07-16 12:23:06 UTC; stefan",
         "Repository": "RSPM",
-        "Date/Publication": "2018-01-04 16:50:12 UTC",
-        "Built": "R 3.4.2; x86_64-apple-darwin15.6.0; 2018-01-09 22:02:06 UTC; unix"
+        "Date/Publication": "2018-07-17 20:40:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-14 21:49:21 UTC; unix"
       }
     },
     "glue": {
@@ -1548,40 +1580,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2016-02-26 15:23:14",
         "Built": "R 3.4.0; ; 2017-04-21 21:23:21 UTC; unix"
-      }
-    },
-    "haven": {
-      "Source": "CRAN",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "haven",
-        "Version": "1.1.0",
-        "Title": "Import and Export 'SPSS', 'Stata' and 'SAS' Files",
-        "Description": "Import foreign statistical formats into R via the embedded\n    'ReadStat' C library, <https://github.com/WizardMac/ReadStat>.",
-        "License": "MIT + file LICENSE",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"Evan\", \"Miller\", , role = c(\"aut\", \"cph\"),\n      comment = \"Author of included ReadStat code\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
-        "Depends": "R (>= 3.1.0)",
-        "Suggests": "testthat, knitr, rmarkdown, covr",
-        "LinkingTo": "Rcpp",
-        "Imports": "Rcpp (>= 0.11.4), readr (>= 0.1.0), hms, tibble, forcats (>=\n0.2.0)",
-        "LazyData": "true",
-        "URL": "http://haven.tidyverse.org, https://github.com/tidyverse/haven,\nhttps://github.com/WizardMac/ReadStat",
-        "BugReports": "https://github.com/hadley/haven/issues",
-        "VignetteBuilder": "knitr",
-        "SystemRequirements": "GNU make",
-        "RoxygenNote": "6.0.1",
-        "Encoding": "UTF-8",
-        "NeedsCompilation": "yes",
-        "Packaged": "2017-07-08 15:47:00 UTC; hadley",
-        "Author": "Hadley Wickham [aut, cre],\n  Evan Miller [aut, cph] (Author of included ReadStat code),\n  RStudio [cph, fnd]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2017-07-09 06:40:47 UTC",
-        "Built": "R 3.4.1; x86_64-apple-darwin15.6.0; 2017-07-19 17:16:47 UTC; unix"
       }
     },
     "highcharter": {
@@ -1689,8 +1687,8 @@
         "Package": "htmltools",
         "Type": "Package",
         "Title": "Tools for HTML",
-        "Version": "0.3.5",
-        "Date": "2016-03-19",
+        "Version": "0.3.6",
+        "Date": "2017-04-26",
         "Author": "RStudio, Inc.",
         "Maintainer": "Joe Cheng <joe@rstudio.com>",
         "Description": "Tools for HTML generation and output.",
@@ -1701,15 +1699,13 @@
         "License": "GPL (>= 2)",
         "URL": "https://github.com/rstudio/htmltools",
         "BugReports": "https://github.com/rstudio/htmltools/issues",
-        "RoxygenNote": "5.0.1",
+        "RoxygenNote": "6.0.1",
         "LinkingTo": "Rcpp",
         "NeedsCompilation": "yes",
-        "Packaged": "2016-03-21 21:26:31 UTC; jcheng",
+        "Packaged": "2017-04-27 00:04:32 UTC; jcheng",
         "Repository": "RSPM",
-        "Date/Publication": "2016-03-21 23:36:11",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-11 20:09:47 UTC; unix",
-        "RemoteType": "url",
-        "RemoteUrl": "http://cluster.rstudiopm.com/cran/latest/src/contrib/Archive/htmltools/htmltools_0.3.5.tar.gz"
+        "Date/Publication": "2017-04-28 07:41:46 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-30 03:28:33 UTC; unix"
       }
     },
     "htmlwidgets": {
@@ -1838,6 +1834,35 @@
         "Repository": "CRAN",
         "Date/Publication": "2017-07-21 11:39:40 UTC",
         "Built": "R 3.4.1; x86_64-apple-darwin15.6.0; 2017-07-24 01:12:48 UTC; unix"
+      }
+    },
+    "ini": {
+      "Source": "CRAN",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "ini",
+        "Type": "Package",
+        "Title": "Read and Write '.ini' Files",
+        "Version": "0.3.0",
+        "Date": "2017-09-30",
+        "Author": "David Valentim Disa",
+        "Maintainer": "David Valentim Dias <dvdscripter@gmail.com>",
+        "Description": "Parse simple '.ini' configuration files to an structured list. Users\n  can manipulate this resulting list with lapply() functions. This same\n  structured list can be used to write back to file after modifications.",
+        "License": "GPL-3",
+        "URL": "https://github.com/dvdscripter/ini",
+        "BugReports": "https://github.com/dvdscripter/ini/issues",
+        "LazyData": "FALSE",
+        "RoxygenNote": "6.0.1",
+        "Suggests": "testthat",
+        "NeedsCompilation": "no",
+        "Packaged": "2017-09-30 19:30:34 UTC; CLIENTE",
+        "Repository": "CRAN",
+        "Date/Publication": "2017-09-30 23:20:43 UTC",
+        "Built": "R 3.4.2; ; 2017-10-01 05:07:47 UTC; unix"
       }
     },
     "irlba": {
@@ -2288,36 +2313,6 @@
         "Built": "R 3.4.0; x86_64-apple-darwin15.6.0; 2017-04-21 23:02:00 UTC; unix"
       }
     },
-    "modelr": {
-      "Source": "CRAN",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "modelr",
-        "Version": "0.1.1",
-        "Title": "Modelling Functions that Work with the Pipe",
-        "Description": "Functions for modelling that help you seamlessly integrate\n    modelling into a pipeline of data manipulation and visualisation.",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = \"cph\")\n  )",
-        "License": "GPL-3",
-        "LazyData": "true",
-        "Depends": "R (>= 3.1.0)",
-        "Imports": "magrittr, purrr (>= 0.2.2), lazyeval (>= 0.2.0), tibble,\nbroom, dplyr, tidyr (>= 0.6.0)",
-        "Suggests": "testthat, ggplot2, covr, compiler",
-        "URL": "https://github.com/hadley/modelr",
-        "BugReports": "https://github.com/hadley/modelr/issues",
-        "RoxygenNote": "6.0.1",
-        "NeedsCompilation": "no",
-        "Packaged": "2017-07-22 21:47:57 UTC; hadley",
-        "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2017-07-24 18:28:20 UTC",
-        "Built": "R 3.4.1; ; 2017-07-25 13:09:39 UTC; unix"
-      }
-    },
     "munsell": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -2535,6 +2530,37 @@
         "Built": "R 3.4.3; ; 2018-08-04 19:14:52 UTC; unix"
       }
     },
+    "pkgbuild": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "pkgbuild",
+        "Title": "Find Tools Needed to Build R Packages",
+        "Version": "1.0.2",
+        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", role = \"aut\"),\n    person(\"Jim\", \"Hester\", , \"james.hester@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = \"cph\")\n  )",
+        "Description": "Provides functions used to build R packages. Locates compilers\n  needed to build R packages on various platforms and ensures the PATH is\n  configured appropriately so R can use them.",
+        "Imports": "callr (>= 2.0.0), cli, crayon, desc, prettyunits, R6,\nrprojroot, withr (>= 2.1.2)",
+        "Suggests": "Rcpp, testthat, covr",
+        "License": "GPL-3",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "6.1.0",
+        "URL": "https://github.com/r-lib/pkgbuild",
+        "BugReports": "https://github.com/r-lib/pkgbuild/issues",
+        "Depends": "R (>= 3.1)",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-10-16 14:22:16 UTC; jhester",
+        "Author": "Hadley Wickham [aut],\n  Jim Hester [aut, cre],\n  RStudio [cph]",
+        "Maintainer": "Jim Hester <james.hester@rstudio.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-10-16 20:00:21 UTC",
+        "Built": "R 3.4.3; ; 2018-11-29 21:32:53 UTC; unix"
+      }
+    },
     "pkgconfig": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -2561,6 +2587,36 @@
         "Repository": "RSPM",
         "Date/Publication": "2018-08-16 09:10:03 UTC",
         "Built": "R 3.4.3; ; 2018-11-06 19:26:05 UTC; unix"
+      }
+    },
+    "pkgload": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "pkgload",
+        "Title": "Simulate Package Installation and Attach",
+        "Version": "1.0.2",
+        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", role = \"aut\"),\n    person(\"Jim\", \"Hester\", , \"james.hester@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"Winston\", \"Chang\", role = \"aut\"),\n    person(\"RStudio\", role = \"cph\"),\n    person(\"R Core team\", role = \"ctb\",\n      comment = \"Some namespace and vignette code extracted from base R\")\n    )",
+        "Description": "Simulates the process of installing a package\n    and then attaching it. This is a key part of the 'devtools' package as it\n    allows you to rapidly iterate while developing a package.",
+        "License": "GPL-3",
+        "URL": "https://github.com/r-lib/pkgload",
+        "BugReports": "https://github.com/r-lib/pkgload/issues",
+        "Imports": "desc, methods, pkgbuild, rlang, rprojroot, rstudioapi, utils,\nwithr",
+        "Suggests": "bitops, covr, Rcpp, testthat",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "6.1.0",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-10-29 19:56:19 UTC; jhester",
+        "Author": "Hadley Wickham [aut],\n  Jim Hester [aut, cre],\n  Winston Chang [aut],\n  RStudio [cph],\n  R Core team [ctb] (Some namespace and vignette code extracted from base\n    R)",
+        "Maintainer": "Jim Hester <james.hester@rstudio.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-10-29 20:30:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-29 21:32:56 UTC; unix"
       }
     },
     "plogr": {
@@ -2862,6 +2918,35 @@
         "Built": "R 3.4.3; ; 2018-10-12 05:43:05 UTC; unix"
       }
     },
+    "rcmdcheck": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "rcmdcheck",
+        "Title": "Run 'R CMD check' from 'R' and Capture Results",
+        "Version": "1.3.2",
+        "Author": "Gábor Csárdi",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+        "Description": "Run 'R CMD check' from 'R' programmatically, and capture the\n    results of the individual checks.",
+        "License": "MIT + file LICENSE",
+        "LazyData": "true",
+        "URL": "https://github.com/r-Lib/rcmdcheck#readme",
+        "BugReports": "https://github.com/r-Lib/rcmdcheck/issues",
+        "RoxygenNote": "6.1.0",
+        "Suggests": "covr, knitr, mockery, rmarkdown, testthat",
+        "Imports": "callr (>= 2.0.0), cli, crayon, desc (>= 1.2.0), digest,\npkgbuild, prettyunits, R6, rprojroot, sessioninfo (>= 1.1.1),\nutils, withr, xopen",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-11-10 05:25:39 UTC; gaborcsardi",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-11-10 19:40:02 UTC",
+        "Built": "R 3.4.3; ; 2018-11-29 21:32:57 UTC; unix"
+      }
+    },
     "readr": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -2894,7 +2979,7 @@
         "Built": "R 3.4.0; x86_64-apple-darwin15.6.0; 2017-05-17 03:46:57 UTC; unix"
       }
     },
-    "readxl": {
+    "remotes": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
@@ -2902,88 +2987,28 @@
       "GithubRef": null,
       "GithubSha1": null,
       "description": {
-        "Package": "readxl",
-        "Title": "Read Excel Files",
-        "Version": "1.0.0",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", ,\"hadley@rstudio.com\", role = c(\"aut\")),\n    person(\"Jennifer\", \"Bryan\", ,\"jenny@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = c(\"cph\"), comment = \"Copyright holder of\n      all R code and all C/C++ code without explicit copyright attribution\"),\n    person(\"Marcin\", \"Kalicinski\", role = c(\"ctb\", \"cph\"), comment = \"Author of included RapidXML code\"),\n    person(\"Komarov Valery\", role = c(\"ctb\", \"cph\"), comment = \"Author of included libxls code\"),\n    person(\"Christophe Leitienne\", role = c(\"ctb\", \"cph\"), comment = \"Author of included libxls code\"),\n    person(\"Bob Colbert\", role = c(\"ctb\", \"cph\"), comment = \"Author of included libxls code\"),\n    person(\"David Hoerl\", role = c(\"ctb\", \"cph\"), comment = \"Author of included libxls code\")\n    )",
-        "Description": "Import excel files into R. Supports '.xls' via the embedded\n    'libxls' C library <https://sourceforge.net/projects/libxls/> and '.xlsx' via\n    the embedded 'RapidXML' C++ library <https://rapidxml.sourceforge.net>. Works on\n    Windows, Mac and Linux without external dependencies.",
-        "License": "GPL-3",
-        "LazyData": "true",
-        "LinkingTo": "Rcpp",
-        "Imports": "cellranger, Rcpp (>= 0.11.6), tibble (>= 1.1)",
-        "Suggests": "covr, knitr, rmarkdown, rprojroot (>= 1.1), testthat",
-        "URL": "http://readxl.tidyverse.org, https://github.com/tidyverse/readxl",
-        "BugReports": "https://github.com/tidyverse/readxl/issues",
+        "Package": "remotes",
+        "Title": "R Package Installation from Remote Repositories, Including\n'GitHub'",
+        "Version": "2.0.2",
+        "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", role = c(\"aut\")),\n    person(\"Winston\", \"Chang\", role = \"aut\"),\n    person(\"Jim\", \"Hester\", role = \"aut\"),\n    person(\"RStudio\", role = \"cph\"),\n    person(\"Martin\", \"Morgan\", role = \"aut\"),\n    person(\"Dan\", \"Tenenbaum\", role = \"aut\"),\n    person(\"Mango Solutions\", role = \"cph\")\n    )",
+        "Description": "Download and install R packages stored in 'GitHub',\n    'BitBucket', or plain 'subversion' or 'git' repositories. This package\n    is a lightweight replacement of the 'install_*' functions in 'devtools'.\n    Indeed most of the code was copied over from 'devtools'.",
+        "License": "GPL (>= 2)",
+        "URL": "https://github.com/r-lib/remotes#readme",
+        "BugReports": "https://github.com/r-lib/remotes/issues",
+        "Imports": "methods, utils",
+        "Suggests": "curl, covr, git2r (>= 0.23.0), knitr, mockery, pkgbuild (>=\n1.0.1), pingr, rmarkdown, testthat, withr",
+        "Depends": "R (>= 3.0.0)",
         "VignetteBuilder": "knitr",
-        "RoxygenNote": "6.0.1",
-        "NeedsCompilation": "yes",
-        "Packaged": "2017-04-18 06:15:07 UTC; jenny",
-        "Author": "Hadley Wickham [aut],\n  Jennifer Bryan [aut, cre],\n  RStudio [cph] (Copyright holder of all R code and all C/C++ code\n    without explicit copyright attribution),\n  Marcin Kalicinski [ctb, cph] (Author of included RapidXML code),\n  Komarov Valery [ctb, cph] (Author of included libxls code),\n  Christophe Leitienne [ctb, cph] (Author of included libxls code),\n  Bob Colbert [ctb, cph] (Author of included libxls code),\n  David Hoerl [ctb, cph] (Author of included libxls code)",
-        "Maintainer": "Jennifer Bryan <jenny@rstudio.com>",
+        "RoxygenNote": "6.1.0",
+        "SystemRequirements": "Subversion for install_svn, git for install_git",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-10-30 10:46:53 UTC; gaborcsardi",
+        "Author": "Gábor Csárdi [aut, cre],\n  Hadley Wickham [aut],\n  Winston Chang [aut],\n  Jim Hester [aut],\n  RStudio [cph],\n  Martin Morgan [aut],\n  Dan Tenenbaum [aut],\n  Mango Solutions [cph]",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "RSPM",
-        "Date/Publication": "2017-04-18 07:21:33 UTC",
-        "Built": "R 3.4.2; x86_64-apple-darwin15.6.0; 2018-04-04 04:32:12 UTC; unix"
-      }
-    },
-    "rematch": {
-      "Source": "CRAN",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "rematch",
-        "Title": "Match Regular Expressions with a Nicer 'API'",
-        "Version": "1.0.1",
-        "Author": "Gabor Csardi",
-        "Maintainer": "Gabor Csardi <gcsardi@mango-solutions.com>",
-        "Description": "A small wrapper on 'regexpr' to extract the matches and\n    captured groups from the match of a regular expression to a character\n    vector.",
-        "License": "MIT + file LICENSE",
-        "LazyData": "true",
-        "URL": "https://github.com/MangoTheCat/rematch",
-        "BugReports": "https://github.com/MangoTheCat/rematch/issues",
-        "RoxygenNote": "5.0.1.9000",
-        "Suggests": "covr, testthat",
-        "Encoding": "UTF-8",
-        "NeedsCompilation": "no",
-        "Packaged": "2016-04-20 19:54:37 UTC; gaborcsardi",
-        "Repository": "CRAN",
-        "Date/Publication": "2016-04-21 08:20:46",
-        "Built": "R 3.4.0; ; 2017-04-21 23:43:33 UTC; unix"
-      }
-    },
-    "reprex": {
-      "Source": "CRAN",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "reprex",
-        "Title": "Prepare Reproducible Example Code via the Clipboard",
-        "Version": "0.2.0",
-        "Authors@R": "c(\n    person(\"Jennifer\", \"Bryan\", , \"jenny@rstudio.com\", role = c(\"aut\", \"cre\"),\n      comment = c(ORCID = \"0000-0002-6983-2759\")\n    ),\n    person(\"Jim\", \"Hester\", , \"james.hester@rstudio.com\", role = \"aut\",\n      comment = c(ORCID = \"0000-0002-2739-7082\")\n    ),\n    person(\"David\", \"Robinson\", , \"admiral.david@gmail.com\", role = \"aut\"),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = \"aut\",\n      comment = c(ORCID = \"0000-0003-4757-117X\")\n    ),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n    )",
-        "Description": "Convenience wrapper that uses the 'rmarkdown' package to render\n  small snippets of code to target formats that include both code and output.\n  The goal is to encourage the sharing of small, reproducible, and runnable\n  examples on code-oriented websites, such as <https://stackoverflow.com> and\n  <https://github.com>, or in email. The user's clipboard is the default source\n  of input code and the default target for rendered output. 'reprex' also\n  extracts clean, runnable R code from various common formats, such as\n  copy/paste from an R session. ",
-        "License": "MIT + file LICENSE",
-        "URL": "https://reprex.tidyverse.org,\nhttps://github.com/tidyverse/reprex#readme",
-        "BugReports": "https://github.com/tidyverse/reprex/issues",
-        "Depends": "R (>= 3.1)",
-        "Imports": "callr (>= 2.0.0), clipr (>= 0.4.0), rlang, rmarkdown, tools,\nutils, whisker, withr",
-        "Suggests": "covr, devtools, fortunes, knitr, miniUI, rprojroot,\nrstudioapi, shiny, styler, testthat (>= 2.0.0)",
-        "VignetteBuilder": "knitr",
-        "Encoding": "UTF-8",
-        "LazyData": "true",
-        "RoxygenNote": "6.0.1.9000",
-        "SystemRequirements": "pandoc (>= 1.12.3) - http://pandoc.org",
-        "NeedsCompilation": "no",
-        "Packaged": "2018-06-22 04:23:58 UTC; jenny",
-        "Author": "Jennifer Bryan [aut, cre] (<https://orcid.org/0000-0002-6983-2759>),\n  Jim Hester [aut] (<https://orcid.org/0000-0002-2739-7082>),\n  David Robinson [aut],\n  Hadley Wickham [aut] (<https://orcid.org/0000-0003-4757-117X>),\n  RStudio [cph, fnd]",
-        "Maintainer": "Jennifer Bryan <jenny@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2018-06-22 23:40:09 UTC",
-        "Built": "R 3.4.4; ; 2018-07-02 21:55:28 UTC; unix"
+        "Date/Publication": "2018-10-30 11:30:10 UTC",
+        "Built": "R 3.4.3; ; 2018-11-06 19:24:58 UTC; unix"
       }
     },
     "reshape2": {
@@ -3173,38 +3198,6 @@
         "Built": "R 3.4.3; ; 2018-11-06 19:26:35 UTC; unix"
       }
     },
-    "rvest": {
-      "Source": "CRAN",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "rvest",
-        "Version": "0.3.2",
-        "Title": "Easily Harvest (Scrape) Web Pages",
-        "Description": "Wrappers around the 'xml2' and 'httr' packages to make it easy to\n    download, then manipulate, HTML and XML.",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = \"cph\")\n    )",
-        "Depends": "R (>= 3.0.1), xml2",
-        "Imports": "httr (>= 0.5), selectr, magrittr",
-        "Suggests": "testthat, knitr, png, stringi (>= 0.3.1), rmarkdown, covr",
-        "Encoding": "UTF-8",
-        "License": "GPL-3",
-        "LazyData": "true",
-        "VignetteBuilder": "knitr",
-        "RoxygenNote": "5.0.1",
-        "URL": "https://github.com/hadley/rvest",
-        "BugReports": "https://github.com/hadley/rvest/issues",
-        "NeedsCompilation": "no",
-        "Packaged": "2016-06-16 16:20:43 UTC; hadley",
-        "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2016-06-17 08:57:12",
-        "Built": "R 3.4.0; ; 2017-04-20 19:59:35 UTC; unix"
-      }
-    },
     "scales": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -3237,34 +3230,33 @@
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-10-18 01:15:02 UTC; unix"
       }
     },
-    "selectr": {
-      "Source": "CRAN",
+    "sessioninfo": {
+      "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
       "GithubRef": null,
       "GithubSha1": null,
       "description": {
-        "Package": "selectr",
-        "Type": "Package",
-        "Title": "Translate CSS Selectors to XPath Expressions",
-        "Version": "0.3-1",
-        "Date": "2016-12-18",
-        "Authors@R": "c(person(\"Simon\", \"Potter\",\n                    role = c(\"aut\", \"trl\", \"cre\"),\n                    email = \"simon@sjp.co.nz\"),\n             person(\"Simon\", \"Sapin\", role = \"aut\"),\n             person(\"Ian\", \"Bicking\", role = \"aut\"))",
-        "License": "BSD_3_clause + file LICENCE",
-        "Depends": "R (>= 2.15.2)",
-        "Imports": "methods, stringr",
-        "Suggests": "testthat, XML, xml2",
-        "URL": "https://sjp.co.nz/projects/selectr",
-        "BugReports": "https://github.com/sjp/selectr/issues",
-        "Description": "Translates a CSS3 selector into an equivalent XPath\n  expression. This allows us to use CSS selectors when working with\n  the XML package as it can only evaluate XPath expressions. Also\n  provided are convenience functions useful for using CSS selectors on\n  XML nodes. This package is a port of the Python package 'cssselect'\n  (<https://pythonhosted.org/cssselect/>).",
+        "Package": "sessioninfo",
+        "Title": "R Session Information",
+        "Version": "1.1.1",
+        "Author": "Gábor Csárdi, R core, Hadley Wickham, Winston Chang,\n    Robert M Flight, Kirill Müller, Jim Hester",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+        "Description": "Query and print information about the current R session.\n    It is similar to 'utils::sessionInfo()', but includes more information\n    about packages, and where they were installed from.",
+        "License": "GPL-2",
+        "LazyData": "true",
+        "URL": "https://github.com/r-lib/sessioninfo#readme",
+        "BugReports": "https://github.com/r-lib/sessioninfo/issues",
+        "RoxygenNote": "6.1.0",
+        "Suggests": "callr, covr, mockery, testthat",
+        "Imports": "cli, tools, utils, withr",
+        "Encoding": "UTF-8",
         "NeedsCompilation": "no",
-        "Packaged": "2016-12-19 02:54:30 UTC; sjp",
-        "Author": "Simon Potter [aut, trl, cre],\n  Simon Sapin [aut],\n  Ian Bicking [aut]",
-        "Maintainer": "Simon Potter <simon@sjp.co.nz>",
-        "Repository": "CRAN",
-        "Date/Publication": "2016-12-19 08:34:09",
-        "Built": "R 3.4.0; ; 2017-04-20 17:43:30 UTC; unix"
+        "Packaged": "2018-11-05 16:32:45 UTC; gaborcsardi",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-11-05 17:20:02 UTC",
+        "Built": "R 3.4.3; ; 2018-11-29 21:32:52 UTC; unix"
       }
     },
     "shiny": {
@@ -3423,40 +3415,6 @@
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-08-04 19:15:53 UTC; unix"
       }
     },
-    "tidyquant": {
-      "Source": "RSPM",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "tidyquant",
-        "Type": "Package",
-        "Title": "Tidy Quantitative Financial Analysis",
-        "Version": "0.5.5",
-        "Date": "2018-05-06",
-        "Authors@R": "c(\n    person(\"Matt\", \"Dancho\", email = \"mdancho@business-science.io\", role = c(\"aut\", \"cre\")),\n    person(\"Davis\", \"Vaughan\", email = \"dvaughan@business-science.io\", role = c(\"aut\"))\n  )",
-        "Maintainer": "Matt Dancho <mdancho@business-science.io>",
-        "Description": "Bringing financial analysis to the 'tidyverse'. The 'tidyquant' \n    package provides a convenient wrapper to various 'xts', 'zoo', 'quantmod', 'TTR' \n    and 'PerformanceAnalytics' package \n    functions and returns the objects in the tidy 'tibble' format. The main \n    advantage is being able to use quantitative functions with the 'tidyverse'\n    functions including 'purrr', 'dplyr', 'tidyr', 'ggplot2', 'lubridate', etc. See \n    the 'tidyquant' website for more information, documentation and examples.",
-        "URL": "https://github.com/business-science/tidyquant",
-        "BugReports": "https://github.com/business-science/tidyquant/issues",
-        "License": "MIT + file LICENSE",
-        "Encoding": "UTF-8",
-        "LazyData": "true",
-        "Depends": "R (>= 3.0.0), lubridate, PerformanceAnalytics, quantmod (>=\n0.4-13), tidyverse",
-        "Imports": "dplyr, ggplot2, httr, lazyeval, magrittr, purrr, Quandl,\nstringr, tibble, tidyr, timetk, TTR, xml2, xts, rlang",
-        "Suggests": "alphavantager, broom, knitr, rmarkdown, testthat, tibbletime,\nscales, Rblpapi, XLConnect",
-        "RoxygenNote": "6.0.1",
-        "VignetteBuilder": "knitr",
-        "NeedsCompilation": "no",
-        "Packaged": "2018-05-08 20:43:46 UTC; davisvaughan",
-        "Author": "Matt Dancho [aut, cre],\n  Davis Vaughan [aut]",
-        "Repository": "RSPM",
-        "Date/Publication": "2018-05-09 08:48:07 UTC",
-        "Built": "R 3.4.3; ; 2018-10-12 05:43:08 UTC; unix"
-      }
-    },
     "tidyr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -3518,37 +3476,6 @@
         "Repository": "RSPM",
         "Date/Publication": "2018-10-11 13:00:03 UTC",
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:27:57 UTC; unix"
-      }
-    },
-    "tidyverse": {
-      "Source": "CRAN",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "tidyverse",
-        "Title": "Easily Install and Load the 'Tidyverse'",
-        "Version": "1.2.1",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
-        "Description": "The 'tidyverse' is a set of packages that work in harmony\n    because they share common data representations and 'API' design. This\n    package is designed to make it easy to install and load multiple\n    'tidyverse' packages in a single step. Learn more about the 'tidyverse'\n    at <https://tidyverse.org>.",
-        "License": "GPL-3 | file LICENSE",
-        "URL": "http://tidyverse.tidyverse.org,\nhttps://github.com/tidyverse/tidyverse",
-        "BugReports": "https://github.com/tidyverse/tidyverse/issues",
-        "Imports": "broom (>= 0.4.2), cli (>= 1.0.0), crayon (>= 1.3.4), dplyr (>=\n0.7.4), dbplyr (>= 1.1.0), forcats (>= 0.2.0), ggplot2 (>=\n2.2.1), haven (>= 1.1.0), hms (>= 0.3), httr (>= 1.3.1),\njsonlite (>= 1.5), lubridate (>= 1.7.1), magrittr (>= 1.5),\nmodelr (>= 0.1.1), purrr (>= 0.2.4), readr (>= 1.1.1), readxl\n(>= 1.0.0), reprex (>= 0.1.1), rlang (>= 0.1.4), rstudioapi (>=\n0.7), rvest (>= 0.3.2), stringr (>= 1.2.0), tibble (>= 1.3.4),\ntidyr (>= 0.7.2), xml2 (>= 1.1.1)",
-        "Suggests": "feather (>= 0.3.1), knitr (>= 1.17), rmarkdown (>= 1.7.4)",
-        "VignetteBuilder": "knitr",
-        "Encoding": "UTF-8",
-        "LazyData": "true",
-        "RoxygenNote": "6.0.1",
-        "NeedsCompilation": "no",
-        "Packaged": "2017-11-14 00:57:48 UTC; hadley",
-        "Author": "Hadley Wickham [aut, cre],\n  RStudio [cph, fnd]",
-        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2017-11-14 18:09:56 UTC",
-        "Built": "R 3.4.2; ; 2017-11-15 05:27:51 UTC; unix"
       }
     },
     "timeDate": {
@@ -3724,6 +3651,38 @@
         "Built": "R 3.4.2; x86_64-apple-darwin15.6.0; 2018-04-22 08:14:24 UTC; unix"
       }
     },
+    "usethis": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "usethis",
+        "Title": "Automate Package and Project Setup",
+        "Version": "1.4.0",
+        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\", \"cre\"), \n      comment = c(ORCID = \"0000-0003-4757-117X\")\n    ),\n    person(\"Jennifer\", \"Bryan\", , \"jenny@rstudio.com\", role = \"aut\",\n      comment = c(ORCID = \"0000-0002-6983-2759\")\n    ),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "Automate package and project setup tasks that are otherwise\n    performed manually. This includes setting up unit testing, test \n    coverage, continuous integration, Git, 'GitHub', licenses, 'Rcpp', 'RStudio' \n    projects, and more.",
+        "License": "GPL-3",
+        "URL": "https://github.com/r-lib/usethis",
+        "BugReports": "https://github.com/r-lib/usethis/issues",
+        "Depends": "R (>= 3.1)",
+        "Imports": "clipr (>= 0.3.0), clisymbols, crayon, curl (>= 2.7), desc, fs\n(>= 1.2.0), gh, git2r (>= 0.23), glue, rlang, rprojroot (>=\n1.2), rstudioapi, utils, whisker",
+        "Suggests": "covr, knitr, magick, rmarkdown, roxygen2, spelling (>= 1.2),\nstyler (>= 1.0.2), testthat (>= 2.0.0), withr",
+        "Encoding": "UTF-8",
+        "Language": "en-US",
+        "LazyData": "true",
+        "RoxygenNote": "6.1.0",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-08-14 05:17:52 UTC; jenny",
+        "Author": "Hadley Wickham [aut, cre] (<https://orcid.org/0000-0003-4757-117X>),\n  Jennifer Bryan [aut] (<https://orcid.org/0000-0002-6983-2759>),\n  RStudio [cph, fnd]",
+        "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-08-14 12:10:02 UTC",
+        "Built": "R 3.4.3; ; 2018-11-29 21:32:54 UTC; unix"
+      }
+    },
     "utf8": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -3878,7 +3837,7 @@
         "Built": "R 3.4.3; ; 2018-11-06 19:26:38 UTC; unix"
       }
     },
-    "xml2": {
+    "xopen": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
@@ -3886,29 +3845,27 @@
       "GithubRef": null,
       "GithubSha1": null,
       "description": {
-        "Package": "xml2",
-        "Version": "1.2.0",
-        "Title": "Parse XML",
-        "Description": "Work with XML files using a simple, consistent interface. Built on\n    top of the 'libxml2' C library.",
-        "Authors@R": "c(\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", \"aut\"),\n    person(\"James\", \"Hester\", , \"james.hester@rstudio.com\", c(\"aut\", \"cre\")),\n    person(\"Jeroen\", \"Ooms\", role = \"aut\"),\n    person(\"RStudio\", role = \"cph\"),\n    person(\"R Foundation\", role = \"ctb\",\n      comment = \"Copy of R-project homepage cached as example\")\n    )",
-        "URL": "https://github.com/r-lib/xml2",
-        "BugReports": "https://github.com/r-lib/xml2/issues",
-        "Depends": "R (>= 3.1.0)",
-        "Imports": "Rcpp",
-        "LinkingTo": "Rcpp (>= 0.12.12)",
-        "Suggests": "testthat, curl, covr, knitr, rmarkdown, magrittr, httr",
-        "SystemRequirements": "libxml2: libxml2-dev (deb), libxml2-devel (rpm)",
-        "License": "GPL (>= 2)",
-        "RoxygenNote": "6.0.1",
-        "VignetteBuilder": "knitr",
-        "Collate": "'RcppExports.R' 'as_list.R' 'xml_parse.R' 'as_xml_document.R'\n'classes.R' 'init.R' 'paths.R' 'utils.R' 'xml_attr.R'\n'xml_children.R' 'xml_find.R' 'xml_modify.R' 'xml_name.R'\n'xml_namespaces.R' 'xml_path.R' 'xml_schema.R'\n'xml_serialize.R' 'xml_structure.R' 'xml_text.R' 'xml_type.R'\n'xml_url.R' 'xml_write.R' 'zzz.R'",
-        "NeedsCompilation": "yes",
-        "Packaged": "2018-01-23 14:02:37 UTC; jhester",
-        "Author": "Hadley Wickham [aut],\n  James Hester [aut, cre],\n  Jeroen Ooms [aut],\n  RStudio [cph],\n  R Foundation [ctb] (Copy of R-project homepage cached as example)",
-        "Maintainer": "James Hester <james.hester@rstudio.com>",
+        "Package": "xopen",
+        "Title": "Open System Files, 'URLs', Anything",
+        "Version": "1.0.0",
+        "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\",, \"csardi.gabor@gmail.com\", c(\"aut\", \"cre\")),\n    person(\"Fathi\", \"Boudra\", role = \"aut\"),\n    person(\"Rex\", \"Dieter\", role = \"aut\"),\n    person(\"Kevin\", \"Krammer\", role = \"aut\"),\n    person(\"Jeremy\", \"White\", role = \"aut\"))",
+        "Description": "Cross platform solution to open files, directories or 'URLs'\n    with their associated programs.",
+        "License": "MIT + file LICENSE",
+        "LazyData": "true",
+        "URL": "https://github.com/r-lib/xopen#readme",
+        "BugReports": "https://github.com/r-lib/xopen/issues",
+        "RoxygenNote": "6.1.0",
+        "Imports": "processx",
+        "Suggests": "ps, testthat",
+        "Encoding": "UTF-8",
+        "Depends": "R (>= 3.1)",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-09-10 20:47:53 UTC; gaborcsardi",
+        "Author": "Gábor Csárdi [aut, cre],\n  Fathi Boudra [aut],\n  Rex Dieter [aut],\n  Kevin Krammer [aut],\n  Jeremy White [aut]",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "RSPM",
-        "Date/Publication": "2018-01-24 14:50:28 UTC",
-        "Built": "R 3.4.2; x86_64-apple-darwin15.6.0; 2018-05-09 20:05:24 UTC; unix"
+        "Date/Publication": "2018-09-17 13:10:03 UTC",
+        "Built": "R 3.4.3; ; 2018-11-29 21:32:52 UTC; unix"
       }
     },
     "xtable": {
@@ -4029,17 +3986,11 @@
     }
   },
   "files": {
-    "aggressive_portfolio_returns2018-11-09.xlsx": {
-      "checksum": "4c5cb039da7b2e4c4f13ad25b45f1e40"
-    },
-    "balanced_portfolio_returns2018-11-09.xlsx": {
-      "checksum": "90f288953166b5b00a68641f7c374237"
-    },
     "config.yml": {
-      "checksum": "9e5df2916018a8a5bbf519348d6831a4"
+      "checksum": "07a4a6940a8a9749ce6220a2c0fa87da"
     },
-    "conservative_portfolio_returns2018-11-09.xlsx": {
-      "checksum": "e1c22e6887cfbc9e358341c82291588d"
+    "manifest.json": {
+      "checksum": "26456e2906e92587cfd60a47fcdc6c7a"
     },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
@@ -4077,14 +4028,14 @@
     "packrat/desc/callr": {
       "checksum": "a1574cb4c69666cd6ac5104058a2c57d"
     },
-    "packrat/desc/cellranger": {
-      "checksum": "614a417d1ae40afba06efebaf6076143"
-    },
     "packrat/desc/cli": {
       "checksum": "ba8cfad4f0dcdde5d33e910c27871d5d"
     },
     "packrat/desc/clipr": {
       "checksum": "3cc86a9a018156814361a52b772fbf17"
+    },
+    "packrat/desc/clisymbols": {
+      "checksum": "d772884fdeac9d664001baa2ee5f9b73"
     },
     "packrat/desc/colorspace": {
       "checksum": "85629c522af9fa84380a2018c4391e29"
@@ -4110,8 +4061,11 @@
     "packrat/desc/dbplyr": {
       "checksum": "82c3321827580f8df269fcb4a78dd303"
     },
+    "packrat/desc/desc": {
+      "checksum": "83e6aae7e8c80f9cfd044288e1a7ab1a"
+    },
     "packrat/desc/devtools": {
-      "checksum": "d87dd1546f1a5caca856404f4025c640"
+      "checksum": "4a84488dd1d9f0359c4815ab74508ff0"
     },
     "packrat/desc/digest": {
       "checksum": "c95ae59bfc208d230e68f3f801f23846"
@@ -4131,9 +4085,6 @@
     "packrat/desc/flexdashboard": {
       "checksum": "f74178f28488c4697a80af77771a0bc5"
     },
-    "packrat/desc/forcats": {
-      "checksum": "8a2476d20561066f2f3c8aa0c6a071a8"
-    },
     "packrat/desc/forecast": {
       "checksum": "b59143f10b785afd0f77a6a6d569870e"
     },
@@ -4146,20 +4097,23 @@
     "packrat/desc/fracdiff": {
       "checksum": "7826585d31b0ac26a225430d1d9c1511"
     },
+    "packrat/desc/fs": {
+      "checksum": "8fc133fe6fa9e2978156e839a5459b13"
+    },
     "packrat/desc/ggplot2": {
       "checksum": "5c1a46ee91ac620a3a7852deb8ac00d4"
     },
+    "packrat/desc/gh": {
+      "checksum": "cc16c1ea2f9b76c4175bc4251619deef"
+    },
     "packrat/desc/git2r": {
-      "checksum": "68343288c1e1df660971a2ddbb473620"
+      "checksum": "12abd7a22c169dd8c99ac60c99852e40"
     },
     "packrat/desc/glue": {
       "checksum": "b6621544dfe9ce763cd4ab9be9057ee7"
     },
     "packrat/desc/gtable": {
       "checksum": "e70cd9fb2bdd54d941a899fb388d5af8"
-    },
-    "packrat/desc/haven": {
-      "checksum": "ef9e5581f9d3d429bc8c481f80e04212"
     },
     "packrat/desc/highcharter": {
       "checksum": "68796d06f44135f4259fad8b2bb34ea3"
@@ -4171,7 +4125,7 @@
       "checksum": "c1973976fa2b1d6a6ee400d0f81d2646"
     },
     "packrat/desc/htmltools": {
-      "checksum": "384c79b68e1dacfc36ab0d6f7f6229e7"
+      "checksum": "6fb2b6f9179a0b87b9391c912763f3a2"
     },
     "packrat/desc/htmlwidgets": {
       "checksum": "7b3090a7900cdb5e673430ebbdc2a60d"
@@ -4184,6 +4138,9 @@
     },
     "packrat/desc/igraph": {
       "checksum": "766e69281a35681d64befe2e663b9f3d"
+    },
+    "packrat/desc/ini": {
+      "checksum": "3ac11cf20522b4a2cfea1b4364b6cfb7"
     },
     "packrat/desc/irlba": {
       "checksum": "0132bccc09a51e46c43f327e7c3dcb42"
@@ -4236,9 +4193,6 @@
     "packrat/desc/mnormt": {
       "checksum": "93309fe0f9c8e886db85b85ee66ff39d"
     },
-    "packrat/desc/modelr": {
-      "checksum": "4de341f02f5c5635af70fccb9369a0ca"
-    },
     "packrat/desc/munsell": {
       "checksum": "8641f7a570811c7139cb8b0bc84f5601"
     },
@@ -4263,8 +4217,14 @@
     "packrat/desc/pillar": {
       "checksum": "6f09922f8b4d16462a325f5b6ed0b8c4"
     },
+    "packrat/desc/pkgbuild": {
+      "checksum": "bf3083909c2676e9c93fe38a3e11df54"
+    },
     "packrat/desc/pkgconfig": {
       "checksum": "c2e37bd91d44c85e2b066394fe4ffdeb"
+    },
+    "packrat/desc/pkgload": {
+      "checksum": "372d3cb6d2c128b457eda426b2c35ccf"
     },
     "packrat/desc/plogr": {
       "checksum": "73ae8d9d6590adee336c754239cc72c5"
@@ -4293,14 +4253,14 @@
     "packrat/desc/quadprog": {
       "checksum": "c701f6dc334be220b8b4195f2d916f17"
     },
-    "packrat/desc/Quandl": {
-      "checksum": "5618377720154e73c3b38cab34d7c69e"
-    },
     "packrat/desc/quantmod": {
       "checksum": "81580af37c25a36441adfe883421b876"
     },
     "packrat/desc/R6": {
       "checksum": "63ed2d1108aa9e7e6df841286d7bf337"
+    },
+    "packrat/desc/rcmdcheck": {
+      "checksum": "22f8e5d32aa647ad70d64667a7591726"
     },
     "packrat/desc/RColorBrewer": {
       "checksum": "2077eba50e542359b463281212519a71"
@@ -4314,14 +4274,8 @@
     "packrat/desc/readr": {
       "checksum": "49902ee99f95ffd10b41af11f2b4c099"
     },
-    "packrat/desc/readxl": {
-      "checksum": "9969d6953108fb1fb0f73c183f5d8060"
-    },
-    "packrat/desc/rematch": {
-      "checksum": "899f8e83ca9a6a2fa9b0ead29d42abda"
-    },
-    "packrat/desc/reprex": {
-      "checksum": "3d16170734c614e29607d176e6d4780b"
+    "packrat/desc/remotes": {
+      "checksum": "c9b22e36597bfb14b51614749ad50b92"
     },
     "packrat/desc/reshape2": {
       "checksum": "6a23a153d95292868ca53dfa87b76b22"
@@ -4344,14 +4298,11 @@
     "packrat/desc/rstudioapi": {
       "checksum": "d762ab33b45a1a34fefb5ce9a5543a81"
     },
-    "packrat/desc/rvest": {
-      "checksum": "2617e8884fe763733cb0e97c8f9bf1b0"
-    },
     "packrat/desc/scales": {
       "checksum": "e67fe6d49034b1102b96c47e92beb0b3"
     },
-    "packrat/desc/selectr": {
-      "checksum": "3fba502215525303f94d6c8b0b6e069d"
+    "packrat/desc/sessioninfo": {
+      "checksum": "d0d8c069ede4a4d360a3d870443f55cb"
     },
     "packrat/desc/shiny": {
       "checksum": "b87b226c0beacaacec049ce7bdb66a74"
@@ -4368,17 +4319,11 @@
     "packrat/desc/tibble": {
       "checksum": "bb5ade85968e092a79c13c3f11344420"
     },
-    "packrat/desc/tidyquant": {
-      "checksum": "0420d16582546a425bfb30a547c8340c"
-    },
     "packrat/desc/tidyr": {
       "checksum": "252e2a632db8f442c89944353fb0fdc7"
     },
     "packrat/desc/tidyselect": {
       "checksum": "fd733931fe90fe5f7cfc49e4537521f2"
-    },
-    "packrat/desc/tidyverse": {
-      "checksum": "ca0610f4564246102bced8a201aa5016"
     },
     "packrat/desc/timeDate": {
       "checksum": "cd4ac852c240b8c4ee6f199952ba2f7c"
@@ -4401,6 +4346,9 @@
     "packrat/desc/uroot": {
       "checksum": "14dd354303becb6590668891ec0010de"
     },
+    "packrat/desc/usethis": {
+      "checksum": "7093bd3bc8f53f74f6fe197d3989de07"
+    },
     "packrat/desc/utf8": {
       "checksum": "4483f2b0c4e6c2b7246b64b60e408962"
     },
@@ -4419,8 +4367,8 @@
     "packrat/desc/XML": {
       "checksum": "4e4c789435bfb4efa8797d4760eed669"
     },
-    "packrat/desc/xml2": {
-      "checksum": "0d541dfbbaafe23953b3cb9f5788d977"
+    "packrat/desc/xopen": {
+      "checksum": "36191d78af4a80ad40ce00320e2d3bff"
     },
     "packrat/desc/xtable": {
       "checksum": "524f8e3e26ccfd8b49f9f5164d6a68aa"
@@ -4435,13 +4383,10 @@
       "checksum": "46d1f807fc03a50cf1818ea3560d850f"
     },
     "packrat/packrat.lock": {
-      "checksum": "3387d0cba50bacaa5ebe40d7fffc40c8"
-    },
-    "portfolio.html": {
-      "checksum": "d020f6f997668119ce409baa8212da78"
+      "checksum": "3964a260203610506b6d6e4c45442f11"
     },
     "portfolio.Rmd": {
-      "checksum": "2ab499ff85fd64ef39e3e4e02e693ca4"
+      "checksum": "ad77d1fc78f9689d248b4506023775f7"
     }
   },
   "users": null
