@@ -2,6 +2,8 @@ default:
   resource:
     - from_path: "./stock.db"
       to_path: "/data/stock.db"
+    - from_path: "./portfolio.db"
+      to_path: "/data/portfolio.db"
   content:
     - name: "Stock Portfolio Report"
       path: "./report-portfolio"
