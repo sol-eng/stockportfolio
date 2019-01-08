@@ -1,0 +1,33 @@
+---
+title: 'JKR Finance'
+subtitle: '`r Sys.Date()`'
+output: 
+  powerpoint_presentation:
+    reference_doc: 'template2.pptx'
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+## `r params$portfolioName` Portfolio Summary
+
+The sortino ratio for the last `r params$window` days is `r tail(sortino_byhand$ratio, 1)`.
+
+## Returns
+
+```{r fig.height=4, fig.width=6, fig.cap="Colored by default return rate"}
+portfolio_scatter
+```
+
+
+## Portfolio Downside
+
+```{r fig.height=6, fig.width=6}
+sortino_hist
+```
