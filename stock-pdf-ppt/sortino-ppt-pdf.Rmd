@@ -1,0 +1,266 @@
+---
+title: "JKR Finance"
+params:
+  date:
+    input: date
+    label: Start Date
+    value: '2010-01-01'
+  mar:
+    input: slider
+    label: Min Acceptable Rate
+    max: 0.5
+    min: 0
+    step: 0.001
+    value: 0.008
+  portfolio:
+    choices:
+    - balanced_portfolio_returns
+    - aggressive_portfolio_returns
+    - conservative_portfolio_returns
+    input: select
+    label: portfolio
+    value: balanced_portfolio_returns
+  portfolioName:
+    input: text
+    label: title
+    value: Balanced
+  window:
+    input: numeric
+    label: Rolling Window
+    max: 36
+    min: 6
+    value: 12
+resource_files:
+- config.yml
+- template/template2.pptx
+output:
+  tufte::tufte_handout: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+
+library(config)
+library(dbplyr)
+library(DBI)
+
+dw <- config::get("mssql")
+
+con <- DBI::dbConnect(odbc::odbc(),
+                      Driver = dw$Driver,
+                      Server = dw$Server,
+                      #Host = dw$Host,
+                      UID    = dw$UID,
+                      PWD    = dw$PWD,
+                      Port   = dw$Port,
+                      Database = dw$Database
+                      #Schema = dw$Schema
+                      )
+library(openxlsx)
+library(tidyverse)
+library(tidyquant)
+library(highcharter)
+library(timetk)
+library(blastula)
+library(formattable)
+library(RColorBrewer)
+```
+
+```{r}
+MAR <- params$mar
+# run our calcs
+portfolio_selected <- 
+    tbl(con, params$portfolio) %>%
+    collect() %>% 
+    filter(date >= params$date)
+
+  
+rolling_sortino <-
+    portfolio_selected %>% 
+    tk_xts(date_var = date) %>% 
+    rollapply(params$window, function(x) SortinoRatio(x, MAR = MAR)) %>% 
+    `colnames<-`("rolling")
+
+
+sortino_byhand <- 
+    portfolio_selected %>% 
+    mutate(ratio = mean(returns - MAR)/sqrt(sum(pmin(returns - MAR, 0)^2)/nrow(.))) %>% 
+    # Add two new columns to help with ggplot.
+    mutate(returns_below_MAR = ifelse(returns < MAR, returns, NA)) %>%
+    mutate(returns_above_MAR = ifelse(returns > MAR, returns, NA))
+
+
+```
+
+
+# Sortino Ratio Report for `r params$portfolioName` Portfolio
+
+A portfolio is a weighted collection of assets. ^[Its etymology harkens back to the Latin for "to carry sheets of paper", which I s'pose made its way to the world of investments because securities used to actually be on sheets of paper too, and a portfolio of investments involved sheets of paper representing interests in several assets]. The reason that rational investors prefer a portfolio to a single asset is that a portfolio can offer a better risk/return tradeoff due to low or negavitve covariance amongst portfolio components.
+
+The Sortino Ratio is similar to the Sharpe Ratio except that the riskiness of a portfolio is measured by the deviation of returns below a target return, instead of by the standard deviation of all returns. This stands in contradistinction to the Sharpe Ratio, which measures return/risk by the ratio of the returns above the risk free rate divided by the standard deviation of all returns. By way of history, Harry Markowitz, Nobel laureate and father of MPT, noted that downside deviation might be a better measure of risk than the standard deviation of all returns, but its calculation was computationally too expensive1 (it was 1959, if he only he’d had R on his laptop).
+
+# Rolling Sortino
+
+This ratio gives us a sense of how risky our portfolio is! **The ratio indicator for today is `r tail(sortino_byhand$ratio, 1)`**.
+
+The historical ratio for this portfolio is:
+
+\[Sortino~Ratio_{portfolio}=\frac{(\overline{Return_{portfolio}-MAR})}{\sqrt{\sum_{t=1}^n min(R_t-MAR,~0)^2}/n}\]
+
+
+
+```{r}
+rolling_sortino %>% 
+  as_tibble() %>% 
+  mutate(time = tk_index(rolling_sortino)) %>% 
+  ggplot(aes(time, rolling)) +
+    geom_line() + 
+    theme_minimal() + 
+    labs(
+      title = NULL, 
+      x = "Date", 
+      y = "Sortino Ratio"
+    )
+  
+```
+
+```{marginfigure, echo = TRUE}
+This ratio is based off of a rolling window.
+```
+
+# Returns
+
+This chart shows the returns overtime, colored based on whether the return is above or below our acceptable default rate of return, `r params$mar`.
+
+```{r fig.fullwidth=TRUE}
+
+ portfolio_scatter <-  ggplot(data = sortino_byhand, aes(x = date)) +
+  geom_point(aes(y = returns_below_MAR), colour = "red") +
+  geom_point(aes(y = returns_above_MAR), colour = "green") + 
+  geom_vline(xintercept = as.numeric(as.Date("2016-11-30")), color = "blue") +
+  geom_hline(yintercept = MAR, color = "purple", linetype = "dotted") +
+  annotate(geom="text", x=as.Date("2016-11-30"), 
+           y = -.05, label = "Trump", fontface = "plain", 
+           angle = 90, alpha = .5, vjust =  1.5) +
+  ylab("percent monthly returns")
+
+portfolio_scatter
+
+```
+
+# Density
+
+We can also look at the density of the returns, and focus on the portion of the density below our desired return threshold (the downside of our portfolio).
+
+```{r}
+  
+  sortino_density_plot <- sortino_byhand %>% 
+    ggplot(aes(x = returns)) +
+    stat_density(geom = "line", size = 1, color = "cornflowerblue") 
+  
+  shaded_area_data <- ggplot_build(sortino_density_plot)$data[[1]] %>% 
+    filter(x < MAR)
+
+  sortino_density_plot <- 
+    sortino_density_plot + 
+  geom_area(data = shaded_area_data, aes(x = x, y = y), fill="pink", alpha = 0.5) +
+  geom_segment(data = shaded_area_data, aes(x = MAR, y = 0, xend = MAR, yend = y), 
+               color = "red", linetype = "dotted") +
+  annotate(geom = "text", x = MAR, y = 5, label = paste("MAR =", MAR, sep = ""), 
+           fontface = "plain", angle = 90, alpha = .8, vjust =  -1) +
+  annotate(geom = "text", x = (MAR - .02), y = .1, label = "Downside", 
+           fontface = "plain", alpha = .8, vjust =  -1)
+           
+sortino_density_plot
+```
+
+```{r fig.margin=TRUE, fig.cap="You may prefer a histogram over a density plot."}
+
+sortino_hist <-  sortino_byhand %>% 
+    ggplot(aes(x = returns)) +
+    geom_histogram(alpha = 0.25, binwidth = .01, fill = "cornflowerblue") +
+    geom_vline(xintercept = MAR, color = "green") +
+    annotate(geom = "text", x = MAR, 
+             y = 10, label = "MAR", fontface = "plain", 
+             angle = 90, alpha = .5, vjust =  1)
+
+sortino_hist
+```
+
+# Other Outputs
+
+This report is also going to generate some legacy reporting documents, including an Excel file and a Powerpoint document. We'll also use code from the report to create a customized email.  
+
+```{r, echo = FALSE}
+# excel file
+excel_file <- 
+  paste(params$portfolio, Sys.Date(), ".csv", sep = "")
+write.csv(portfolio_selected, file = excel_file)
+
+#ppt
+callr::r_copycat(
+  function(params,portfolio_scatter, sortino_hist,sortino_byhand, MAR){
+    rmarkdown::render('template/template.Rmd', 
+                      output_file = 'returns.pptx',
+                      quiet = TRUE)
+  },
+  list(params,portfolio_scatter, sortino_hist,sortino_byhand, MAR)
+)
+
+file.copy('template/returns.pptx', './returns.pptx')
+
+```
+
+```{r, echo = FALSE}
+subject <- paste0(params$portfolioName, " portfolio Sortino report", sep = " ")
+rmarkdown::output_metadata$set("rsc_email_subject" = subject)
+  
+
+# embed charts and data table
+  
+sign_formatter <- formatter("span", 
+  style = x ~ style(color = ifelse(x > 0, "green", 
+    ifelse(x < 0, "red", "black"))))
+
+
+tbl <- 
+  portfolio_selected %>%
+  arrange(desc(date)) %>% 
+  head() %>% 
+  format_table(x = .,
+               list(returns = sign_formatter))
+  
+  
+  msg <- compose_email(
+    body = "
+    Hello Team,
+    
+    Here is the daily pulse of the {params$portfolio} Portfolio as of {Sys.Date()}.
+
+    {add_ggplot(portfolio_scatter, width = 6, height = 6)}
+
+
+    The returns as of {Sys.Date()}: 
+
+    {add_ggplot(sortino_density_plot, width = 6, height = 6)}
+
+    Here are the raw numbers and a spreadsheet and powerpoint are attached:
+
+    {tbl}
+    
+
+    Let me know if you have any questions.
+    
+
+    Thanks,
+    JKR"
+  )
+
+  # set the output metadat
+  rmarkdown::output_metadata$set(
+    rsc_email_body_html = msg$html_str,
+    rsc_email_images = msg$images,
+    rsc_email_attachments = list(excel_file, "returns.pptx")
+  )
+````
+
