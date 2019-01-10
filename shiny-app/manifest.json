@@ -266,8 +266,8 @@
       "description": {
         "Package": "Rcpp",
         "Title": "Seamless R and C++ Integration",
-        "Version": "0.12.19",
-        "Date": "2018-09-21",
+        "Version": "1.0.0",
+        "Date": "2018-11-05",
         "Author": "Dirk Eddelbuettel, Romain Francois, JJ Allaire, Kevin Ushey, Qiang Kou,\n Nathan Russell, Douglas Bates and John Chambers",
         "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
         "Description": "The 'Rcpp' package provides R functions as well as C++ classes which\n offer a seamless integration of R and C++. Many R data types and objects can be\n mapped back and forth to C++ equivalents which facilitates both writing of new\n code as well as easier integration of third-party libraries. Documentation\n about 'Rcpp' is provided by several vignettes included in this package, via the\n 'Rcpp Gallery' site at <http://gallery.rcpp.org>, the paper by Eddelbuettel and\n Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013,\n <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018,\n <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
@@ -281,10 +281,10 @@
         "MailingList": "Please send questions and comments regarding Rcpp to\nrcpp-devel@lists.r-forge.r-project.org",
         "RoxygenNote": "6.0.1",
         "NeedsCompilation": "yes",
-        "Packaged": "2018-09-30 18:12:58.354107 UTC; edd",
+        "Packaged": "2018-11-06 03:02:42.98448 UTC; edd",
         "Repository": "RSPM",
-        "Date/Publication": "2018-10-01 06:39:15 UTC",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:26:08 UTC; unix"
+        "Date/Publication": "2018-11-07 20:00:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-12-17 21:07:57 UTC; unix"
       }
     },
     "RcppArmadillo": {
@@ -660,24 +660,24 @@
       "description": {
         "Package": "callr",
         "Title": "Call R from R",
-        "Version": "3.0.0",
+        "Version": "3.1.0",
         "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", role = c(\"aut\", \"cre\", \"cph\"),\n           email = \"csardi.gabor@gmail.com\",\n\t   comment = c(ORCID = \"0000-0001-7098-9676\")),\n    person(\"Winston\", \"Chang\", role = \"aut\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\")),\n    person(\"Mango Solutions\", role  = c(\"cph\", \"fnd\")))",
         "Description": "It is sometimes useful to perform a computation in a\n    separate R process, without affecting the current R process at all.\n    This packages does exactly that.",
         "License": "MIT + file LICENSE",
         "LazyData": "true",
         "URL": "https://github.com/r-lib/callr#readme",
         "BugReports": "https://github.com/r-lib/callr/issues",
-        "RoxygenNote": "6.1.0",
-        "Imports": "base64enc, processx (>= 3.2.0), R6, utils",
-        "Suggests": "covr, crayon, ps, testthat, withr",
+        "RoxygenNote": "6.1.1",
+        "Imports": "processx (>= 3.2.1), R6, utils",
+        "Suggests": "covr, crayon, pingr, ps, testthat, withr",
         "Encoding": "UTF-8",
         "NeedsCompilation": "no",
-        "Packaged": "2018-08-24 08:39:14 UTC; gaborcsardi",
+        "Packaged": "2018-12-10 14:39:29 UTC; gaborcsardi",
         "Author": "Gábor Csárdi [aut, cre, cph] (<https://orcid.org/0000-0001-7098-9676>),\n  Winston Chang [aut],\n  RStudio [cph, fnd],\n  Mango Solutions [cph, fnd]",
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "RSPM",
-        "Date/Publication": "2018-08-24 10:05:40 UTC",
-        "Built": "R 3.4.3; ; 2018-10-10 02:16:50 UTC; unix"
+        "Date/Publication": "2018-12-10 16:30:03 UTC",
+        "Built": "R 3.4.3; ; 2018-12-17 21:08:21 UTC; unix"
       }
     },
     "cli": {
@@ -1428,6 +1428,41 @@
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-14 21:49:21 UTC; unix"
       }
     },
+    "gitlink": {
+      "Source": "github",
+      "Repository": null,
+      "GithubRepo": "gitlink",
+      "GithubUsername": "colearendt",
+      "GithubRef": "master",
+      "GithubSha1": "f9878165a9d6ae8c789381b8e543d6b5827bf886",
+      "description": {
+        "Package": "gitlink",
+        "Title": "Add git links to your web-based assets",
+        "Version": "0.0.0.9000",
+        "Authors@R": "\n    person(given = \"Cole\",\n           family = \"Arendt\",\n           role = c(\"aut\", \"cre\"),\n           email = \"cole@rstudio.com\")",
+        "Description": "Provides helpers to add git links to Shiny applications, R Markdown documents, \n            and other HTML-based resources. This is most commonly used for GitHub ribbons.",
+        "License": "MIT + file LICENSE",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "6.1.1",
+        "Imports": "htmltools, rlang",
+        "RemoteType": "github",
+        "RemoteHost": "api.github.com",
+        "RemoteRepo": "gitlink",
+        "RemoteUsername": "colearendt",
+        "RemoteRef": "master",
+        "RemoteSha": "f9878165a9d6ae8c789381b8e543d6b5827bf886",
+        "GithubRepo": "gitlink",
+        "GithubUsername": "colearendt",
+        "GithubRef": "master",
+        "GithubSHA1": "f9878165a9d6ae8c789381b8e543d6b5827bf886",
+        "NeedsCompilation": "no",
+        "Packaged": "2019-01-08 19:53:53 UTC; carendt",
+        "Author": "Cole Arendt [aut, cre]",
+        "Maintainer": "Cole Arendt <cole@rstudio.com>",
+        "Built": "R 3.4.3; ; 2019-01-08 19:53:54 UTC; unix"
+      }
+    },
     "glue": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -1647,40 +1682,34 @@
       }
     },
     "httpuv": {
-      "Source": "github",
-      "Repository": null,
-      "GithubRepo": "httpuv",
-      "GithubUsername": "rstudio",
-      "GithubRef": "master",
-      "GithubSha1": "2cbf7bddb7a824e484c6ed34b8921f35d6b29ce9",
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
       "description": {
         "Package": "httpuv",
         "Type": "Package",
         "Title": "HTTP and WebSocket Server Library",
-        "Version": "1.4.5.9000",
+        "Version": "1.4.5.1",
         "Author": "Joe Cheng, Hector Corrada Bravo [ctb], Jeroen Ooms [ctb],\n    Winston Chang [ctb]",
-        "Copyright": "RStudio, Inc.; Joyent, Inc.; Nginx Inc.; Igor Sysoev; Niels Provos;\nInternet Systems Consortium, Inc.; Alexander Chemeris",
+        "Copyright": "RStudio, Inc.; Joyent, Inc.; Nginx Inc.; Igor Sysoev; Niels\nProvos; Internet Systems Consortium, Inc.; Alexander Chemeris",
         "Maintainer": "Joe Cheng <joe@rstudio.com>",
         "Description": "Provides low-level socket and protocol support for handling\n    HTTP and WebSocket requests directly from within R. It is primarily\n    intended as a building block for other packages, rather than making it\n    particularly easy to create complete web applications using httpuv alone.\n    httpuv is built on top of the libuv and http-parser C libraries, both of\n    which were developed by Joyent, Inc. (See LICENSE file for libuv and\n    http-parser license information.)",
         "License": "GPL (>= 2) | file LICENSE",
-        "Depends": "R (>= 2.15.1),\nmethods",
-        "Imports": "Rcpp (>= 0.11.0),\nutils,\npromises,\nlater (>= 0.7.3)",
+        "Depends": "R (>= 2.15.1), methods",
+        "Imports": "Rcpp (>= 0.11.0), utils, promises, later (>= 0.7.3)",
         "LinkingTo": "Rcpp, BH, later",
         "URL": "https://github.com/rstudio/httpuv",
         "SystemRequirements": "GNU make",
         "RoxygenNote": "6.0.1.9000",
-        "Suggests": "testthat,\ncallr",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-07 19:39:50 UTC; unix",
-        "RemoteType": "github",
-        "RemoteHost": "https://api.github.com",
-        "RemoteRepo": "httpuv",
-        "RemoteUsername": "rstudio",
-        "RemoteRef": "master",
-        "RemoteSha": "2cbf7bddb7a824e484c6ed34b8921f35d6b29ce9",
-        "GithubRepo": "httpuv",
-        "GithubUsername": "rstudio",
-        "GithubRef": "master",
-        "GithubSHA1": "2cbf7bddb7a824e484c6ed34b8921f35d6b29ce9"
+        "Suggests": "testthat, callr",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-12-18 19:03:26 UTC; winston",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-12-18 19:40:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-07 15:14:19 UTC; unix"
       }
     },
     "httr": {
@@ -1804,7 +1833,7 @@
       }
     },
     "jsonlite": {
-      "Source": "CRAN",
+      "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
@@ -1812,7 +1841,7 @@
       "GithubSha1": null,
       "description": {
         "Package": "jsonlite",
-        "Version": "1.5",
+        "Version": "1.6",
         "Title": "A Robust, High Performance JSON Parser and Generator for R",
         "License": "MIT + file LICENSE",
         "NeedsCompilation": "yes",
@@ -1824,11 +1853,11 @@
         "VignetteBuilder": "knitr, R.rsp",
         "Description": "A fast JSON parser and generator optimized for statistical data\n    and the web. Started out as a fork of 'RJSONIO', but has been completely\n    rewritten in recent versions. The package offers flexible, robust, high\n    performance tools for working with JSON in R and is particularly powerful\n    for building pipelines and interacting with a web API. The implementation is\n    based on the mapping described in the vignette (Ooms, 2014). In addition to\n    converting JSON data from/to R objects, 'jsonlite' contains functions to\n    stream, validate, and prettify JSON data. The unit tests included with the\n    package verify that all edge cases are encoded and decoded consistently for\n    use with dynamic data in systems and applications.",
         "Suggests": "httr, curl, plyr, testthat, knitr, rmarkdown, R.rsp, sp",
-        "RoxygenNote": "6.0.1.9000",
-        "Packaged": "2017-05-31 14:03:43 UTC; jeroen",
-        "Repository": "CRAN",
-        "Date/Publication": "2017-06-01 12:03:37 UTC",
-        "Built": "R 3.4.0; x86_64-apple-darwin15.6.0; 2017-06-02 03:53:14 UTC; unix"
+        "RoxygenNote": "6.1.1",
+        "Packaged": "2018-12-07 11:22:02 UTC; jeroen",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-12-07 12:50:02 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-12-20 04:28:51 UTC; unix"
       }
     },
     "knitr": {
@@ -1922,7 +1951,7 @@
         "Maintainer": "Joe Cheng <joe@rstudio.com>",
         "Repository": "RSPM",
         "Date/Publication": "2018-09-18 22:20:03 UTC",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:27:06 UTC; unix"
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-07 15:02:04 UTC; unix"
       }
     },
     "lattice": {
@@ -2624,24 +2653,24 @@
       "description": {
         "Package": "processx",
         "Title": "Execute and Control System Processes",
-        "Version": "3.2.0",
+        "Version": "3.2.1",
         "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", role = c(\"aut\", \"cre\", \"cph\"),\n           email = \"csardi.gabor@gmail.com\",\n\t   comment = c(ORCID = \"0000-0001-7098-9676\")),\n    person(\"Winston\", \"Chang\", role = \"aut\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\")),\n    person(\"Mango Solutions\", role  = c(\"cph\", \"fnd\")))",
         "Description": "Tools to run system processes in the background.\n    It can check if a background process is running; wait on a background\n    process to finish; get the exit status of finished processes; kill\n    background processes. It can read the standard output and error of\n    the processes, using non-blocking connections. 'processx' can poll\n    a process for standard output or error, with a timeout. It can also\n    poll several processes at once.",
         "License": "MIT + file LICENSE",
         "LazyData": "true",
         "URL": "https://github.com/r-lib/processx#readme",
         "BugReports": "https://github.com/r-lib/processx/issues",
-        "RoxygenNote": "6.0.1.9000",
-        "Imports": "assertthat, crayon, ps, R6, utils",
-        "Suggests": "callr, covr, debugme, parallel, testthat, withr",
+        "RoxygenNote": "6.1.1",
+        "Imports": "ps, R6, utils",
+        "Suggests": "callr, covr, crayon, debugme, parallel, testthat, withr",
         "Encoding": "UTF-8",
         "NeedsCompilation": "yes",
-        "Packaged": "2018-08-16 08:47:09 UTC; gaborcsardi",
+        "Packaged": "2018-12-04 23:16:03 UTC; gaborcsardi",
         "Author": "Gábor Csárdi [aut, cre, cph] (<https://orcid.org/0000-0001-7098-9676>),\n  Winston Chang [aut],\n  RStudio [cph, fnd],\n  Mango Solutions [cph, fnd]",
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "RSPM",
-        "Date/Publication": "2018-08-16 09:20:02 UTC",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-08-24 17:50:34 UTC; unix"
+        "Date/Publication": "2018-12-05 07:40:06 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-12-17 21:08:18 UTC; unix"
       }
     },
     "promises": {
@@ -2686,7 +2715,7 @@
       "GithubSha1": null,
       "description": {
         "Package": "ps",
-        "Version": "1.1.0",
+        "Version": "1.2.1",
         "Title": "List, Query, Manipulate System Processes",
         "Description": "List, query and manipulate all system processes, on 'Windows',\n    'Linux' and 'macOS'.",
         "Authors@R": "c(\n    person(\"Jay\", \"Loden\", role = \"aut\"),\n    person(\"Dave\", \"Daeschler\", role = \"aut\"),\n    person(\"Giampaolo\", \"Rodola'\", role = \"aut\"),\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", c(\"aut\", \"cre\")),\n    person(\"RStudio\", role = \"cph\"))",
@@ -2696,16 +2725,16 @@
         "Encoding": "UTF-8",
         "Depends": "R (>= 3.1)",
         "Imports": "utils",
-        "Suggests": "callr, covr, processx (>= 3.1.0), R6, rlang, testthat, tibble",
+        "Suggests": "callr, covr, curl, pingr, processx (>= 3.1.0), R6, rlang,\ntestthat, tibble",
         "RoxygenNote": "6.1.0",
         "Biarch": "true",
         "NeedsCompilation": "yes",
-        "Packaged": "2018-08-09 23:43:34 UTC; gaborcsardi",
+        "Packaged": "2018-11-06 10:09:10 UTC; gaborcsardi",
         "Author": "Jay Loden [aut],\n  Dave Daeschler [aut],\n  Giampaolo Rodola' [aut],\n  Gábor Csárdi [aut, cre],\n  RStudio [cph]",
         "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
         "Repository": "RSPM",
-        "Date/Publication": "2018-08-10 12:30:03 UTC",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-08-24 17:50:32 UTC; unix"
+        "Date/Publication": "2018-11-06 12:40:02 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-12-17 21:07:53 UTC; unix"
       }
     },
     "psych": {
@@ -3024,24 +3053,25 @@
         "Package": "rmarkdown",
         "Type": "Package",
         "Title": "Dynamic Documents for R",
-        "Version": "1.10",
-        "Authors@R": "c(\n  person(\"JJ\", \"Allaire\", role = \"aut\", email = \"jj@rstudio.com\"),\n  person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n  person(\"Jonathan\", \"McPherson\", role = \"aut\", email = \"jonathan@rstudio.com\"),\n  person(\"Javier\", \"Luraschi\", role = \"aut\", email = \"javier@rstudio.com\"),\n  person(\"Kevin\", \"Ushey\", role = \"aut\", email = \"kevin@rstudio.com\"),\n  person(\"Aron\", \"Atkins\", role = \"aut\", email = \"aron@rstudio.com\"),\n  person(\"Hadley\", \"Wickham\", role = \"aut\", email = \"hadley@rstudio.com\"),\n  person(\"Joe\", \"Cheng\", role = \"aut\", email = \"joe@rstudio.com\"),\n  person(\"Winston\", \"Chang\", role = \"aut\", email = \"winston@rstudio.com\"),\n  person(\"Jeff\", \"Allen\", role = \"ctb\", email = \"jeff@rstudio.com\"),\n  person(\"Roy\", \"Storey\", role = \"ctb\"),\n  person(\"Rob\", \"Hyndman\", role = \"ctb\", email = \"Rob.Hyndman@monash.edu\"),\n  person(\"Ruben\", \"Arslan\", role = \"ctb\", email = \"ruben.arslan@uni-goettingen.de\"),\n  person(\"Frederik\", \"Aust\", role = \"ctb\", email = \"frederik.aust@uni-koeln.de\", comment = c(ORCID = \"0000-0003-4900-788X\")),\n  person(family = \"RStudio, Inc.\", role = \"cph\"),\n  person(family = \"jQuery Foundation\", role = \"cph\",\n         comment = \"jQuery library\"),\n  person(family = \"jQuery contributors\", role = c(\"ctb\", \"cph\"),\n         comment = \"jQuery library; authors listed in inst/rmd/h/jquery-AUTHORS.txt\"),\n  person(family = \"jQuery UI contributors\", role = c(\"ctb\", \"cph\"),\n         comment = \"jQuery UI library; authors listed in inst/rmd/h/jqueryui-AUTHORS.txt\"),\n  person(\"Mark\", \"Otto\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(\"Jacob\", \"Thornton\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(family = \"Bootstrap contributors\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(family = \"Twitter, Inc\", role = \"cph\",\n         comment = \"Bootstrap library\"),\n  person(\"Alexander\", \"Farkas\", role = c(\"ctb\", \"cph\"),\n         comment = \"html5shiv library\"),\n  person(\"Scott\", \"Jehl\", role = c(\"ctb\", \"cph\"),\n         comment = \"Respond.js library\"),\n  person(\"Ivan\", \"Sagalaev\", role = c(\"ctb\", \"cph\"),\n         comment = \"highlight.js library\"),\n  person(\"Greg\", \"Franko\", role = c(\"ctb\", \"cph\"),\n         comment = \"tocify library\"),\n  person(\"John\", \"MacFarlane\", role = c(\"ctb\", \"cph\"),\n         comment = \"Pandoc templates\"),\n  person(family = \"Google, Inc.\", role = c(\"ctb\", \"cph\"),\n         comment = \"ioslides library\"),\n  person(\"Dave\", \"Raggett\", role = \"ctb\",\n         comment = \"slidy library\"),\n  person(family = \"W3C\", role = \"cph\",\n         comment = \"slidy library\"),\n  person(\"Dave\", \"Gandy\", role = c(\"ctb\", \"cph\"),\n         comment = \"Font-Awesome\"),\n  person(\"Ben\", \"Sperry\", role = \"ctb\",\n         comment = \"Ionicons\"),\n  person(family = \"Drifty\", role = \"cph\",\n         comment = \"Ionicons\"),\n  person(\"Aidan\", \"Lister\", role = c(\"ctb\", \"cph\"), \n         comment = \"jQuery StickyTabs\")\n  )",
+        "Version": "1.11",
+        "Authors@R": "c(\n  person(\"JJ\", \"Allaire\", role = \"aut\", email = \"jj@rstudio.com\"),\n  person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n  person(\"Jonathan\", \"McPherson\", role = \"aut\", email = \"jonathan@rstudio.com\"),\n  person(\"Javier\", \"Luraschi\", role = \"aut\", email = \"javier@rstudio.com\"),\n  person(\"Kevin\", \"Ushey\", role = \"aut\", email = \"kevin@rstudio.com\"),\n  person(\"Aron\", \"Atkins\", role = \"aut\", email = \"aron@rstudio.com\"),\n  person(\"Hadley\", \"Wickham\", role = \"aut\", email = \"hadley@rstudio.com\"),\n  person(\"Joe\", \"Cheng\", role = \"aut\", email = \"joe@rstudio.com\"),\n  person(\"Winston\", \"Chang\", role = \"aut\", email = \"winston@rstudio.com\"),\n  person(\"Richard\", \"Iannone\", role = \"aut\", email = \"rich@rstudio.com\", comment = c(ORCID = \"0000-0003-3925-190X\")),\n  person(\"Jeff\", \"Allen\", role = \"ctb\", email = \"jeff@rstudio.com\"),\n  person(\"Barret\", \"Schloerke\", role = \"ctb\"),\n  person(\"Roy\", \"Storey\", role = \"ctb\"),\n  person(\"Rob\", \"Hyndman\", role = \"ctb\", email = \"Rob.Hyndman@monash.edu\"),\n  person(\"Ruben\", \"Arslan\", role = \"ctb\", email = \"ruben.arslan@uni-goettingen.de\"),\n  person(\"Frederik\", \"Aust\", role = \"ctb\", email = \"frederik.aust@uni-koeln.de\", comment = c(ORCID = \"0000-0003-4900-788X\")),\n  person(\"Christophe\", \"Dervieux\", role = \"ctb\"),\n  person(family = \"RStudio, Inc.\", role = \"cph\"),\n  person(family = \"jQuery Foundation\", role = \"cph\",\n         comment = \"jQuery library\"),\n  person(family = \"jQuery contributors\", role = c(\"ctb\", \"cph\"),\n         comment = \"jQuery library; authors listed in inst/rmd/h/jquery-AUTHORS.txt\"),\n  person(family = \"jQuery UI contributors\", role = c(\"ctb\", \"cph\"),\n         comment = \"jQuery UI library; authors listed in inst/rmd/h/jqueryui-AUTHORS.txt\"),\n  person(\"Mark\", \"Otto\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(\"Jacob\", \"Thornton\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(family = \"Bootstrap contributors\", role = \"ctb\",\n         comment = \"Bootstrap library\"),\n  person(family = \"Twitter, Inc\", role = \"cph\",\n         comment = \"Bootstrap library\"),\n  person(\"Alexander\", \"Farkas\", role = c(\"ctb\", \"cph\"),\n         comment = \"html5shiv library\"),\n  person(\"Scott\", \"Jehl\", role = c(\"ctb\", \"cph\"),\n         comment = \"Respond.js library\"),\n  person(\"Ivan\", \"Sagalaev\", role = c(\"ctb\", \"cph\"),\n         comment = \"highlight.js library\"),\n  person(\"Greg\", \"Franko\", role = c(\"ctb\", \"cph\"),\n         comment = \"tocify library\"),\n  person(\"John\", \"MacFarlane\", role = c(\"ctb\", \"cph\"),\n         comment = \"Pandoc templates\"),\n  person(family = \"Google, Inc.\", role = c(\"ctb\", \"cph\"),\n         comment = \"ioslides library\"),\n  person(\"Dave\", \"Raggett\", role = \"ctb\",\n         comment = \"slidy library\"),\n  person(family = \"W3C\", role = \"cph\",\n         comment = \"slidy library\"),\n  person(\"Dave\", \"Gandy\", role = c(\"ctb\", \"cph\"),\n         comment = \"Font-Awesome\"),\n  person(\"Ben\", \"Sperry\", role = \"ctb\",\n         comment = \"Ionicons\"),\n  person(family = \"Drifty\", role = \"cph\",\n         comment = \"Ionicons\"),\n  person(\"Aidan\", \"Lister\", role = c(\"ctb\", \"cph\"), \n         comment = \"jQuery StickyTabs\")\n  )",
         "Maintainer": "Yihui Xie <xie@yihui.name>",
         "Description": "Convert R Markdown documents into a variety of formats.",
         "Depends": "R (>= 3.0)",
-        "Imports": "tools, utils, knitr (>= 1.18), yaml (>= 2.1.5), htmltools (>=\n0.3.5), evaluate (>= 0.8), base64enc, jsonlite, rprojroot,\nmime, tinytex (>= 0.3), methods, stringr (>= 1.2.0)",
-        "Suggests": "shiny (>= 0.11), tufte, testthat, digest, dygraphs, tibble",
+        "Imports": "tools, utils, knitr (>= 1.18), yaml (>= 2.1.19), htmltools (>=\n0.3.5), evaluate (>= 0.8), base64enc, jsonlite, mime, tinytex\n(>= 0.3), methods, stringr (>= 1.2.0)",
+        "Suggests": "shiny (>= 0.11), tufte, testthat, digest, dygraphs, tibble,\ncallr (>= 2.0.0)",
         "SystemRequirements": "pandoc (>= 1.12.3) - http://pandoc.org",
-        "URL": "https://rmarkdown.rstudio.com,\nhttps://github.com/rstudio/rmarkdown",
+        "URL": "https://rmarkdown.rstudio.com",
         "BugReports": "https://github.com/rstudio/rmarkdown/issues",
         "License": "GPL-3",
-        "RoxygenNote": "6.0.1",
+        "RoxygenNote": "6.1.1",
+        "Encoding": "UTF-8",
         "NeedsCompilation": "no",
-        "Packaged": "2018-06-11 05:02:32 UTC; yihui",
-        "Author": "JJ Allaire [aut],\n  Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  Jonathan McPherson [aut],\n  Javier Luraschi [aut],\n  Kevin Ushey [aut],\n  Aron Atkins [aut],\n  Hadley Wickham [aut],\n  Joe Cheng [aut],\n  Winston Chang [aut],\n  Jeff Allen [ctb],\n  Roy Storey [ctb],\n  Rob Hyndman [ctb],\n  Ruben Arslan [ctb],\n  Frederik Aust [ctb] (<https://orcid.org/0000-0003-4900-788X>),\n  RStudio, Inc. [cph],\n  jQuery Foundation [cph] (jQuery library),\n  jQuery contributors [ctb, cph] (jQuery library; authors listed in\n    inst/rmd/h/jquery-AUTHORS.txt),\n  jQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in\n    inst/rmd/h/jqueryui-AUTHORS.txt),\n  Mark Otto [ctb] (Bootstrap library),\n  Jacob Thornton [ctb] (Bootstrap library),\n  Bootstrap contributors [ctb] (Bootstrap library),\n  Twitter, Inc [cph] (Bootstrap library),\n  Alexander Farkas [ctb, cph] (html5shiv library),\n  Scott Jehl [ctb, cph] (Respond.js library),\n  Ivan Sagalaev [ctb, cph] (highlight.js library),\n  Greg Franko [ctb, cph] (tocify library),\n  John MacFarlane [ctb, cph] (Pandoc templates),\n  Google, Inc. [ctb, cph] (ioslides library),\n  Dave Raggett [ctb] (slidy library),\n  W3C [cph] (slidy library),\n  Dave Gandy [ctb, cph] (Font-Awesome),\n  Ben Sperry [ctb] (Ionicons),\n  Drifty [cph] (Ionicons),\n  Aidan Lister [ctb, cph] (jQuery StickyTabs)",
+        "Packaged": "2018-12-07 21:58:51 UTC; yihui",
+        "Author": "JJ Allaire [aut],\n  Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  Jonathan McPherson [aut],\n  Javier Luraschi [aut],\n  Kevin Ushey [aut],\n  Aron Atkins [aut],\n  Hadley Wickham [aut],\n  Joe Cheng [aut],\n  Winston Chang [aut],\n  Richard Iannone [aut] (<https://orcid.org/0000-0003-3925-190X>),\n  Jeff Allen [ctb],\n  Barret Schloerke [ctb],\n  Roy Storey [ctb],\n  Rob Hyndman [ctb],\n  Ruben Arslan [ctb],\n  Frederik Aust [ctb] (<https://orcid.org/0000-0003-4900-788X>),\n  Christophe Dervieux [ctb],\n  RStudio, Inc. [cph],\n  jQuery Foundation [cph] (jQuery library),\n  jQuery contributors [ctb, cph] (jQuery library; authors listed in\n    inst/rmd/h/jquery-AUTHORS.txt),\n  jQuery UI contributors [ctb, cph] (jQuery UI library; authors listed in\n    inst/rmd/h/jqueryui-AUTHORS.txt),\n  Mark Otto [ctb] (Bootstrap library),\n  Jacob Thornton [ctb] (Bootstrap library),\n  Bootstrap contributors [ctb] (Bootstrap library),\n  Twitter, Inc [cph] (Bootstrap library),\n  Alexander Farkas [ctb, cph] (html5shiv library),\n  Scott Jehl [ctb, cph] (Respond.js library),\n  Ivan Sagalaev [ctb, cph] (highlight.js library),\n  Greg Franko [ctb, cph] (tocify library),\n  John MacFarlane [ctb, cph] (Pandoc templates),\n  Google, Inc. [ctb, cph] (ioslides library),\n  Dave Raggett [ctb] (slidy library),\n  W3C [cph] (slidy library),\n  Dave Gandy [ctb, cph] (Font-Awesome),\n  Ben Sperry [ctb] (Ionicons),\n  Drifty [cph] (Ionicons),\n  Aidan Lister [ctb, cph] (jQuery StickyTabs)",
         "Repository": "RSPM",
-        "Date/Publication": "2018-06-11 06:12:56 UTC",
-        "Built": "R 3.4.3; ; 2018-11-06 19:27:49 UTC; unix"
+        "Date/Publication": "2018-12-08 05:50:03 UTC",
+        "Built": "R 3.4.3; ; 2018-12-19 13:57:27 UTC; unix"
       }
     },
     "rprojroot": {
@@ -3897,7 +3927,7 @@
       "checksum": "9e5df2916018a8a5bbf519348d6831a4"
     },
     "manifest.json": {
-      "checksum": "6ca7c602e20cae73d25f825d3c5a9d5f"
+      "checksum": "015853191323f62f254f1ee2f9189207"
     },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
@@ -3930,7 +3960,7 @@
       "checksum": "290185ec97f18eb66941a6705ad41ff3"
     },
     "packrat/desc/callr": {
-      "checksum": "a1574cb4c69666cd6ac5104058a2c57d"
+      "checksum": "84b267b5497d91b04485a36fb65e4c1f"
     },
     "packrat/desc/cli": {
       "checksum": "ba8cfad4f0dcdde5d33e910c27871d5d"
@@ -4007,6 +4037,9 @@
     "packrat/desc/git2r": {
       "checksum": "12abd7a22c169dd8c99ac60c99852e40"
     },
+    "packrat/desc/gitlink": {
+      "checksum": "33c870c7072b4ed2ff6db5027f6f0735"
+    },
     "packrat/desc/glue": {
       "checksum": "b6621544dfe9ce763cd4ab9be9057ee7"
     },
@@ -4029,7 +4062,7 @@
       "checksum": "7b3090a7900cdb5e673430ebbdc2a60d"
     },
     "packrat/desc/httpuv": {
-      "checksum": "da1d9d8b4679958bd1f01d09df6d72c0"
+      "checksum": "5c3a90f812e5fc64f7228f7f8d206be9"
     },
     "packrat/desc/httr": {
       "checksum": "cba5f484844498ccf21470b8fcf2d530"
@@ -4044,7 +4077,7 @@
       "checksum": "0132bccc09a51e46c43f327e7c3dcb42"
     },
     "packrat/desc/jsonlite": {
-      "checksum": "aaa13777daafed750a31e9bcba079dff"
+      "checksum": "81f981554c247af7cec2c74e8d9b7f13"
     },
     "packrat/desc/knitr": {
       "checksum": "6f6e50fc4f1bedf1ac4777be600b94c7"
@@ -4053,7 +4086,7 @@
       "checksum": "68ee057121e6303c655fa990fac07b56"
     },
     "packrat/desc/later": {
-      "checksum": "571617dd016f64b6ec4052b296b4109b"
+      "checksum": "868fb95a17eedaa6223cb5963dda80ac"
     },
     "packrat/desc/lattice": {
       "checksum": "3de0fdce21b1f67076e5507edb187495"
@@ -4134,13 +4167,13 @@
       "checksum": "340684a04d3d185b9858bd157d879941"
     },
     "packrat/desc/processx": {
-      "checksum": "6714de94c6a21b8d1cecb90092b1cb4c"
+      "checksum": "acc07a229eabc36a155366756c0500fd"
     },
     "packrat/desc/promises": {
       "checksum": "87ae09d1618a4219516974c77e6fcdee"
     },
     "packrat/desc/ps": {
-      "checksum": "3ab4d54a8eac236619a2dd7f7d49df2c"
+      "checksum": "14d5ff5383f5f799f599007d50eeca73"
     },
     "packrat/desc/psych": {
       "checksum": "bad5568663275291657e5110fb6a58af"
@@ -4164,7 +4197,7 @@
       "checksum": "2077eba50e542359b463281212519a71"
     },
     "packrat/desc/Rcpp": {
-      "checksum": "eb9cada34554bc7acd08b55d95284fc9"
+      "checksum": "b19b256c7cd1169f1cd4b58ecb842641"
     },
     "packrat/desc/RcppArmadillo": {
       "checksum": "e55e15e31c5307e4625f9acdf8ab19d8"
@@ -4185,7 +4218,7 @@
       "checksum": "c7137a4c673389cfd7caa249f818acb8"
     },
     "packrat/desc/rmarkdown": {
-      "checksum": "e3e8f97325d1e6bf92a5b253bcd15b3a"
+      "checksum": "cbc03b0c31f3045dec5667a9f04f7130"
     },
     "packrat/desc/rprojroot": {
       "checksum": "c97ce6417dca249a3bc45b8ae74c96f7"
@@ -4281,10 +4314,10 @@
       "checksum": "46d1f807fc03a50cf1818ea3560d850f"
     },
     "packrat/packrat.lock": {
-      "checksum": "bd99f020e63ecad04c47117c131bff3d"
+      "checksum": "0503edb0e309e232389c1aa4718f5907"
     },
     "sortino-db-slider-shiny.Rmd": {
-      "checksum": "7ea6908c4c76ff7cd302acae3afaefc8"
+      "checksum": "724c3028a6eb332e5933a8df7f2bf9fe"
     }
   },
   "users": null
