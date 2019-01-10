@@ -71,11 +71,11 @@ MAR <- params$mar
 portfolio_selected <- 
     tbl(con, params$portfolio) %>%
     collect() %>% 
-    filter(date >= params$date)
-
+    filter(as.Date(date) >= as.Date(params$date)) %>%
+    mutate(date = as.Date(date))
   
 rolling_sortino <-
-    portfolio_selected %>% 
+    portfolio_selected %>%
     tk_xts(date_var = date) %>% 
     rollapply(params$window, function(x) SortinoRatio(x, MAR = MAR)) %>% 
     `colnames<-`("rolling")
