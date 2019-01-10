@@ -1,4 +1,8 @@
 default:
-  db: "../stock.db"
+  db:
+    drv: !expr RSQLite::SQLite()
+    dbname: "../portfolio.db"
 quickstart:
-  db: "/data/stock.db"
+  db:
+    drv: !expr RSQLite::SQLite()
+    dbname: "/data/portfolio.db"
