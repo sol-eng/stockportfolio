@@ -2372,7 +2372,7 @@
       }
     },
     "openssl": {
-      "Source": "CRAN",
+      "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "GithubRepo": null,
       "GithubUsername": null,
@@ -2382,7 +2382,7 @@
         "Package": "openssl",
         "Type": "Package",
         "Title": "Toolkit for Encryption, Signatures and Certificates Based on\nOpenSSL",
-        "Version": "1.0.2",
+        "Version": "1.1",
         "Authors@R": "c(person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroen@berkeley.edu\",\n    comment = c(ORCID = \"0000-0002-4035-0289\")),\n    person(\"Oliver\", \"Keyes\", role = \"ctb\"))",
         "Description": "Bindings to OpenSSL libssl and libcrypto, plus custom SSH pubkey parsers.\n    Supports RSA, DSA and EC curves P-256, P-384 and P-521. Cryptographic signatures\n    can either be created and verified manually or via x509 certificates. AES can be\n    used in cbc, ctr or gcm mode for symmetric encryption; RSA for asymmetric (public\n    key) encryption or EC for Diffie Hellman. High-level envelope functions combine\n    RSA and AES for encrypting arbitrary sized data. Other utilities include key\n    generators, hash functions (md5, sha1, sha256, etc), base64 encoder, a secure\n    random number generator, and 'bignum' math methods for manually performing\n    crypto calculations on large multibyte integers.",
         "License": "MIT + file LICENSE",
@@ -2391,14 +2391,14 @@
         "SystemRequirements": "OpenSSL >= 1.0.1",
         "VignetteBuilder": "knitr",
         "Suggests": "testthat, digest, knitr, rmarkdown, jsonlite, jose",
-        "RoxygenNote": "6.0.1.9000",
+        "RoxygenNote": "6.1.1",
         "NeedsCompilation": "yes",
-        "Packaged": "2018-07-30 12:01:13 UTC; jeroen",
+        "Packaged": "2018-11-15 13:15:06 UTC; jeroen",
         "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>),\n  Oliver Keyes [ctb]",
         "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
-        "Repository": "CRAN",
-        "Date/Publication": "2018-07-30 15:30:02 UTC",
-        "Built": "R 3.4.4; x86_64-apple-darwin15.6.0; 2018-07-31 09:29:51 UTC; unix"
+        "Repository": "RSPM",
+        "Date/Publication": "2018-11-15 14:20:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-10 10:49:24 UTC; unix"
       }
     },
     "padr": {
@@ -3927,7 +3927,7 @@
       "checksum": "9e5df2916018a8a5bbf519348d6831a4"
     },
     "manifest.json": {
-      "checksum": "015853191323f62f254f1ee2f9189207"
+      "checksum": "626c7dceb107224f41f9d909fcbfa014"
     },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
@@ -4137,7 +4137,7 @@
       "checksum": "d911dc61f5984c13ae62ca5b0377eb1a"
     },
     "packrat/desc/openssl": {
-      "checksum": "97e2791a8bc5a5f36a88bf7be0c68d7a"
+      "checksum": "a4f50a515dd3c78309c88b6763bd08d6"
     },
     "packrat/desc/padr": {
       "checksum": "3276b4a5a1f25d037ff19324952536d3"
@@ -4314,7 +4314,7 @@
       "checksum": "46d1f807fc03a50cf1818ea3560d850f"
     },
     "packrat/packrat.lock": {
-      "checksum": "0503edb0e309e232389c1aa4718f5907"
+      "checksum": "a2f872653158294d043ecd4bf83aec35"
     },
     "sortino-db-slider-shiny.Rmd": {
       "checksum": "724c3028a6eb332e5933a8df7f2bf9fe"
