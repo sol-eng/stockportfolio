@@ -11,7 +11,7 @@ output:
 
 ```{r echo=FALSE,message=FALSE}
 gitlink::ribbon_css(
-  "https://github.com/sol-eng/stockportfolio/tree/master/shiny-app", 
+  "https://github.com/sol-eng/stockportfolio/", 
   position = "right", 
   parent_css = list(top = "50px", "z-index" = "5", "pointer-events" = "none"),
   "pointer-events" = "auto"
