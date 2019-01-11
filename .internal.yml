@@ -20,6 +20,7 @@ default:
         - "Demo Content|Stock Portfolio"
       url: "/stock-portfolio/report-ppt-pdf/"
       send_email: true
+      image: "img/stock-portfolio-report-ppt-pdf.png"
     - name: "Stock Portfolio Shiny Document"
       path: "./shiny-app"
       description: "This Shiny Application + R Markdown document allows interactive exploration of portfolio returns along with tuning of model parameters"
