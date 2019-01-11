@@ -1434,7 +1434,7 @@
       "GithubRepo": "gitlink",
       "GithubUsername": "colearendt",
       "GithubRef": "master",
-      "GithubSha1": "f9878165a9d6ae8c789381b8e543d6b5827bf886",
+      "GithubSha1": "23c90a7722a1096d8be49640b5f4efc3a08b7009",
       "description": {
         "Package": "gitlink",
         "Title": "Add git links to your web-based assets",
@@ -1451,16 +1451,16 @@
         "RemoteRepo": "gitlink",
         "RemoteUsername": "colearendt",
         "RemoteRef": "master",
-        "RemoteSha": "f9878165a9d6ae8c789381b8e543d6b5827bf886",
+        "RemoteSha": "23c90a7722a1096d8be49640b5f4efc3a08b7009",
         "GithubRepo": "gitlink",
         "GithubUsername": "colearendt",
         "GithubRef": "master",
-        "GithubSHA1": "f9878165a9d6ae8c789381b8e543d6b5827bf886",
+        "GithubSHA1": "23c90a7722a1096d8be49640b5f4efc3a08b7009",
         "NeedsCompilation": "no",
-        "Packaged": "2019-01-08 19:53:53 UTC; carendt",
+        "Packaged": "2019-01-11 16:01:18 UTC; carendt",
         "Author": "Cole Arendt [aut, cre]",
         "Maintainer": "Cole Arendt <cole@rstudio.com>",
-        "Built": "R 3.4.3; ; 2019-01-08 19:53:54 UTC; unix"
+        "Built": "R 3.4.3; ; 2019-01-11 16:01:18 UTC; unix"
       }
     },
     "glue": {
@@ -3927,7 +3927,7 @@
       "checksum": "9e5df2916018a8a5bbf519348d6831a4"
     },
     "manifest.json": {
-      "checksum": "626c7dceb107224f41f9d909fcbfa014"
+      "checksum": "c250b51d1f3fc6047c8cd31258d5ea2a"
     },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
@@ -4038,7 +4038,7 @@
       "checksum": "12abd7a22c169dd8c99ac60c99852e40"
     },
     "packrat/desc/gitlink": {
-      "checksum": "33c870c7072b4ed2ff6db5027f6f0735"
+      "checksum": "6345f7f67337a781733bcf1ecc744a11"
     },
     "packrat/desc/glue": {
       "checksum": "b6621544dfe9ce763cd4ab9be9057ee7"
@@ -4314,7 +4314,7 @@
       "checksum": "46d1f807fc03a50cf1818ea3560d850f"
     },
     "packrat/packrat.lock": {
-      "checksum": "a2f872653158294d043ecd4bf83aec35"
+      "checksum": "69b793649fdcf29ab65dea40c87f6978"
     },
     "sortino-db-slider-shiny.Rmd": {
       "checksum": "724c3028a6eb332e5933a8df7f2bf9fe"

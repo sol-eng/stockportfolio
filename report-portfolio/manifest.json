@@ -1527,7 +1527,7 @@
       "GithubRepo": "gitlink",
       "GithubUsername": "colearendt",
       "GithubRef": "master",
-      "GithubSha1": "f9878165a9d6ae8c789381b8e543d6b5827bf886",
+      "GithubSha1": "23c90a7722a1096d8be49640b5f4efc3a08b7009",
       "description": {
         "Package": "gitlink",
         "Title": "Add git links to your web-based assets",
@@ -1544,16 +1544,16 @@
         "RemoteRepo": "gitlink",
         "RemoteUsername": "colearendt",
         "RemoteRef": "master",
-        "RemoteSha": "f9878165a9d6ae8c789381b8e543d6b5827bf886",
+        "RemoteSha": "23c90a7722a1096d8be49640b5f4efc3a08b7009",
         "GithubRepo": "gitlink",
         "GithubUsername": "colearendt",
         "GithubRef": "master",
-        "GithubSHA1": "f9878165a9d6ae8c789381b8e543d6b5827bf886",
+        "GithubSHA1": "23c90a7722a1096d8be49640b5f4efc3a08b7009",
         "NeedsCompilation": "no",
-        "Packaged": "2019-01-08 19:53:53 UTC; carendt",
+        "Packaged": "2019-01-11 16:01:18 UTC; carendt",
         "Author": "Cole Arendt [aut, cre]",
         "Maintainer": "Cole Arendt <cole@rstudio.com>",
-        "Built": "R 3.4.3; ; 2019-01-08 19:53:54 UTC; unix"
+        "Built": "R 3.4.3; ; 2019-01-11 16:01:18 UTC; unix"
       }
     },
     "glue": {
@@ -4023,7 +4023,7 @@
       "checksum": "07a4a6940a8a9749ce6220a2c0fa87da"
     },
     "manifest.json": {
-      "checksum": "7af00812c195abbbd94d248c91a59cba"
+      "checksum": "951988edab1c483285b5d27478b06c7c"
     },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
@@ -4143,7 +4143,7 @@
       "checksum": "12abd7a22c169dd8c99ac60c99852e40"
     },
     "packrat/desc/gitlink": {
-      "checksum": "33c870c7072b4ed2ff6db5027f6f0735"
+      "checksum": "6345f7f67337a781733bcf1ecc744a11"
     },
     "packrat/desc/glue": {
       "checksum": "b6621544dfe9ce763cd4ab9be9057ee7"
@@ -4419,7 +4419,7 @@
       "checksum": "46d1f807fc03a50cf1818ea3560d850f"
     },
     "packrat/packrat.lock": {
-      "checksum": "25cef379dad828464e86c2390c528150"
+      "checksum": "a6f46dd6611fc973c06d27baa152e611"
     },
     "portfolio.html": {
       "checksum": "3e040679a7fec3a01e4657ac000005a1"
