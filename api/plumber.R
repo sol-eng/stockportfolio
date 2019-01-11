@@ -1,3 +1,7 @@
+#* @apiTitle Stock Information API
+#* @apiVersion 1.0.0
+#* @apiDescription This Plumber API surfaces the ability to programmatically request price history or a number representing the relative volatility of a stock ticker
+
 #library(tidyquant)
 #library(tidyverse)
 library(glue)
