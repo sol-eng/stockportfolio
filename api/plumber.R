@@ -13,8 +13,9 @@ valid_tickers <- c(
   Microsoft = "MSFT"
 )
 
-db_path <- config::get("db", file = "config.yml")
-con <- pool::dbPool(drv = RSQLite::SQLite(), db = db_path)
+cfg <- config::get("db", file = "config.yml")
+con <- do.call(pool::dbPool, cfg)
+
 
 # in an online environment,
 # replace with 
