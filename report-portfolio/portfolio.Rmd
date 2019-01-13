@@ -61,6 +61,15 @@ db_params <- config::get("db", file = "config.yml")
 con <- do.call(DBI::dbConnect, args = db_params)
 ```
 
+```{r echo=FALSE,message=FALSE}
+gitlink::ribbon_css(
+  "https://github.com/sol-eng/stockportfolio/", 
+  position = "right", 
+  parent_css = list(top = "50px", "z-index" = "5", "pointer-events" = "none"),
+  "pointer-events" = "auto"
+  )
+```
+
 ```{r}
 MAR <- params$mar
 # run our calcs

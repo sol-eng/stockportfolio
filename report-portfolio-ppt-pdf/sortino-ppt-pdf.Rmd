@@ -43,27 +43,26 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 library(config)
 library(dbplyr)
 library(DBI)
+library(RSQLite)
+library(odbc)
 
-dw <- config::get("mssql")
+db <- config::get("db")
 
-con <- DBI::dbConnect(odbc::odbc(),
-                      Driver = dw$Driver,
-                      Server = dw$Server,
-                      #Host = dw$Host,
-                      UID    = dw$UID,
-                      PWD    = dw$PWD,
-                      Port   = dw$Port,
-                      Database = dw$Database
-                      #Schema = dw$Schema
-                      )
+con <- do.call(DBI::dbConnect, args = db)
+
+library(formatR)
 library(openxlsx)
-library(tidyverse)
-library(tidyquant)
+library(xts)
+library(dplyr)
+library(lubridate)
+library(ggplot2)
 library(highcharter)
 library(timetk)
 library(blastula)
 library(formattable)
 library(RColorBrewer)
+library(PerformanceAnalytics)
+library(zoo)
 ```
 
 ```{r}
@@ -72,11 +71,11 @@ MAR <- params$mar
 portfolio_selected <- 
     tbl(con, params$portfolio) %>%
     collect() %>% 
-    filter(date >= params$date)
-
+    filter(as.Date(date) >= as.Date(params$date)) %>%
+    mutate(date = as.Date(date))
   
 rolling_sortino <-
-    portfolio_selected %>% 
+    portfolio_selected %>%
     tk_xts(date_var = date) %>% 
     rollapply(params$window, function(x) SortinoRatio(x, MAR = MAR)) %>% 
     `colnames<-`("rolling")

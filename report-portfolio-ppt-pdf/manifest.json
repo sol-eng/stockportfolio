@@ -3,11 +3,11 @@
   "locale": "en_US",
   "platform": "3.4.3",
   "metadata": {
-    "appmode": "rmd-shiny",
-    "primary_rmd": "sortino-db-slider-shiny.Rmd",
+    "appmode": "rmd-static",
+    "primary_rmd": "sortino-ppt-pdf.Rmd",
     "primary_html": null,
     "content_category": null,
-    "has_parameters": false
+    "has_parameters": true
   },
   "packages": {
     "BH": {
@@ -589,6 +589,44 @@
         "Built": "R 3.4.0; x86_64-apple-darwin15.6.0; 2017-05-09 03:25:14 UTC; unix"
       }
     },
+    "blastula": {
+      "Source": "github",
+      "Repository": null,
+      "GithubRepo": "blastula",
+      "GithubUsername": "rich-iannone",
+      "GithubRef": "master",
+      "GithubSha1": "3b69cbcf340be2bba4a9f1d29f6557747668aebf",
+      "description": {
+        "Type": "Package",
+        "Package": "blastula",
+        "Title": "Easily Send HTML Email Messages",
+        "Version": "0.2.2",
+        "Authors@R": "\n    person(\"Richard\", \"Iannone\", , \"riannone@me.com\", c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0003-3925-190X\"))",
+        "Description": "Compose and send out responsive HTML email messages that render\n    perfectly across a range of email clients and device sizes. Messages are\n    composed using 'Markdown' and a text interpolation system that allows for\n    the injection of evaluated R code within the message body, footer, and\n    subject line. Helper functions let the user insert embedded images, web\n    link buttons, and 'ggplot2' plot objects into the message body. Messages\n    can be sent through an 'SMTP' server or through the 'Mailgun' API service\n    <http://mailgun.com/>.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/rich-iannone/blastula",
+        "BugReports": "https://github.com/rich-iannone/blastula/issues",
+        "Depends": "R (>= 3.2.1)",
+        "Imports": "commonmark (>= 1.5),\ndownloader (>= 0.4),\ndplyr (>= 0.7.5),\nglue (>= 1.2.0),\nhtmltools (>= 0.3.6),\nmagrittr (>= 1.5),\nstringr (>= 1.3.1),\ntidyr (>= 0.8.0)",
+        "Suggests": "covr,\nggplot2,\nhttr,\ntestthat",
+        "Encoding": "UTF-8",
+        "LazyData": "true",
+        "RoxygenNote": "6.1.0",
+        "Author": "Richard Iannone [aut, cre] (0000-0003-3925-190X)",
+        "Maintainer": "Richard Iannone <riannone@me.com>",
+        "Built": "R 3.4.3; ; 2018-10-20 17:51:12 UTC; unix",
+        "RemoteType": "github",
+        "RemoteHost": "https://api.github.com",
+        "RemoteRepo": "blastula",
+        "RemoteUsername": "rich-iannone",
+        "RemoteRef": "master",
+        "RemoteSha": "3b69cbcf340be2bba4a9f1d29f6557747668aebf",
+        "GithubRepo": "blastula",
+        "GithubUsername": "rich-iannone",
+        "GithubRef": "master",
+        "GithubSHA1": "3b69cbcf340be2bba4a9f1d29f6557747668aebf"
+      }
+    },
     "blob": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -796,6 +834,34 @@
         "Repository": "CRAN",
         "Date/Publication": "2016-12-14 23:28:25",
         "Built": "R 3.4.0; x86_64-apple-darwin15.6.0; 2017-04-21 21:24:28 UTC; unix"
+      }
+    },
+    "commonmark": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "commonmark",
+        "Type": "Package",
+        "Title": "High Performance CommonMark and Github Markdown Rendering in R",
+        "Version": "1.7",
+        "Authors@R": "c(\n    person(\"Jeroen\", \"Ooms\", ,\"jeroen@berkeley.edu\", role = c(\"aut\", \"cre\")),\n    person(\"John MacFarlane\", role = \"cph\", comment = \"Author of cmark\"))",
+        "URL": "http://github.com/jeroen/commonmark (devel)\nhttps://github.github.com/gfm/ (spec)",
+        "BugReports": "http://github.com/jeroen/commonmark/issues",
+        "Description": "The CommonMark specification defines a rationalized version of markdown\n    syntax. This package uses the 'cmark' reference implementation for converting\n    markdown text into various formats including html, latex and groff man. In\n    addition it exposes the markdown parse tree in xml format. Also includes opt-in\n    support for GFM extensions including tables, autolinks, and strikethrough text.",
+        "License": "BSD_2_clause + file LICENSE",
+        "Suggests": "curl, testthat, xml2",
+        "RoxygenNote": "6.0.1",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-12-01 11:57:14 UTC; jeroen",
+        "Author": "Jeroen Ooms [aut, cre],\n  John MacFarlane [cph] (Author of cmark)",
+        "Maintainer": "Jeroen Ooms <jeroen@berkeley.edu>",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-12-01 12:30:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-12-17 21:07:42 UTC; unix"
       }
     },
     "config": {
@@ -1048,6 +1114,32 @@
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:25:54 UTC; unix"
       }
     },
+    "downloader": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "downloader",
+        "Maintainer": "Winston Chang <winston@stdout.org>",
+        "Author": "Winston Chang <winston@stdout.org>",
+        "Version": "0.4",
+        "License": "GPL-2",
+        "Title": "Download Files over HTTP and HTTPS",
+        "Description": "Provides a wrapper for the download.file function,\n    making it possible to download files over HTTPS on Windows, Mac OS X, and\n    other Unix-like platforms. The 'RCurl' package provides this functionality\n    (and much more) but can be difficult to install because it must be compiled\n    with external dependencies. This package has no external dependencies, so\n    it is much easier to install.",
+        "URL": "https://github.com/wch/downloader",
+        "Imports": "utils, digest",
+        "Suggests": "testthat",
+        "BugReports": "https://github.com/wch/downloader/issues",
+        "NeedsCompilation": "no",
+        "Packaged": "2015-07-09 01:22:22 UTC; winston",
+        "Repository": "RSPM",
+        "Date/Publication": "2015-07-09 14:47:41",
+        "Built": "R 3.4.3; ; 2018-07-05 16:29:05 UTC; unix"
+      }
+    },
     "dplyr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -1080,38 +1172,6 @@
         "Repository": "RSPM",
         "Date/Publication": "2018-10-16 13:20:03 UTC",
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:28:05 UTC; unix"
-      }
-    },
-    "dygraphs": {
-      "Source": "CRAN",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "dygraphs",
-        "Type": "Package",
-        "Title": "Interface to 'Dygraphs' Interactive Time Series Charting Library",
-        "Version": "1.1.1.4",
-        "Date": "2017-01-04",
-        "Authors@R": "c(\n    person(\"Dan\", \"Vanderkam\", role = c(\"aut\", \"cph\"),\n       comment = \"dygraphs library in htmlwidgets/lib, http://dygraphs.com/\"),\n    person(\"JJ\", \"Allaire\", role = c(\"aut\", \"cre\"),\n       comment = \"R interface\", email = \"jj@rstudio.com\"),\n    person(family = \"RStudio\", role = \"cph\"),\n    person(\"Jonathan\", \"Owen\", role = c(\"aut\", \"cph\")),\n    person(\"Daniel\", \"Gromer\", role = c(\"aut\", \"cph\")),\n    person(\"Petr\", \"Shevtsov\", role = c(\"aut\", \"cph\")),\n    person(\"Benoit\", \"Thieurmel\", role = c(\"aut\", \"cph\")),\n    person(family = \"jQuery Foundation\", role = \"cph\",\n           comment = \"jQuery library\"),\n    person(family = \"jQuery contributors\", role = c(\"ctb\", \"cph\"),\n           comment = \"jQuery library; authors listed in inst/htmlwidgets/lib/jquery/AUTHORS.txt\")\n    )",
-        "Maintainer": "JJ Allaire <jj@rstudio.com>",
-        "URL": "https://github.com/rstudio/dygraphs",
-        "BugReports": "https://github.com/rstudio/dygraphs/issues",
-        "Description": "An R interface to the 'dygraphs' JavaScript charting library\n    (a copy of which is included in the package). Provides rich facilities\n    for charting time-series data in R, including highly configurable\n    series- and axis-display and interactive features like zoom/pan and\n    series/point highlighting.",
-        "License": "MIT + file LICENSE",
-        "Depends": "R (>= 3.0)",
-        "Imports": "magrittr, htmlwidgets (>= 0.6), htmltools (>= 0.3.5), zoo (>=\n1.7-10), xts (>= 0.9-7)",
-        "Suggests": "testthat",
-        "Enhances": "rmarkdown (>= 0.3.3), shiny (>= 0.10.2.1)",
-        "RoxygenNote": "5.0.1",
-        "NeedsCompilation": "no",
-        "Packaged": "2017-01-04 13:43:02 UTC; jjallaire",
-        "Author": "Dan Vanderkam [aut, cph] (dygraphs library in htmlwidgets/lib,\n    http://dygraphs.com/),\n  JJ Allaire [aut, cre] (R interface),\n  RStudio [cph],\n  Jonathan Owen [aut, cph],\n  Daniel Gromer [aut, cph],\n  Petr Shevtsov [aut, cph],\n  Benoit Thieurmel [aut, cph],\n  jQuery Foundation [cph] (jQuery library),\n  jQuery contributors [ctb, cph] (jQuery library; authors listed in\n    inst/htmlwidgets/lib/jquery/AUTHORS.txt)",
-        "Repository": "CRAN",
-        "Date/Publication": "2017-01-04 16:34:56",
-        "Built": "R 3.4.0; ; 2017-04-20 20:02:28 UTC; unix"
       }
     },
     "evaluate": {
@@ -1177,37 +1237,6 @@
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:25:58 UTC; unix"
       }
     },
-    "flexdashboard": {
-      "Source": "RSPM",
-      "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
-      "description": {
-        "Package": "flexdashboard",
-        "Type": "Package",
-        "Title": "R Markdown Format for Flexible Dashboards",
-        "Version": "0.5.1.1",
-        "Description": "Format for converting an R Markdown document to a grid oriented\n  dashboard. The dashboard flexibly adapts the size of it's components to the\n  containing web page.",
-        "Authors@R": "c(\n  person(\"Richard\", \"Iannone\", role = c(\"aut\", \"cre\"), email = \"rich@rstudio.com\",\n         comment = c(ORCID = \"0000-0003-3925-190X\")),\n  person(\"JJ\", \"Allaire\", role = \"aut\", email = \"jj@rstudio.com\"),\n  person(\"Barbara\", \"Borges\", role = c(\"aut\"), email = \"barb.b.ribeiro@gmail.com\"),\n  person(family = \"RStudio\", role = \"cph\"),\n  person(family = \"Keen IO\", role = c(\"ctb\", \"cph\"), comment = \"Dashboard CSS\"),\n  person(\"Abdullah\", \"Almsaeed\", role = c(\"ctb\", \"cph\"), comment = \"Dashboard CSS\"),\n  person(\"Jonas\", \"Mosbech\", role = c(\"ctb\", \"cph\"), comment = \"StickyTableHeaders\"),\n  person(\"Noel\", \"Bossart\", role = c(\"ctb\", \"cph\"), comment = \"Featherlight\"),\n  person(\"Lea\", \"Verou\", role = c(\"ctb\", \"cph\"), comment = \"Prism\"),\n  person(\"Dmitry\", \"Baranovskiy\", role = c(\"ctb\", \"cph\"), comment = \"Raphael.js\"),\n  person(family = \"Sencha Labs\", role = c(\"ctb\", \"cph\"), comment = \"Raphael.js\"),\n  person(\"Bojan\", \"Djuricic\", role = c(\"ctb\", \"cph\"), comment = \"JustGage\"),\n  person(\"Tomas\", \"Sardyha\", role = c(\"ctb\", \"cph\"), comment = \"Sly\"),\n  person(\"Bryan\", \"Lewis\", role = c(\"ctb\", \"cph\"), comment = \"Examples\"),\n  person(\"Carson\", \"Sievert\", role = c(\"ctb\", \"cph\"), comment = \"Examples\"),\n  person(\"Joshua\", \"Kunst\", role = c(\"ctb\", \"cph\"), comment = \"Examples\"),\n  person(\"Ryan\", \"Hafen\", role = c(\"ctb\", \"cph\"), comment = \"Examples\"),\n  person(\"Bob\", \"Rudis\", role = c(\"ctb\", \"cph\"), comment = \"Examples\"),\n  person(\"Joe\", \"Cheng\", role = c(\"ctb\"), comment = \"Examples\")\n  )",
-        "URL": "http://rmarkdown.rstudio.com/flexdashboard",
-        "BugReports": "https://github.com/rstudio/flexdashboard/issues",
-        "Depends": "R (>= 3.0.2)",
-        "Imports": "tools, jsonlite, htmltools, knitr (>= 1.13), htmlwidgets (>=\n0.6), rmarkdown (>= 1.0), shiny (>= 0.13)",
-        "Suggests": "testthat",
-        "LazyData": "TRUE",
-        "License": "MIT + file LICENSE",
-        "RoxygenNote": "6.0.1",
-        "NeedsCompilation": "no",
-        "Packaged": "2018-06-28 21:44:36 UTC; jcheng",
-        "Author": "Richard Iannone [aut, cre] (<https://orcid.org/0000-0003-3925-190X>),\n  JJ Allaire [aut],\n  Barbara Borges [aut],\n  RStudio [cph],\n  Keen IO [ctb, cph] (Dashboard CSS),\n  Abdullah Almsaeed [ctb, cph] (Dashboard CSS),\n  Jonas Mosbech [ctb, cph] (StickyTableHeaders),\n  Noel Bossart [ctb, cph] (Featherlight),\n  Lea Verou [ctb, cph] (Prism),\n  Dmitry Baranovskiy [ctb, cph] (Raphael.js),\n  Sencha Labs [ctb, cph] (Raphael.js),\n  Bojan Djuricic [ctb, cph] (JustGage),\n  Tomas Sardyha [ctb, cph] (Sly),\n  Bryan Lewis [ctb, cph] (Examples),\n  Carson Sievert [ctb, cph] (Examples),\n  Joshua Kunst [ctb, cph] (Examples),\n  Ryan Hafen [ctb, cph] (Examples),\n  Bob Rudis [ctb, cph] (Examples),\n  Joe Cheng [ctb] (Examples)",
-        "Maintainer": "Richard Iannone <rich@rstudio.com>",
-        "Repository": "RSPM",
-        "Date/Publication": "2018-06-29 21:23:17 UTC",
-        "Built": "R 3.4.3; ; 2018-11-06 19:30:35 UTC; unix"
-      }
-    },
     "forecast": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -1270,6 +1299,70 @@
         "Repository": "CRAN",
         "Date/Publication": "2017-06-22 08:20:36 UTC",
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2017-12-07 02:10:43 UTC; unix"
+      }
+    },
+    "formatR": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "formatR",
+        "Type": "Package",
+        "Title": "Format R Code Automatically",
+        "Version": "1.5",
+        "Date": "2017-04-26",
+        "Authors@R": "c(\n    person(\"Yihui\", \"Xie\", email = \"xie@yihui.name\", role = c(\"aut\", \"cre\")),\n    person(\"Eugene\", \"Ha\", role = \"ctb\"),\n    person(\"Kohske\", \"Takahashi\", role = \"ctb\"),\n    person(\"Ed\", \"Lee\", role = \"ctb\")\n    )",
+        "Maintainer": "Yihui Xie <xie@yihui.name>",
+        "Description": "Provides a function tidy_source() to format R source code. Spaces\n    and indent will be added to the code automatically, and comments will be\n    preserved under certain conditions, so that R code will be more\n    human-readable and tidy. There is also a Shiny app as a user interface in\n    this package (see tidy_app()).",
+        "Depends": "R (>= 3.0.2)",
+        "Suggests": "codetools, shiny, testit, rmarkdown, knitr",
+        "License": "GPL",
+        "URL": "https://yihui.name/formatR",
+        "BugReports": "https://github.com/yihui/formatR/issues",
+        "VignetteBuilder": "knitr",
+        "RoxygenNote": "6.0.1",
+        "NeedsCompilation": "no",
+        "Packaged": "2017-04-25 16:06:05 UTC; yihui",
+        "Author": "Yihui Xie [aut, cre],\n  Eugene Ha [ctb],\n  Kohske Takahashi [ctb],\n  Ed Lee [ctb]",
+        "Repository": "RSPM",
+        "Date/Publication": "2017-04-25 23:31:46 UTC",
+        "Built": "R 3.4.3; ; 2019-01-10 02:21:14 UTC; unix"
+      }
+    },
+    "formattable": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "formattable",
+        "Title": "Create 'Formattable' Data Structures",
+        "Version": "0.2.0.1",
+        "Authors@R": "c(\n    person(\"Kun\", \"Ren\", role = c(\"aut\", \"cre\"), email = \"ken@renkun.me\"),\n    person(\"Kenton\", \"Russell\", role = \"aut\", email = \"kent.russell@timelyportfolio.com\")\n    )",
+        "Description": "Provides functions to create formattable vectors and data frames.\n    'Formattable' vectors are printed with text formatting, and formattable\n    data frames are printed with multiple types of formatting in HTML\n    to improve the readability of data presented in tabular form rendered in\n    web pages.",
+        "Depends": "R (> 3.0.2)",
+        "Date": "2016-08-05",
+        "Imports": "methods, htmltools, htmlwidgets, knitr, rmarkdown",
+        "License": "MIT + file LICENSE",
+        "LazyData": "true",
+        "URL": "https://renkun.me/formattable,\nhttps://github.com/renkun-ken/formattable",
+        "BugReports": "https://github.com/renkun-ken/formattable/issues",
+        "ByteCompile": "TRUE",
+        "Suggests": "testthat, DT, shiny, covr",
+        "RoxygenNote": "5.0.1",
+        "VignetteBuilder": "knitr",
+        "NeedsCompilation": "no",
+        "Packaged": "2016-08-05 01:44:15 UTC; renkun",
+        "Author": "Kun Ren [aut, cre],\n  Kenton Russell [aut]",
+        "Maintainer": "Kun Ren <ken@renkun.me>",
+        "Repository": "RSPM",
+        "Date/Publication": "2016-08-05 11:53:18",
+        "Built": "R 3.4.3; ; 2018-08-04 14:01:13 UTC; unix"
       }
     },
     "fracdiff": {
@@ -1426,41 +1519,6 @@
         "Repository": "RSPM",
         "Date/Publication": "2018-07-17 20:40:03 UTC",
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-14 21:49:21 UTC; unix"
-      }
-    },
-    "gitlink": {
-      "Source": "github",
-      "Repository": null,
-      "GithubRepo": "gitlink",
-      "GithubUsername": "colearendt",
-      "GithubRef": "master",
-      "GithubSha1": "23c90a7722a1096d8be49640b5f4efc3a08b7009",
-      "description": {
-        "Package": "gitlink",
-        "Title": "Add git links to your web-based assets",
-        "Version": "0.0.0.9000",
-        "Authors@R": "\n    person(given = \"Cole\",\n           family = \"Arendt\",\n           role = c(\"aut\", \"cre\"),\n           email = \"cole@rstudio.com\")",
-        "Description": "Provides helpers to add git links to Shiny applications, R Markdown documents, \n            and other HTML-based resources. This is most commonly used for GitHub ribbons.",
-        "License": "MIT + file LICENSE",
-        "Encoding": "UTF-8",
-        "LazyData": "true",
-        "RoxygenNote": "6.1.1",
-        "Imports": "htmltools, rlang",
-        "RemoteType": "github",
-        "RemoteHost": "api.github.com",
-        "RemoteRepo": "gitlink",
-        "RemoteUsername": "colearendt",
-        "RemoteRef": "master",
-        "RemoteSha": "23c90a7722a1096d8be49640b5f4efc3a08b7009",
-        "GithubRepo": "gitlink",
-        "GithubUsername": "colearendt",
-        "GithubRef": "master",
-        "GithubSHA1": "23c90a7722a1096d8be49640b5f4efc3a08b7009",
-        "NeedsCompilation": "no",
-        "Packaged": "2019-01-11 16:01:18 UTC; carendt",
-        "Author": "Cole Arendt [aut, cre]",
-        "Maintainer": "Cole Arendt <cole@rstudio.com>",
-        "Built": "R 3.4.3; ; 2019-01-11 16:01:18 UTC; unix"
       }
     },
     "glue": {
@@ -2399,6 +2457,40 @@
         "Repository": "RSPM",
         "Date/Publication": "2018-11-15 14:20:03 UTC",
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-10 10:49:24 UTC; unix"
+      }
+    },
+    "openxlsx": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "openxlsx",
+        "Type": "Package",
+        "Title": "Read, Write and Edit XLSX Files",
+        "Version": "4.0.17",
+        "Date": "2017-03-09",
+        "Authors@R": "c(\n    person(\"Alexander\", \"Walker\",\n    email = \"Alexander.Walker1989@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Luca\", \"Braglia\", role = \"ctb\"))",
+        "URL": "https://github.com/awalker89/openxlsx",
+        "BugReports": "https://github.com/awalker89/openxlsx/issues",
+        "Maintainer": "Alexander Walker <Alexander.Walker1989@gmail.com>",
+        "Description": "Simplifies the creation of Excel .xlsx files by providing a high\n    level interface to writing, styling and editing worksheets. Through the use of\n    'Rcpp', read/write times are comparable to the 'xlsx' and 'XLConnect' packages\n    with the added benefit of removing the dependency on Java.",
+        "License": "GPL-3",
+        "LinkingTo": "Rcpp",
+        "Depends": "R (>= 3.3.0)",
+        "Imports": "methods, Rcpp, grDevices, stats, utils",
+        "VignetteBuilder": "knitr",
+        "Suggests": "knitr, testthat",
+        "RoxygenNote": "6.0.1.9000",
+        "Collate": "'CommentClass.R' 'HyperlinkClass.R' 'RcppExports.R'\n'class_definitions.R' 'StyleClass.R' 'WorkbookClass.R'\n'baseXML.R' 'borderFunctions.R' 'chartsheet_class.R'\n'conditional_formatting.R' 'helperFunctions.R' 'loadWorkbook.R'\n'openXL.R' 'openxlsx.R' 'openxlsxCoerce.R' 'readWorkbook.R'\n'sheet_data_class.R' 'workbook_column_widths.R'\n'workbook_read_workbook.R' 'workbook_write_data.R'\n'worksheet_class.R' 'wrappers.R' 'writeData.R'\n'writeDataTable.R' 'writexlsx.R'",
+        "NeedsCompilation": "yes",
+        "Packaged": "2017-03-23 09:21:13 UTC; Alex",
+        "Author": "Alexander Walker [aut, cre],\n  Luca Braglia [ctb]",
+        "Repository": "RSPM",
+        "Date/Publication": "2017-03-23 13:10:15 UTC",
+        "Built": "R 3.4.2; x86_64-apple-darwin15.6.0; 2018-04-04 04:33:12 UTC; unix"
       }
     },
     "padr": {
@@ -3532,6 +3624,35 @@
         "Built": "R 3.4.2; x86_64-apple-darwin15.6.0; 2018-04-22 08:14:43 UTC; unix"
       }
     },
+    "tufte": {
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "tufte",
+        "Type": "Package",
+        "Title": "Tufte's Styles for R Markdown Documents",
+        "Version": "0.4",
+        "Authors@R": "c(\n    person(\"Yihui\", \"Xie\", role = c(\"aut\", \"cre\"), email = \"xie@yihui.name\", comment = c(ORCID = \"0000-0003-0645-5666\")),\n    person(\"JJ\", \"Allaire\", role = \"aut\"),\n    person(\"Andrzej\", \"Oles\", role = \"ctb\"),\n    person(\"Dave\", \"Liepmann\", role = \"ctb\", comment = \"Tufte CSS in inst/rmarkdown/templates/tufte_html/resources\"),\n    person(family = \"RStudio, Inc.\", role = \"cph\")\n    )",
+        "Maintainer": "Yihui Xie <xie@yihui.name>",
+        "Description": "Provides R Markdown output formats to use Tufte styles for PDF and HTML output.",
+        "License": "GPL-3",
+        "LazyData": "TRUE",
+        "URL": "https://github.com/rstudio/tufte",
+        "BugReports": "https://github.com/rstudio/tufte/issues",
+        "Imports": "htmltools, xfun, knitr (>= 1.18), rmarkdown",
+        "RoxygenNote": "6.0.1",
+        "NeedsCompilation": "no",
+        "Packaged": "2018-07-15 04:11:41 UTC; yihui",
+        "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),\n  JJ Allaire [aut],\n  Andrzej Oles [ctb],\n  Dave Liepmann [ctb] (Tufte CSS in\n    inst/rmarkdown/templates/tufte_html/resources),\n  RStudio, Inc. [cph]",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-07-15 04:30:03 UTC",
+        "Built": "R 3.4.3; ; 2019-01-10 02:15:29 UTC; unix"
+      }
+    },
     "urca": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
@@ -3924,10 +4045,10 @@
   },
   "files": {
     "config.yml": {
-      "checksum": "9e5df2916018a8a5bbf519348d6831a4"
+      "checksum": "07a4a6940a8a9749ce6220a2c0fa87da"
     },
     "manifest.json": {
-      "checksum": "c250b51d1f3fc6047c8cd31258d5ea2a"
+      "checksum": "16c27012f09d6c9a6fec8dfcfba0d483"
     },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
@@ -3953,6 +4074,9 @@
     "packrat/desc/bit64": {
       "checksum": "1fe70b1e3b52d5ad0c3d28cdbbcddb85"
     },
+    "packrat/desc/blastula": {
+      "checksum": "c4cc12c5fdedb37401dac858b86d5bc6"
+    },
     "packrat/desc/blob": {
       "checksum": "7c7ea626a5037c52cccb7f2da19a5ad1"
     },
@@ -3973,6 +4097,9 @@
     },
     "packrat/desc/colorspace": {
       "checksum": "85629c522af9fa84380a2018c4391e29"
+    },
+    "packrat/desc/commonmark": {
+      "checksum": "c64bff0f0cb9a000339a8665f4eaab67"
     },
     "packrat/desc/config": {
       "checksum": "a93e6146af16862f418f6c9bee8c60e9"
@@ -4001,11 +4128,11 @@
     "packrat/desc/digest": {
       "checksum": "c95ae59bfc208d230e68f3f801f23846"
     },
+    "packrat/desc/downloader": {
+      "checksum": "a7a7fffda6464f93a1203fc88a3c3b88"
+    },
     "packrat/desc/dplyr": {
       "checksum": "192bd4d08187007309ad7ffde7552780"
-    },
-    "packrat/desc/dygraphs": {
-      "checksum": "b1e8d2ecad7dfd1aadda5b4e49987425"
     },
     "packrat/desc/evaluate": {
       "checksum": "1481bfaa9f7e870270a49cc844f05610"
@@ -4013,14 +4140,17 @@
     "packrat/desc/fansi": {
       "checksum": "6e7d2e3fdfbbe8330e4843be89c789a4"
     },
-    "packrat/desc/flexdashboard": {
-      "checksum": "f74178f28488c4697a80af77771a0bc5"
-    },
     "packrat/desc/forecast": {
       "checksum": "b59143f10b785afd0f77a6a6d569870e"
     },
     "packrat/desc/foreign": {
       "checksum": "6281943756121a5e8dec93879c0eb855"
+    },
+    "packrat/desc/formatR": {
+      "checksum": "b46789170c6ae9106aec9cbd65c56cab"
+    },
+    "packrat/desc/formattable": {
+      "checksum": "d761e94ac3af62220c74e5449fa45fbd"
     },
     "packrat/desc/fracdiff": {
       "checksum": "7826585d31b0ac26a225430d1d9c1511"
@@ -4036,9 +4166,6 @@
     },
     "packrat/desc/git2r": {
       "checksum": "12abd7a22c169dd8c99ac60c99852e40"
-    },
-    "packrat/desc/gitlink": {
-      "checksum": "6345f7f67337a781733bcf1ecc744a11"
     },
     "packrat/desc/glue": {
       "checksum": "b6621544dfe9ce763cd4ab9be9057ee7"
@@ -4138,6 +4265,9 @@
     },
     "packrat/desc/openssl": {
       "checksum": "a4f50a515dd3c78309c88b6763bd08d6"
+    },
+    "packrat/desc/openxlsx": {
+      "checksum": "5e98a19f59de6d5209a5a0645b16afb5"
     },
     "packrat/desc/padr": {
       "checksum": "3276b4a5a1f25d037ff19324952536d3"
@@ -4271,6 +4401,9 @@
     "packrat/desc/TTR": {
       "checksum": "4713f1c0213cf7335e55791b37717c9a"
     },
+    "packrat/desc/tufte": {
+      "checksum": "a3a2f7e1e3b042927fb3956d0bea22b0"
+    },
     "packrat/desc/urca": {
       "checksum": "2fa1a4d0a32045da8238230c4568a919"
     },
@@ -4314,10 +4447,16 @@
       "checksum": "46d1f807fc03a50cf1818ea3560d850f"
     },
     "packrat/packrat.lock": {
-      "checksum": "69b793649fdcf29ab65dea40c87f6978"
+      "checksum": "df5406398ef633e522b9520e5478172c"
     },
-    "sortino-db-slider-shiny.Rmd": {
-      "checksum": "724c3028a6eb332e5933a8df7f2bf9fe"
+    "sortino-ppt-pdf.Rmd": {
+      "checksum": "94a68f4467459be0a90218f1ccd5581e"
+    },
+    "template/template.Rmd": {
+      "checksum": "0b5ec423123a88482c2a1a990313b007"
+    },
+    "template/template2.pptx": {
+      "checksum": "b31ea75c33559c5bb8a266da1a6a9a41"
     }
   },
   "users": null

@@ -1,3 +1,7 @@
+#* @apiTitle Stock Information API
+#* @apiVersion 1.0.0
+#* @apiDescription This Plumber API surfaces the ability to programmatically request price history or a number representing the relative volatility of a stock ticker
+
 #library(tidyquant)
 #library(tidyverse)
 library(glue)
@@ -13,8 +17,9 @@ valid_tickers <- c(
   Microsoft = "MSFT"
 )
 
-db_path <- config::get("db", file = "config.yml")
-con <- pool::dbPool(drv = RSQLite::SQLite(), db = db_path)
+cfg <- config::get("db", file = "config.yml")
+con <- do.call(pool::dbPool, cfg)
+
 
 # in an online environment,
 # replace with 

@@ -13,10 +13,6 @@
     "BH": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "BH",
         "Type": "Package",
@@ -38,10 +34,6 @@
     "DBI": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "DBI",
         "Version": "1.0.0",
@@ -71,10 +63,6 @@
     "R6": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "R6",
         "Title": "Classes with Reference Semantics",
@@ -100,10 +88,6 @@
     "RSQLite": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "RSQLite",
         "Title": "'SQLite' Interface for R",
@@ -134,15 +118,11 @@
     "Rcpp": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "Rcpp",
         "Title": "Seamless R and C++ Integration",
-        "Version": "0.12.19",
-        "Date": "2018-09-21",
+        "Version": "1.0.0",
+        "Date": "2018-11-05",
         "Author": "Dirk Eddelbuettel, Romain Francois, JJ Allaire, Kevin Ushey, Qiang Kou,\n Nathan Russell, Douglas Bates and John Chambers",
         "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
         "Description": "The 'Rcpp' package provides R functions as well as C++ classes which\n offer a seamless integration of R and C++. Many R data types and objects can be\n mapped back and forth to C++ equivalents which facilitates both writing of new\n code as well as easier integration of third-party libraries. Documentation\n about 'Rcpp' is provided by several vignettes included in this package, via the\n 'Rcpp Gallery' site at <http://gallery.rcpp.org>, the paper by Eddelbuettel and\n Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013,\n <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018,\n <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
@@ -156,19 +136,15 @@
         "MailingList": "Please send questions and comments regarding Rcpp to\nrcpp-devel@lists.r-forge.r-project.org",
         "RoxygenNote": "6.0.1",
         "NeedsCompilation": "yes",
-        "Packaged": "2018-09-30 18:12:58.354107 UTC; edd",
+        "Packaged": "2018-11-06 03:02:42.98448 UTC; edd",
         "Repository": "RSPM",
-        "Date/Publication": "2018-10-01 06:39:15 UTC",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:26:08 UTC; unix"
+        "Date/Publication": "2018-11-07 20:00:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-12-17 21:07:57 UTC; unix"
       }
     },
     "assertthat": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "assertthat",
         "Title": "Easy Pre and Post Assertions",
@@ -192,10 +168,6 @@
     "bindr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "bindr",
         "Title": "Parametrized Active Bindings",
@@ -222,10 +194,6 @@
     "bindrcpp": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "bindrcpp",
         "Title": "An 'Rcpp' Interface to Active Bindings",
@@ -254,10 +222,6 @@
     "bit": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "bit",
         "Type": "Package",
@@ -283,10 +247,6 @@
     "bit64": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "bit64",
         "Type": "Package",
@@ -312,10 +272,6 @@
     "blob": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "blob",
         "Title": "A Simple S3 Class for Representing Vectors of Binary Data\n('BLOBS')",
@@ -342,10 +298,6 @@
     "cli": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "cli",
         "Title": "Helpers for Developing Command Line Interfaces",
@@ -373,10 +325,6 @@
     "config": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "config",
         "Type": "Package",
@@ -403,10 +351,6 @@
     "crayon": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "crayon",
         "Title": "Colored Terminal Output",
@@ -434,10 +378,6 @@
     "dbplyr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Type": "Package",
         "Package": "dbplyr",
@@ -467,10 +407,6 @@
     "digest": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "digest",
         "Author": "Dirk Eddelbuettel <edd@debian.org> with contributions \n by Antoine Lucas, Jarek Tuszynski, Henrik Bengtsson, Simon Urbanek,\n Mario Frasca, Bryan Lewis, Murray Stokely, Hannes Muehleisen,\n Duncan Murdoch, Jim Hester, Wush Wu, Qiang Kou, Thierry Onkelinx, \n Michel Lang, Viliam Simko, Kurt Hornik and Radford Neal.",
@@ -495,10 +431,6 @@
     "dplyr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Type": "Package",
         "Package": "dplyr",
@@ -529,10 +461,6 @@
     "fansi": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "fansi",
         "Title": "ANSI Control Sequence Aware String Functions",
@@ -561,10 +489,6 @@
     "glue": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "glue",
         "Title": "Interpreted String Literals",
@@ -592,52 +516,38 @@
       }
     },
     "httpuv": {
-      "Source": "github",
-      "Repository": null,
-      "GithubRepo": "httpuv",
-      "GithubUsername": "rstudio",
-      "GithubRef": "master",
-      "GithubSha1": "2cbf7bddb7a824e484c6ed34b8921f35d6b29ce9",
+      "Source": "RSPM",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
       "description": {
         "Package": "httpuv",
         "Type": "Package",
         "Title": "HTTP and WebSocket Server Library",
-        "Version": "1.4.5.9000",
+        "Version": "1.4.5.1",
         "Author": "Joe Cheng, Hector Corrada Bravo [ctb], Jeroen Ooms [ctb],\n    Winston Chang [ctb]",
-        "Copyright": "RStudio, Inc.; Joyent, Inc.; Nginx Inc.; Igor Sysoev; Niels Provos;\nInternet Systems Consortium, Inc.; Alexander Chemeris",
+        "Copyright": "RStudio, Inc.; Joyent, Inc.; Nginx Inc.; Igor Sysoev; Niels\nProvos; Internet Systems Consortium, Inc.; Alexander Chemeris",
         "Maintainer": "Joe Cheng <joe@rstudio.com>",
         "Description": "Provides low-level socket and protocol support for handling\n    HTTP and WebSocket requests directly from within R. It is primarily\n    intended as a building block for other packages, rather than making it\n    particularly easy to create complete web applications using httpuv alone.\n    httpuv is built on top of the libuv and http-parser C libraries, both of\n    which were developed by Joyent, Inc. (See LICENSE file for libuv and\n    http-parser license information.)",
         "License": "GPL (>= 2) | file LICENSE",
-        "Depends": "R (>= 2.15.1),\nmethods",
-        "Imports": "Rcpp (>= 0.11.0),\nutils,\npromises,\nlater (>= 0.7.3)",
+        "Depends": "R (>= 2.15.1), methods",
+        "Imports": "Rcpp (>= 0.11.0), utils, promises, later (>= 0.7.3)",
         "LinkingTo": "Rcpp, BH, later",
         "URL": "https://github.com/rstudio/httpuv",
         "SystemRequirements": "GNU make",
         "RoxygenNote": "6.0.1.9000",
-        "Suggests": "testthat,\ncallr",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-07 19:39:50 UTC; unix",
-        "RemoteType": "github",
-        "RemoteHost": "https://api.github.com",
-        "RemoteRepo": "httpuv",
-        "RemoteUsername": "rstudio",
-        "RemoteRef": "master",
-        "RemoteSha": "2cbf7bddb7a824e484c6ed34b8921f35d6b29ce9",
-        "GithubRepo": "httpuv",
-        "GithubUsername": "rstudio",
-        "GithubRef": "master",
-        "GithubSHA1": "2cbf7bddb7a824e484c6ed34b8921f35d6b29ce9"
+        "Suggests": "testthat, callr",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-12-18 19:03:26 UTC; winston",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-12-18 19:40:03 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-07 15:14:19 UTC; unix"
       }
     },
     "jsonlite": {
-      "Source": "CRAN",
+      "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "jsonlite",
-        "Version": "1.5",
+        "Version": "1.6",
         "Title": "A Robust, High Performance JSON Parser and Generator for R",
         "License": "MIT + file LICENSE",
         "NeedsCompilation": "yes",
@@ -649,20 +559,16 @@
         "VignetteBuilder": "knitr, R.rsp",
         "Description": "A fast JSON parser and generator optimized for statistical data\n    and the web. Started out as a fork of 'RJSONIO', but has been completely\n    rewritten in recent versions. The package offers flexible, robust, high\n    performance tools for working with JSON in R and is particularly powerful\n    for building pipelines and interacting with a web API. The implementation is\n    based on the mapping described in the vignette (Ooms, 2014). In addition to\n    converting JSON data from/to R objects, 'jsonlite' contains functions to\n    stream, validate, and prettify JSON data. The unit tests included with the\n    package verify that all edge cases are encoded and decoded consistently for\n    use with dynamic data in systems and applications.",
         "Suggests": "httr, curl, plyr, testthat, knitr, rmarkdown, R.rsp, sp",
-        "RoxygenNote": "6.0.1.9000",
-        "Packaged": "2017-05-31 14:03:43 UTC; jeroen",
-        "Repository": "CRAN",
-        "Date/Publication": "2017-06-01 12:03:37 UTC",
-        "Built": "R 3.4.0; x86_64-apple-darwin15.6.0; 2017-06-02 03:53:14 UTC; unix"
+        "RoxygenNote": "6.1.1",
+        "Packaged": "2018-12-07 11:22:02 UTC; jeroen",
+        "Repository": "RSPM",
+        "Date/Publication": "2018-12-07 12:50:02 UTC",
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-12-20 04:28:51 UTC; unix"
       }
     },
     "later": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "later",
         "Type": "Package",
@@ -684,16 +590,12 @@
         "Maintainer": "Joe Cheng <joe@rstudio.com>",
         "Repository": "RSPM",
         "Date/Publication": "2018-09-18 22:20:03 UTC",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2018-11-06 19:27:06 UTC; unix"
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-07 15:02:04 UTC; unix"
       }
     },
     "magrittr": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "magrittr",
         "Type": "Package",
@@ -716,10 +618,6 @@
     "memoise": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Encoding": "UTF-8",
         "Package": "memoise",
@@ -746,10 +644,6 @@
     "pillar": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "pillar",
         "Title": "Coloured Formatting for Columns",
@@ -777,10 +671,6 @@
     "pkgconfig": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "pkgconfig",
         "Title": "Private Configuration for 'R' Packages",
@@ -805,10 +695,6 @@
     "plogr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "plogr",
         "Title": "The 'plog' C++ Logging Library",
@@ -835,10 +721,6 @@
     "plumber": {
       "Source": "CRAN",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Encoding": "UTF-8",
         "Package": "plumber",
@@ -869,10 +751,6 @@
     "pool": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "pool",
         "Type": "Package",
@@ -901,10 +779,6 @@
     "prettyunits": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "prettyunits",
         "Title": "Pretty, Human Readable Formatting of Quantities",
@@ -928,10 +802,6 @@
     "promises": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "promises",
         "Type": "Package",
@@ -961,10 +831,6 @@
     "purrr": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "purrr",
         "Title": "Functional Programming Tools",
@@ -993,10 +859,6 @@
     "rlang": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "rlang",
         "Version": "0.3.0.1",
@@ -1025,10 +887,6 @@
     "stringi": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "stringi",
         "Version": "1.2.4",
@@ -1057,10 +915,6 @@
     "tibble": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "tibble",
         "Title": "Simple Data Frames",
@@ -1090,10 +944,6 @@
     "tidyselect": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "tidyselect",
         "Title": "Select from a Set of Strings",
@@ -1121,10 +971,6 @@
     "utf8": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "utf8",
         "Version": "1.1.4",
@@ -1151,10 +997,6 @@
     "yaml": {
       "Source": "RSPM",
       "Repository": "http://cluster.rstudiopm.com/cran/latest",
-      "GithubRepo": null,
-      "GithubUsername": null,
-      "GithubRef": null,
-      "GithubSha1": null,
       "description": {
         "Package": "yaml",
         "Type": "Package",
@@ -1178,10 +1020,10 @@
   },
   "files": {
     "config.yml": {
-      "checksum": "b94cda94efb55fb9cca0170c0e7854b6"
+      "checksum": "07a4a6940a8a9749ce6220a2c0fa87da"
     },
     "manifest.json": {
-      "checksum": "7b629619d8f9d442d3bde1a73716a93b"
+      "checksum": "48ab0203b9696fe891b27d42d44ba5ff"
     },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
@@ -1232,13 +1074,13 @@
       "checksum": "b6621544dfe9ce763cd4ab9be9057ee7"
     },
     "packrat/desc/httpuv": {
-      "checksum": "da1d9d8b4679958bd1f01d09df6d72c0"
+      "checksum": "5c3a90f812e5fc64f7228f7f8d206be9"
     },
     "packrat/desc/jsonlite": {
-      "checksum": "aaa13777daafed750a31e9bcba079dff"
+      "checksum": "81f981554c247af7cec2c74e8d9b7f13"
     },
     "packrat/desc/later": {
-      "checksum": "571617dd016f64b6ec4052b296b4109b"
+      "checksum": "868fb95a17eedaa6223cb5963dda80ac"
     },
     "packrat/desc/magrittr": {
       "checksum": "94afb9deed6685e2a4a7591ec5adc17f"
@@ -1274,7 +1116,7 @@
       "checksum": "63ed2d1108aa9e7e6df841286d7bf337"
     },
     "packrat/desc/Rcpp": {
-      "checksum": "eb9cada34554bc7acd08b55d95284fc9"
+      "checksum": "b19b256c7cd1169f1cd4b58ecb842641"
     },
     "packrat/desc/rlang": {
       "checksum": "5ecfc08504004468704151147ef62f3e"
@@ -1298,7 +1140,7 @@
       "checksum": "727431b9e87c3b298ee1bb1676e8f5ba"
     },
     "packrat/packrat.lock": {
-      "checksum": "55a3eaa030b97a46e4ff35c603fd7a3f"
+      "checksum": "2a8dff73be50e4df1b87e44f1c5288f3"
     },
     "plumber.R": {
       "checksum": "116337bf0ccd4562fbfe79e3d425b335"
