@@ -21,7 +21,7 @@ con <- pool::dbPool(drv = RSQLite::SQLite(), db = db_path)
 # tidyquant::tq_get(ticker, from = "2010-01-01")
 # to pull data directly from Yahoo
 # (note to remove the valid_tickers checks)
-get_price_data <- function(ticker, from = "2010-01-01", con) {
+get_price_data <- function(ticker = "AMZN", from = "2010-01-01", con) {
   ticker <- glue::single_quote(ticker)
   from <- as.integer(as.Date(from))
   dbGetQuery(
@@ -60,7 +60,7 @@ function(req, res) {
 #* @response 400 Bad ticker
 #* @response 500 Bad ticker
 #* @response default Returns price for ticker
-price <- function(ticker) {
+price <- function(ticker = "AMZN") {
   get_price_data(ticker = ticker, from = "2010-01-01", con = con)
 }
 
@@ -70,7 +70,7 @@ price <- function(ticker) {
 #* @response 400 Bad ticker
 #* @response 500 Bad ticker
 #* @response default Returns volatility for ticker
-volatility <- function(ticker){
+volatility <- function(ticker = "AMZN"){
   price <- get_price_data(ticker, from = "2010-01-01", con = con) %>% 
     select(date, adjusted) %>% 
     mutate(returns = (log(adjusted) - log(lag(adjusted)))) %>%
