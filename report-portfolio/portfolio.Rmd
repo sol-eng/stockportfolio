@@ -82,8 +82,7 @@ sortino_byhand <-
     portfolio_selected %>% 
     mutate(ratio = mean(returns - MAR)/sqrt(sum(pmin(returns - MAR, 0)^2)/nrow(.))) %>% 
     # Add two new columns to help with ggplot.
-    mutate(returns_below_MAR = ifelse(returns < MAR, returns, NA)) %>%
-    mutate(returns_above_MAR = ifelse(returns > MAR, returns, NA))
+    mutate(status = ifelse(returns < MAR, "down", "up"))
 
 
 ```
@@ -114,9 +113,10 @@ Row
 
 ```{r}
 
- portfolio_scatter <-  ggplot(data = sortino_byhand, aes(x = date)) +
-  geom_point(aes(y = returns_below_MAR), colour = "red") +
-  geom_point(aes(y = returns_above_MAR), colour = "green") + 
+ portfolio_scatter <-  ggplot(data = sortino_byhand) +
+  aes(x = date, y = returns, color = status) +
+  geom_point() +
+  scale_color_manual(values=c("tomato", "chartreuse3"), guide=FALSE) +
   geom_vline(xintercept = as.numeric(as.Date("2016-11-30")), color = "blue") +
   geom_hline(yintercept = MAR, color = "purple", linetype = "dotted") +
   annotate(geom="text", x=as.Date("2016-11-30"), 
