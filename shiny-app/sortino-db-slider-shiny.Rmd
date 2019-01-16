@@ -76,9 +76,9 @@ dateInput(
 
 rate_limit_sec <- 2
 
-numericInput("mar", "MAR", .008, min = 0, max = 1, step = .001)
+sliderInput("mar", "MAR", min = 0, max = 0.1, value = 0.008, step = 0.001)
 
-numericInput("window", "Window", 24, min = 6, max = 36, step = 2)
+numericInput("window", "Rolling Window", min = 6, max = 36, value = 12)
 
 portfolio_selected <- throttle(reactive({
   req(input$portfolio, input$date)
@@ -108,8 +108,7 @@ sortino_byhand <- reactive({
     portfolio_selected() %>%
     mutate(ratio = mean(returns - input$mar)/sqrt(sum(pmin(returns - input$mar, 0)^2)/nrow(.))) %>% 
     # Add two new columns to help with ggplot.
-    mutate(returns_below_MAR = ifelse(returns < input$mar, returns, NA)) %>%
-    mutate(returns_above_MAR = ifelse(returns > input$mar, returns, NA))
+    mutate(status = ifelse(returns < input$mar, "down", "up"))
 
 })
 
@@ -146,17 +145,17 @@ Row {.tabset .tabset-fade}
 ```{r, message = FALSE}
 renderPlot({
   
-  sortino_byhand <- sortino_byhand()
-  
-  ggplot(data = sortino_byhand, aes(x = date)) +
-  geom_point(aes(y = returns_below_MAR), colour = "red") +
-  geom_point(aes(y = returns_above_MAR), colour = "green") + 
-  geom_vline(xintercept = as.numeric(lubridate::as_date("2016-11-30")), color = "blue") +
+ ggplot(data = sortino_byhand()) +
+  aes(x = date, y = returns, color = status) +
+  geom_point() +
+  scale_color_manual(values=c("tomato", "chartreuse3"), guide=FALSE) +
+  geom_vline(xintercept = as.numeric(as.Date("2016-11-30")), color = "blue") +
   geom_hline(yintercept = input$mar, color = "purple", linetype = "dotted") +
-  annotate(geom="text", x=lubridate::as_date("2016-11-30"), 
+  annotate(geom="text", x=as.Date("2016-11-30"), 
            y = -.05, label = "Trump", fontface = "plain", 
            angle = 90, alpha = .5, vjust =  1.5) +
   ylab("percent monthly returns")
+ 
 })
 ```
 
