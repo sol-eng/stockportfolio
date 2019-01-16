@@ -62,7 +62,7 @@ db_params <- config::get("db", file = "config.yml")
 con <- do.call(DBI::dbConnect, args = db_params)
 ```
 
-```{r echo=FALSE,message=FALSE,eval=FALSE}
+```{r echo=FALSE,message=FALSE}
 gitlink::ribbon_css(
   "https://github.com/sol-eng/stockportfolio/", 
   position = "right", 
