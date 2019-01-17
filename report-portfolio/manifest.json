@@ -2044,7 +2044,7 @@
         "Maintainer": "Joe Cheng <joe@rstudio.com>",
         "Repository": "RSPM",
         "Date/Publication": "2018-09-18 22:20:03 UTC",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-07 15:02:04 UTC; unix"
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-17 12:46:39 UTC; unix"
       }
     },
     "lattice": {
@@ -2428,6 +2428,40 @@
         "Repository": "CRAN",
         "Date/Publication": "2016-02-02 14:55:19",
         "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2017-12-07 02:10:43 UTC; unix"
+      }
+    },
+    "odbc": {
+      "Source": "CRAN",
+      "Repository": "http://cluster.rstudiopm.com/cran/latest",
+      "GithubRepo": null,
+      "GithubUsername": null,
+      "GithubRef": null,
+      "GithubSha1": null,
+      "description": {
+        "Package": "odbc",
+        "Title": "Connect to ODBC Compatible Databases (using the DBI Interface)",
+        "Version": "1.1.6",
+        "Authors@R": "c(\n    person(\"Jim\", \"Hester\", , \"james.hester@rstudio.com\", role = c(\"aut\", \"cre\")),\n    person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", role = c(\"aut\")),\n    person(\"lexicalunit\", role = c(\"cph\"), comment = \"nanodbc library\"),\n    person(\"Google Inc.\", role = c(\"cph\"), comment = \"cctz library\"),\n    person(\"RStudio\", role = c(\"cph\", \"fnd\"))\n  )",
+        "Description": "A DBI-compatible interface to ODBC databases.",
+        "License": "MIT + file LICENSE",
+        "URL": "https://github.com/r-dbi/odbc",
+        "BugReports": "https://github.com/r-dbi/odbc/issues",
+        "SystemRequirements": "C++11, GNU make, An ODBC3 driver manager and\ndrivers.",
+        "RoxygenNote": "6.0.1",
+        "LazyData": "true",
+        "ByteCompile": "true",
+        "Depends": "R (>= 3.2.0)",
+        "Imports": "DBI (>= 1.0.0), methods, Rcpp (>= 0.12.11), blob (>= 1.1.0),\nbit64, hms",
+        "Suggests": "tibble, DBItest, testthat, covr, magrittr",
+        "LinkingTo": "Rcpp, BH",
+        "Collate": "'odbc.R' 'Driver.R' 'Connection.R' 'DataTypes.R'\n'RcppExports.R' 'Result.R' 'Table.R' 'Viewer.R' 'db.R'\n'hidden.R' 'utils.R' 'zzz.R'",
+        "NeedsCompilation": "yes",
+        "Packaged": "2018-06-08 20:54:50 UTC; jhester",
+        "Author": "Jim Hester [aut, cre],\n  Hadley Wickham [aut],\n  lexicalunit [cph] (nanodbc library),\n  Google Inc. [cph] (cctz library),\n  RStudio [cph, fnd]",
+        "Maintainer": "Jim Hester <james.hester@rstudio.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2018-06-09 20:02:13 UTC",
+        "Built": "R 3.4.4; x86_64-apple-darwin15.6.0; 2018-06-30 04:56:51 UTC; unix"
       }
     },
     "openssl": {
@@ -4020,10 +4054,10 @@
       "checksum": "fe956b700a087f220ab5afd1d27e97ec"
     },
     "config.yml": {
-      "checksum": "07a4a6940a8a9749ce6220a2c0fa87da"
+      "checksum": "2f317cce736d722fd25e2fdf0be377e8"
     },
     "manifest.json": {
-      "checksum": "951988edab1c483285b5d27478b06c7c"
+      "checksum": "10c85ad01786c8296f6f7651ab4d180d"
     },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
@@ -4191,7 +4225,7 @@
       "checksum": "68ee057121e6303c655fa990fac07b56"
     },
     "packrat/desc/later": {
-      "checksum": "868fb95a17eedaa6223cb5963dda80ac"
+      "checksum": "f76cab82543a9b235a5a0545b77d1ab6"
     },
     "packrat/desc/lattice": {
       "checksum": "3de0fdce21b1f67076e5507edb187495"
@@ -4237,6 +4271,9 @@
     },
     "packrat/desc/nnet": {
       "checksum": "d2a0d283b38fd07e967390a3023109d2"
+    },
+    "packrat/desc/odbc": {
+      "checksum": "d911dc61f5984c13ae62ca5b0377eb1a"
     },
     "packrat/desc/openssl": {
       "checksum": "a4f50a515dd3c78309c88b6763bd08d6"
@@ -4419,13 +4456,16 @@
       "checksum": "46d1f807fc03a50cf1818ea3560d850f"
     },
     "packrat/packrat.lock": {
-      "checksum": "a6f46dd6611fc973c06d27baa152e611"
+      "checksum": "d337344e556ce811ae2b97a789388f1a"
     },
     "portfolio.html": {
       "checksum": "3e040679a7fec3a01e4657ac000005a1"
     },
     "portfolio.Rmd": {
-      "checksum": "f4e78a727fa4cb3b328babdbc2554206"
+      "checksum": "4aa93c95626ee018edce1eff6d6ac70c"
+    },
+    "rsconnect/documents/portfolio.Rmd/localhost/rstudio/portfolio.dcf": {
+      "checksum": "16907ac3f76b10da9f752d819da185bf"
     }
   },
   "users": null

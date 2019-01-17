@@ -5,6 +5,7 @@
 #library(tidyquant)
 #library(tidyverse)
 library(glue)
+library(RSQLite)
 library(dplyr)
 library(pool)
 

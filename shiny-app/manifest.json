@@ -1951,7 +1951,7 @@
         "Maintainer": "Joe Cheng <joe@rstudio.com>",
         "Repository": "RSPM",
         "Date/Publication": "2018-09-18 22:20:03 UTC",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-07 15:02:04 UTC; unix"
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-17 12:46:39 UTC; unix"
       }
     },
     "lattice": {
@@ -3924,10 +3924,10 @@
   },
   "files": {
     "config.yml": {
-      "checksum": "9e5df2916018a8a5bbf519348d6831a4"
+      "checksum": "2f317cce736d722fd25e2fdf0be377e8"
     },
     "manifest.json": {
-      "checksum": "c250b51d1f3fc6047c8cd31258d5ea2a"
+      "checksum": "f1c84bc6956ca00650d3bd2d900bed08"
     },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
@@ -4086,7 +4086,7 @@
       "checksum": "68ee057121e6303c655fa990fac07b56"
     },
     "packrat/desc/later": {
-      "checksum": "868fb95a17eedaa6223cb5963dda80ac"
+      "checksum": "f76cab82543a9b235a5a0545b77d1ab6"
     },
     "packrat/desc/lattice": {
       "checksum": "3de0fdce21b1f67076e5507edb187495"
@@ -4314,10 +4314,10 @@
       "checksum": "46d1f807fc03a50cf1818ea3560d850f"
     },
     "packrat/packrat.lock": {
-      "checksum": "69b793649fdcf29ab65dea40c87f6978"
+      "checksum": "bf900fd7bc74be02e2ff4aee9d7f496f"
     },
     "sortino-db-slider-shiny.Rmd": {
-      "checksum": "724c3028a6eb332e5933a8df7f2bf9fe"
+      "checksum": "593ba007834d2f75b202c8ba1b3d8d1c"
     }
   },
   "users": null
