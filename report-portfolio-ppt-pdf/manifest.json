@@ -2009,7 +2009,7 @@
         "Maintainer": "Joe Cheng <joe@rstudio.com>",
         "Repository": "RSPM",
         "Date/Publication": "2018-09-18 22:20:03 UTC",
-        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-07 15:02:04 UTC; unix"
+        "Built": "R 3.4.3; x86_64-apple-darwin15.6.0; 2019-01-17 12:46:39 UTC; unix"
       }
     },
     "lattice": {
@@ -4045,10 +4045,10 @@
   },
   "files": {
     "config.yml": {
-      "checksum": "07a4a6940a8a9749ce6220a2c0fa87da"
+      "checksum": "2f317cce736d722fd25e2fdf0be377e8"
     },
     "manifest.json": {
-      "checksum": "16c27012f09d6c9a6fec8dfcfba0d483"
+      "checksum": "d40fe0fb0c596ec29b35b93f06a488ad"
     },
     "packrat/desc/assertthat": {
       "checksum": "8d1395cb909e100c8433a01614da5f10"
@@ -4213,7 +4213,7 @@
       "checksum": "68ee057121e6303c655fa990fac07b56"
     },
     "packrat/desc/later": {
-      "checksum": "868fb95a17eedaa6223cb5963dda80ac"
+      "checksum": "f76cab82543a9b235a5a0545b77d1ab6"
     },
     "packrat/desc/lattice": {
       "checksum": "3de0fdce21b1f67076e5507edb187495"
@@ -4447,16 +4447,19 @@
       "checksum": "46d1f807fc03a50cf1818ea3560d850f"
     },
     "packrat/packrat.lock": {
-      "checksum": "df5406398ef633e522b9520e5478172c"
+      "checksum": "b47ab357c291b765651f53943a540686"
     },
     "sortino-ppt-pdf.Rmd": {
-      "checksum": "94a68f4467459be0a90218f1ccd5581e"
+      "checksum": "d96b52515229d7789ca5d301c9056b8d"
     },
     "template/template.Rmd": {
-      "checksum": "0b5ec423123a88482c2a1a990313b007"
+      "checksum": "b220a90c25fde5f8389b14fd75f9b1bb"
     },
     "template/template2.pptx": {
       "checksum": "b31ea75c33559c5bb8a266da1a6a9a41"
+    },
+    "template/template3.pptx": {
+      "checksum": "1cffe7c8f4549dcc116a1889a23075d7"
     }
   },
   "users": null
