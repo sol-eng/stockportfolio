@@ -6,3 +6,7 @@ quickstart:
   db:
     drv: !expr RSQLite::SQLite()
     dbname: "/data/portfolio.db"
+rsconnect:
+  db:
+    drv: !expr odbc::odbc()
+    dsn: "SQL Server (Finance)"

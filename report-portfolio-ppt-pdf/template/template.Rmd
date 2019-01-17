@@ -3,7 +3,7 @@ title: 'JKR Finance'
 subtitle: '`r Sys.Date()`'
 output: 
   powerpoint_presentation:
-    reference_doc: 'template2.pptx'
+    reference_doc: 'template3.pptx'
 
 ---
 
