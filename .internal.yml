@@ -5,13 +5,15 @@ default:
     - from_path: "./portfolio.db"
       to_path: "/data/portfolio.db"
   content:
-    - name: "Stock Information Plumber API"
+    - title: "Stock Information Plumber API"
+      name: "f4191b5c-17fa-4739-936d-30f26f81a987"
       path: "./api"
       description: "This Plumber API surfaces the ability to programmatically request price history or a number representing the relative volatility of a stock ticker"
       tag: "Demo Content|Stock Portfolio"
       url: "/stock-portfolio/api/"
       image: "img/stock-portfolio-api.png"
-    - name: "Stock Portfolio PowerPoint and PDF"
+    - title: "Stock Portfolio PowerPoint and PDF"
+      name: "cd3a3bcd-e59f-414c-8739-6e279620e3ac"
       path: "./report-portfolio-ppt-pdf"
       description: "This parameterized rmarkdown report illustrates customized emails, PDF output, and a PowerPoint Presentation attached to outgoing emails"
       tag:
@@ -19,7 +21,8 @@ default:
       url: "/stock-portfolio/report-ppt-pdf/"
       send_email: true
       image: "img/stock-portfolio-report-ppt-pdf.png"
-    - name: "Stock Portfolio Report"
+    - title: "Stock Portfolio Report"
+      name: "7c22ae6e-41f6-4c8d-af26-812eb3a170b8"
       path: "./report-portfolio"
       description: "This parameterized rmarkdown report illustrates scheduled, customized emails and user-editable parameterization of reporting"
       tag:
@@ -27,7 +30,8 @@ default:
       url: "/stock-portfolio/report/"
       send_email: true
       image: "img/stock-portfolio-report.png"
-    - name: "Stock Portfolio Shiny Document"
+    - title: "Stock Portfolio Shiny Document"
+      name: "7bd8b837-009f-4f46-9925-4e039e38d0df"
       path: "./shiny-app"
       description: "This Shiny Application + R Markdown document allows interactive exploration of portfolio returns along with tuning of model parameters"
       tag: "Demo Content|Stock Portfolio"
